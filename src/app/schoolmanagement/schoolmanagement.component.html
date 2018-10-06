@@ -1,0 +1,77 @@
+
+<!-- Client Management -->
+
+
+
+
+<div class="service-form col-md-12">
+
+        <div class="row">
+          <div class="header">
+      
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                            <h3 class="adsc"> <i class="fa fa-university"></i>  &nbsp;Client Management</h3></div>
+  
+                  </div>
+      
+            <br></div><br>
+      
+            <div class="col">
+      
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="tabl" >
+                      <table class="table table-bordered table-responsive" style="border-collapse:collapse;">
+                          <thead>
+                              <tr>
+                                  <th>SL.NO</th>
+                                  <th>Client Id</th>
+                                  <th>Company Name</th>
+                                  <th>CLient Name</th>
+                                  <th>Contact Person</th>
+                                  <th>Contact Number</th>
+                                  <th>Contract Start</th>
+                                  <th>Contract End</th>
+                                  <th>Status</th>
+                                  <th>View</th>
+                                  <th>Edit</th>
+                                  <th>Delete</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                                      <ng-container  *ngFor="let data of datas.data ;  let i = index">
+                                          
+                                      <tr colspan="6" data-toggle="collapse" [attr.data-target]="10"  class="accordion-toggle">
+                                          <td>{{i + 1}}</td> 
+                                          <td>{{data.cliid}}</td>
+                                          <td id="l1">{{data.Client_Name}}</td>
+                                          <td id="a1">{{data.Client_Name}}</td>
+                                          <td id="pc1">{{data.Contact_Name}}</td>
+                                          <td id="pc1">{{data.Contact_Number}}</td>
+                                          <td id="pc1">{{data.Contract_Start_Dates}}</td>
+                                          <td id="pc1">{{data.ROC_to}}</td>
+                                          <td id="pc1">{{data.Value}}</td>
+                                          <td> <button class="accordion-toggle  btn mat-button-wrapper btn-sm" data-toggle="collapse"  (click)="view($event, data)"><i _ngcontent-c6="" class="m-1 icon-screen-desktop"></i></button></td>
+                                          <td><button type="button" data-toggle="modal"  data-uid="1" class=" btn btn-primary btn-sm"  (click)="edit($event, data)"><i _ngcontent-c6="" class="m-1 icon-note"></i></button></td> 
+                                          <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class=" btn  btn-sm"  (click)="open($event, data)" ><i _ngcontent-c6="" class="m-1 icon-close"  ></i></button></td>
+                                      </tr>
+                                      
+                                      </ng-container>      
+                          </tbody>
+                      </table>
+                      <div *ngIf="loading" ><div class="loader text-center"></div></div>     
+                      <div class="card-footer p-0">
+                      <ngb-pagination [collectionSize]="collsize" [(page)]="advancedPage" (pageChange)="newsync()" [boundaryLinks]="true" ></ngb-pagination>
+                              </div>     
+                </div>
+                </div>
+              </div>
+              </div>
+      </div>
+      </div>  
+              <div *ngIf="deleteLoading" id="snackbar" class="show">Deleting... Pleaser Wait!</div>
+      
+   
+    
+    

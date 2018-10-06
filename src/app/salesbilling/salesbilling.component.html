@@ -1,0 +1,162 @@
+<div id="payslip">
+    <div id="title">client pay</div>
+    <div id="scope">
+      <div class="scope-entry">
+        <div class="title">PAY RUN</div>
+        <div class="value">{{model.Client_Name}}</div>
+      </div>
+      <div class="scope-entry">
+        <div class="title">PAY PERIOD</div>
+        <div class="value">{{model.E_mail_ID}}</div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="left-panel">
+        <div id="employee">
+          <div id="name">
+            {{model.Client_Name}}
+          </div>
+          <div id="email">
+            {{model.E_mail_ID}}
+          </div>
+        </div>
+        <div class="details">
+          <div class="entry">
+            <div class="label">Client ID</div>
+            <div class="value">{{model.cliid}}</div>
+          </div>
+          <div class="entry">
+            <div class="label">Name</div>
+            <div class="value">{{model.Client_Name}}</div>
+          </div>
+          <div class="entry">
+            <div class="label">Type</div>
+            <div class="value">{{model.Designations}}</div>
+          </div>
+          <div class="entry">
+            <div class="label">Contact_No</div>
+            <div class="value">{{model.Contact_No}}</div>
+          </div>
+          <div class="entry">
+            <div class="label">Assistant Manager</div>
+            <div class="value">{{model1.No_am}}</div>
+          </div>
+          <div class="entry">
+            <div class="label">Superviour</div>
+            <div class="value">{{model1.No_as}}</div>
+          </div>
+          <div class="entry">
+            <div class="label">Security</div>
+            <div class="value">{{model1.No_s}}</div>
+          </div>
+          <div class="entry">
+            <div class="label">Work Type</div>
+            <div class="value">{{model1.shift_type}}</div>
+          </div>
+          <div class="entry">
+              <div class="label">Hours Type</div>
+              <div class="value">{{model1.hour_type}}</div>
+            </div>
+          <div class="entry">
+            <div class="label">Payment Type</div>
+            <div class="value">{{model1.payment_type}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="right-panel">
+        <div class="details"> 
+          <div class="salary">
+            <div class="entry">
+              <div class="label">Salary</div>
+              <div class="detail"></div>
+              <div class="rate"></div>
+              <div class="amount"></div>
+            </div>
+            <div class="entry">
+              <div class="label"></div>
+              <div class="detail">Assistant Manager</div>
+              <div class="rate">{{model1.No_am}}*{{model1.salary_am}}</div>
+              <div class="amount">{{model1.am_tot}}</div>
+            </div>
+            <div class="entry">
+              <div class="label"></div>
+              <div class="detail">Superviour</div>
+              <div class="rate">{{model1.No_as}}*{{model1.salary_as}}</div>
+              <div class="amount">{{model1.am_tot}}</div>
+            </div>
+            <div class="entry">
+              <div class="label"></div>
+              <div class="detail">Security</div>
+              <div class="rate">{{model1.No_s}}*{{model1.salary_s}}</div>
+              <div class="amount">{{model1.s_tot}}</div>
+            </div>
+            <div class="entry">
+              <div class="label"></div>
+              <div class="detail">Over Time for Assistant Manager</div>
+              <div class="rate">{{model1.over_time_am}}/1hrs</div>
+              <div class="amount"> </div>
+            </div>
+            <div class="entry">
+                <div class="label"></div>
+                <div class="detail">Over Time for Superviour</div>
+                <div class="rate">{{model1.over_time_as}}/1hrs</div>
+                <div class="amount"> </div>
+              </div>
+              <div class="entry">
+                  <div class="label"></div>
+                  <div class="detail">Over Time for Security</div>
+                  <div class="rate">{{model1.over_time_s}}/1hrs</div>
+                  <div class="amount"> </div>
+                </div>
+
+          </div>
+          <div class="leaves">
+            <div class="entry">
+              <div class="label"></div>
+              <div class="detail"></div>
+              <div class="rate"></div>
+              <div class="amount"></div>
+            </div>
+            <div class="entry paid">
+              <div class="label"></div>
+              <div class="detail"></div>
+              <div class="rate"></div>
+              <div class="amount"></div>
+            </div>
+            
+          </div>
+          <div class="taxable_allowance">
+            <div class="entry">
+              <div class="label"></div>
+              <div class="detail"></div>
+              <div class="rate"></div>
+              <div class="amount"></div>
+            </div>
+          
+          </div>
+          <div class="taxable_bonus">
+            <div class="entry">
+              <div class="label"></div>
+              <div class="detail"></div>
+              <div class="rate"></div>
+              <div class="amount"></div>
+            </div>
+           
+          </div>
+       <br>  
+          <div class="net_pay">
+            <div class="entry">
+              <div class="label">NET PAY</div>
+              <div class="detail"></div>
+              <div class="rate"></div>
+              <div class="amount">{{model1.total_amount}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="col-12 col-sm-5 form-group">
+        <button class="input1" (click) = "addapi()">Send to Approval</button>
+        </div>
+  </div>

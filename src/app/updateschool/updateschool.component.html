@@ -1,0 +1,151 @@
+
+
+<!-- Steps form -->
+<div class="card">
+    <div class="card-body mb-4">
+
+        <!-- <h2 class="text-center font-weight-bold pt-4 pb-5"><strong>Steps form example</strong></h2> -->
+
+        <form role="form" action="" method="post">
+
+            <!-- First Step -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="font-weight-bold pl-0 my-4"><strong>Step 1</strong></h3>
+                    <div class="form-group service-form-group">
+                            <label>Client ID</label>
+                        <label class="control-label sr-only" for="name"></label>
+                        <input  type="text" placeholder="Client ID" class="form-control" [(ngModel)]="model.ClientID" name="ClientID" >
+                        <div class="form-icon"></div>
+                    </div>
+                    <div class="form-group service-form-group">
+                            <label>Client Name</label>
+                        <label class="control-label sr-only" for="name"></label>
+                        <input  type="text" placeholder="ClientlName" class="form-control" [(ngModel)]="model.ClientName" name="ClientName" >
+                        <div class="form-icon"></div>
+                    </div>
+                   </div>
+            </div>
+
+            <!-- Second Step -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="font-weight-bold pl-0 my-4"><strong>Client Address</strong></h3>
+                    <div class="form-group service-form-group">
+                            <label>Lane / Street</label>
+                        <label class="control-label sr-only" for="name"></label>
+                        <input  type="text" placeholder="Lane / Street" class="form-control" required="" [(ngModel)]="model.ClientAddress_Lane" name="ClientAddress_Lane" >
+                        <div class="form-icon"></div>
+                    </div>
+                    <div class="form-group service-form-group">
+                            <label>Area</label>
+                        <label class="control-label sr-only" for="name"></label>
+                        <input   type="text" placeholder="Area" class="form-control" required="" [(ngModel)]="model.ClientAddress_Area" name="ClientAddress_Area" >
+                        <div class="form-icon"></div>
+                    </div>
+                    <div class="form-group service-form-group">
+                            <label> City</label>
+                        <label class="control-label sr-only" for="name"></label>
+                        <input  type="text" placeholder="City" class="form-control" required="" [(ngModel)]="model.ClientAddress_City" name="ClientAddress_City" >
+                        <div class="form-icon"></div>
+                    </div>
+                    <div class="form-group service-form-group">
+                            <label>Pin Code</label>
+                        <label class="control-label sr-only" for="name"></label>
+                        <input  type="text" placeholder="Pin Code" class="form-control" required="" [(ngModel)]="model.ClientAddress_Pincode" name="ClientAddress_Pincode" >
+                        <div class="form-icon"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>State</label>
+                        <label class="control-label sr-only" for="State"></label>
+                        <input  type="text" placeholder="State" class="form-control" required="" [(ngModel)]="model.ClientAddress_State" name="ClientAddress_State" >
+                    </div>
+
+                    <div class="form-group">
+                            <label>Country</label>
+                        <label class="control-label sr-only" for="Country"></label>
+                        <input  type="text" placeholder="Country" class="form-control" required="" [(ngModel)]="model.ClientAddress_Country" name="ClientAddress_Country" >
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <!-- Third Step -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="font-weight-bold pl-0 my-4"><strong>Primary Contact Person</strong></h3>
+
+                    <div class="form-group service-form-group">
+                            <label> Full Name</label>
+                        <label class="control-label sr-only" for="name"></label>
+                        <input  type="text" placeholder="Full Name" class="form-control" required=""  [(ngModel)]="model.primary_Contact_Person_Name" name="primary_Contact_Person_Name">
+                        <div class="form-icon"></div>
+                    </div>
+
+                    <div class="form-group service-form-group">
+                            <label> Contact Number</label>
+                        <label class="control-label sr-only" for="phone"></label>
+                        <input  type="text" placeholder=" Contact Number" class="form-control" required="" [(ngModel)]="model.primary_Contact_Person_contact_number" name="primary_Contact_Person_contact_number">
+                        <div class="form-icon"></div>
+                    </div>
+
+                    <div class="form-group service-form-group">
+                            <label>Mobile Number</label>
+                        <label class="control-label sr-only" for="phone"></label>
+                        <input  type="text" placeholder=" Mobile Number" class="form-control" required="" [(ngModel)]="model.primary_Contact_Person_mobile_number" name="primary_Contact_Person_mobile_number">
+                        <div class="form-icon"></div>
+                    </div>
+
+                    <div class="form-group service-form-group">
+                            <label>Alternate Email Address</label>
+                        <label class="control-label sr-only" for="Email Address"></label>
+                        <input  type="email" placeholder="Alternate Email Address" class="form-control" required="" [(ngModel)]="model.primary_Contact_Person_email_address" name="primary_Contact_Person_email_address">
+                        <div class="form-icon"></div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- fourth Step -->
+             <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="font-weight-bold pl-0 my-4"><strong>Alternate Contact Person</strong></h3>
+
+                        <div class="form-group service-form-group">
+                                <label> Full Name</label>
+                            <label class="control-label sr-only" for="name"></label>
+                            <input  type="text" placeholder="Full Name" class="form-control" required="" [(ngModel)]="model.alternate_Contact_Person_Name" name="alternate_Contact_Person_Name">
+                            <div class="form-icon"></div>
+                        </div>
+
+                        <div class="form-group service-form-group">
+                                <label> Contact Number</label>
+                            <label class="control-label sr-only" for="phone"></label>
+                            <input  type="text" placeholder=" Contact Number" class="form-control" required="" [(ngModel)]="model.alternate_Contact_Person_contact_number" name="alternate_Contact_Person_contact_number">
+                            <div class="form-icon"></div>
+                        </div>
+
+                        <div class="form-group service-form-group">
+                                <label>Mobile Number</label>
+                            <label class="control-label sr-only" for="phone"></label>
+                            <input  type="text" placeholder=" Mobile Number" class="form-control" required="" [(ngModel)]="model.alternate_Contact_Person_mobile_number" name="alternate_Contact_Person_mobile_number">
+                            <div class="form-icon"></div>
+                        </div>
+
+                        <div class="form-group service-form-group">
+                                <label>Alternate Email Address</label>
+                            <label class="control-label sr-only" for="Email Address"></label>
+                            <input  type="email" placeholder="Alternate Email Address" class="form-control" required="" [(ngModel)]="model.alternate_Contact_Person_email_address" name="alternate_Contact_Person_email_address">
+                            <div class="form-icon"></div>
+                        </div>
+
+                        <button class="btn px-gdn-btn btn-rounded float-right" type="submit"  (click) = "check()" >Submit</button>
+                    </div>
+                </div>
+
+        </form>
+
+    </div>
+  </div>
+  <!-- Steps form -->

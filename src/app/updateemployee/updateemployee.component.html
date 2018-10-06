@@ -1,0 +1,206 @@
+<!-- Adding Employee Page -->
+
+<form>
+    <!-- service-form -->
+    <div class="service-forms">
+        <div class="row">
+  
+          <div class="">
+            <div class="row">
+              <div class="col-sm-12 multistep-form-section">
+                <form name="form"  novalidate>
+                        <div class="row justify-content-md-center">
+                                <div class="col-md-auto">
+                                <h3>Update Employee Registation</h3>
+                                </div>
+                                <div class="col col-lg-2">                                        
+                                </div>
+                              </div>                          
+                <div class="row">
+                        <div class="col-12 col-sm-12 form-group">
+                            <form class="frms" name="form" novalidate>
+                            <div class="row">
+                            <div class="col-12 col-sm-5 form-group">
+                                    <div class="form-group service-form-group">
+                                            <label>User Name</label>
+                                        <input type="text" #email_id [(ngModel)]="adduser.Email_id" placeholder="Email_id" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Sl_No" value="" #Sl_No>
+                                    </div>
+                             </div>
+                             <div class="col-12 col-sm-5 form-group">
+                              <div class="form-group service-form-group">
+                                   <label>Password</label>
+                                  <input type="text" [(ngModel)]="Password" placeholder="Password" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="No_of_Sites" value="" #No_of_Sites>
+                              </div>
+                       </div>
+                 
+             
+           <div class="col-12 col-sm-5 form-group">
+            <div class="form-group service-form-group">
+                    <label>Employee ID
+                    </label>
+                <label class="control-label sr-only" for="name"></label>
+  
+    <input type="text" placeholder="Employee_No" [(ngModel)]="adduser.Employee_No" class="form-control col-md-12"     pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Contact_Name" value="" #Contact_Name>
+               
+            </div>
+     </div>
+
+  <div class="col-12 col-sm-5 form-group">
+    <div class="form-group service-form-group">
+            <label>Name</label>
+        <label class="control-label sr-only" for="name"></label>
+        <input type="text" placeholder="Name" [(ngModel)]="adduser.Name" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="E_Mail_ID" value="" #E_Mail_ID>
+       
+    </div>
+  </div>
+  <div class="col-12 col-sm-5 form-group">
+    <div class="form-group service-form-group">
+            <label>Father_Name</label>
+        <label class="control-label sr-only" for="name"></label>
+        <input type="text" placeholder="Father_Name" [(ngModel)]="adduser.Father_Name" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Designations" value="" #Designations>
+       
+    </div>
+  </div>
+  <div class="col-12 col-sm-5 form-group">
+    <div class="form-group service-form-group">
+            <label>Date_Of_Birth</label>
+        <label class="control-label sr-only" for="name"></label>
+        <input type="text" placeholder="Date_Of_Birth"   [(ngModel)]="adduser.Date_Of_Birth" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Deployment" value="" #Deployment>
+        
+    </div>
+  </div>
+  <div class="col-12 col-sm-5 form-group">
+    <div class="form-group service-form-group">
+            <label>Gender</label>
+        <label class="control-label sr-only" for="name"></label>
+        <!-- <input type="text" placeholder="Gender"  [(ngModel)]="adduser.Gender" class="form-control col-md-12"   pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="Hrs_pattern" value="" #Hrs_pattern /> -->
+        <select class="form-control"  [(ngModel)]="adduser.Gender" name="Hrs_pattern" value="" #Hrs_pattern id="exampleFormControlSelect1">
+            <option>Male </option>
+            <option>Female</option>
+            <option>Transgender</option>
+          </select>  
+    </div>
+  </div>
+  <div class="col-12 col-sm-5 form-group">
+    <div class="form-group service-form-group">
+            <label>Marital_Status</label>
+        <label class="control-label sr-only" for="name"></label>
+        <input type="text" placeholder="Marital_Status" [(ngModel)]="adduser.Marital_Status" class="form-control col-md-12"   pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="RATES" value="" #RATES />
+       
+    </div>
+  </div>
+  <div class="col-12 col-sm-5 form-group">
+    <div class="form-group service-form-group">
+            <label>Educational_Qualification</label>
+        <label class="control-label sr-only" for="name"></label>
+        <input type="text" placeholder="Educational_Qualification" [(ngModel)]="adduser.Educational_Qualification"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="Allowance" value="" #Allowance />
+      
+    </div>
+  </div>
+  <div class="col-12 col-sm-5 form-group">
+    <div class="form-group service-form-group">
+            <label>Nationality</label>
+        <label class="control-label sr-only" for="name"></label>
+        <input type="text" placeholder="Nationality"  [(ngModel)]="adduser.Nationality" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="Total_Allowance" value="" #Total_Allowance />
+      
+    </div>
+  </div>
+  <div class="col-12 col-sm-5 form-group">
+    <div class="form-group service-form-group">
+            <label>Address</label>
+        <label class="control-label sr-only" for="name"></label>
+        <input type="textarea" placeholder="Address"  [(ngModel)]="adduser.Permanent_Address" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="Wages" value="" #Wages />
+       
+    </div>
+  </div>
+  <div class="col-12 col-sm-5 form-group">
+    <div class="form-group service-form-group">
+            <label>Contact_No</label>
+        <label class="control-label sr-only" for="name"></label>
+        <input type="text" placeholder="Contact_No" [(ngModel)]="adduser.Contact_No" class="form-control col-md-12"   pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="Add_Value" value="" #Add_Value />
+       
+    </div>
+  </div>
+  <div class="col-12 col-sm-5 form-group">
+    <div class="form-group service-form-group">
+            <label>Languages_Known</label>
+        <label class="control-label sr-only" for="name"></label>
+        <input type="text" placeholder="Languages_Known" [(ngModel)]="adduser.Languages_Known" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="MARGIN" value="" #MARGIN />
+    
+    </div>
+  </div>
+  <div class="col-12 col-sm-5 form-group">
+    <div class="form-group service-form-group">
+            <label>Work_Experience</label>
+        <label class="control-label sr-only" for="name"></label>
+       
+        <input type="text" placeholder="Work_Experience" [(ngModel)]="adduser.Work_Experience" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Contract_Start_Date" value="" #Contract_Start_Date />
+       
+    </div>
+  </div>
+  <div class="col-12 col-sm-5 form-group">
+      <div class="form-group service-form-group">
+              <label>Aadhar_Card_No</label>
+          <label class="control-label sr-only" for="name"></label>
+          <input  type="text" placeholder="Aadhar_Card_No" [(ngModel)]="adduser.Aadhar_Card_No" class="form-control col-md-12" required=""   pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Signed_by_client" value="" #Signed_by_client >   
+      </div>
+  </div>  
+<div class="col-12 col-sm-5 form-group">
+<div class="form-group service-form-group">
+<label>Date_Of_Joining</label>
+<label class="control-label sr-only" for="name"></label>
+<input id="name" type="text" placeholder="Date_Of_Joining" [(ngModel)]="adduser.Date_Of_Joining" class="form-control col-md-12" required=""    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Aging_Analysis" value="" #Aging_Analysis >    
+</div>
+</div>
+<div class="col-12 col-sm-5 form-group">
+<div class="form-group service-form-group">
+<label>Voter_ID</label>
+<label class="control-label sr-only" for="name"></label>
+<input id="name" type="text" placeholder="Voter_ID" [(ngModel)]="adduser.Voter_ID" class="form-control col-md-12" required=""    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Aging_Analysis" value="" #Aging_Analysis >    
+</div>
+</div>
+<div class="col-12 col-sm-5 form-group">
+<div class="form-group service-form-group">
+<label>Driving_Licence_Number</label>
+<label class="control-label sr-only" for="name"></label>
+<input id="name" type="text" placeholder="Driving_Licence_Number" [(ngModel)]="adduser.Driving_Licence_Number" class="form-control col-md-12" required=""    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Aging_Analysis" value="" #Aging_Analysis >    
+</div>
+</div>
+                      <div class="col-12  col-sm-5 form-group">
+                            <div class="form-group service-form-group">
+                              <label>Emi</label>
+                               <label class="control-label sr-only" for="name"></label>
+                                  <input type="file" class="custom-file-input" id="custom-file-input">
+                                  <label class="custom-file-label px-3" for="custom-file-input">Attach Employee photo</label>
+                                </div>
+                              </div>
+                              <div class="col-12  col-sm-5 form-group">
+                                   
+                                      </div>
+
+
+  <div class="col-12 col-sm-5 form-group">
+  <button class="input1" (click) = "addapi()">Next</button>
+  </div>
+  
+  
+  
+                                 </div>
+                            </form>
+  
+                  </div>
+  
+  
+  
+                    </div>
+  
+  
+                  </form>
+              </div>
+              </div>
+            </div>
+          </div>
+  
+    </div>
+  </form>
+  

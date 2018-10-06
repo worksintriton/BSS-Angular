@@ -1,0 +1,399 @@
+<form>
+
+        <div class="service-forms">
+        <!-- service-form -->
+        <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                      
+                    <div class="col-sm-12 multistep-form-section">
+                                         <form novalidate [formGroup]="myform">
+
+                                                <div class="col-md-12 justify-content-md-center">
+                                                       
+                                                        <h3 style="    width: 100%;
+                                                        background: #f1f4f7;padding: 10px;text-transform: uppercase;">Required Employee</h3>
+                                                        
+                                                        <div class="col col-lg-2">                                        
+                                                        </div>
+                                                      </div> 
+                                                      <br>
+
+
+
+                                                      <div _ngcontent-c7="" class="col-md-12">
+                                                          <div _ngcontent-c7="" class="row">
+                                                            <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                              <div _ngcontent-c7="" class="row">
+                                                                <div _ngcontent-c7="" class="col-md-3">
+                                                                  <label _ngcontent-c7="">No of Assistant Manager</label>
+                                                                </div><div _ngcontent-c7="" class="col-md-9">
+                                                                
+                                                                    <input type="number" class="form-control" [(ngModel)]="addempreq.No_am" name="No_am" value="" #No_am  min="0" formControlName="No_ams" required>
+                                                                    <div class="form-control-feedback"
+                                                                       *ngIf="No_ams.errors && (No_ams.dirty || No_ams.touched)">
+                                                                      <p *ngIf="No_ams.errors.required">No of Assistant Manager is required</p>
+                                                                      <p *ngIf="No_ams.errors.minlength">Invalid Data </p>
+                                                                    </div>
+                                                                  
+                                                                    <div class="col-12 col-sm-5 form-group"
+                                                                    [ngClass]="{
+                                                                     'has-danger': No_ams.invalid && (No_ams.dirty || No_ams.touched),
+                                                                     'has-success': No_ams.valid && (No_ams.dirty || No_ams.touched) }">                                                                        
+                                                                    </div>
+                                                                  
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                              <div _ngcontent-c7="" class="row">
+                                                                <div _ngcontent-c7="" class="col-md-3">
+                                                                  <label _ngcontent-c7="">Amount for One AM</label>
+                                                                </div>
+                                                                <div _ngcontent-c7="" class="col-md-9">
+                                                                    <input type="number" class="form-control" [(ngModel)]="addempreq.salary_am" name="salary_am" value="" #salary_am min="0" formControlName="salary_ams" required>
+                                                                  <div class="form-control-feedback"
+                                                                      *ngIf="salary_ams.errors && (salary_ams.dirty || salary_ams.touched)">
+                                                                    <p *ngIf="salary_ams.errors.required">Amount for One AM is required</p>
+                                                                    <p *ngIf="salary_ams.errors.minlength">Invalid Data </p>
+                                                                  </div>
+                                                                  
+                                    
+                                                                  <div class="col-12 col-sm-5 form-group"
+                                                                  [ngClass]="{
+                                                                   'has-danger': salary_ams.invalid && (salary_ams.dirty || salary_ams.touched),
+                                                                   'has-success': salary_ams.valid && (salary_ams.dirty || salary_ams.touched)}">                                                            
+                                                                   </div>
+                                    
+                                    
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+
+
+
+
+
+
+                                                        <div _ngcontent-c7="" class="col-md-12">
+                                                            <div _ngcontent-c7="" class="row">
+                                                              <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                <div _ngcontent-c7="" class="row">
+                                                                  <div _ngcontent-c7="" class="col-md-3">
+                                                                    <label _ngcontent-c7="">No of Supervisor</label>
+                                                                  </div><div _ngcontent-c7="" class="col-md-9">
+                                                                  
+                                                                      <input type="number" class="form-control" [(ngModel)]="addempreq.No_as" name="No_as" value="" #No_as min="0" formControlName="No_ass" required>
+                                                                      <div class="form-control-feedback"
+                                                                         *ngIf="No_ass.errors && (No_ass.dirty || No_ass.touched)">
+                                                                        <p *ngIf="No_ass.errors.required">No of Supervisor is required</p>
+                                                                        <p *ngIf="No_ass.errors.minlength">Invalid Data </p>
+                                                                      </div>
+                                                                    
+                                                                      <div class="col-12 col-sm-5 form-group"
+                                                                      [ngClass]="{
+                                                                       'has-danger': No_ass.invalid && (No_ass.dirty || No_ass.touched),
+                                                                       'has-success': No_ass.valid && (No_ass.dirty || No_ass.touched) }">                          
+                                                                     </div>
+                                                                    
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                              <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                <div _ngcontent-c7="" class="row">
+                                                                  <div _ngcontent-c7="" class="col-md-3">
+                                                                    <label _ngcontent-c7="">Pay for one supervisor</label>
+                                                                  </div>
+                                                                  <div _ngcontent-c7="" class="col-md-9">
+                                                                      <input type="number" class="form-control"  [(ngModel)]="addempreq.salary_as" name="salary_as" value="" #salary_as min="0" formControlName="salary_ass" required>
+                                                                  <div class="form-control-feedback"
+                                                                      *ngIf="salary_ass.errors && (salary_ass.dirty || salary_ass.touched)">
+                                                                    <p *ngIf="salary_ass.errors.required">Pay for one supervisor is required</p>
+                                                                    <p *ngIf="salary_ass.errors.minlength">Invalid Data </p>
+                                                                  </div>
+                                                                    
+                                      
+                                                                  <div class="col-12 col-sm-5 form-group"
+                                                                  [ngClass]="{
+                                                                   'has-danger': salary_ass.invalid && (salary_ass.dirty || salary_ass.touched),
+                                                                   'has-success': salary_ass.valid && (salary_ass.dirty || salary_ass.touched) }">
+                                                                  </div>
+                                      
+                                      
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+
+
+
+
+                                                          <div _ngcontent-c7="" class="col-md-12">
+                                                              <div _ngcontent-c7="" class="row">
+                                                                <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                  <div _ngcontent-c7="" class="row">
+                                                                    <div _ngcontent-c7="" class="col-md-3">
+                                                                      <label _ngcontent-c7="">No of Security</label>
+                                                                    </div><div _ngcontent-c7="" class="col-md-9">
+                                                                    
+                                                                        <input type="number" class="form-control" [(ngModel)]="addempreq.No_s" name="No_s" value="" #No_s  min="0" formControlName="No_ss" required>
+                                                                        <div class="form-control-feedback"
+                                                                           *ngIf="No_ss.errors && (No_ss.dirty || No_ss.touched)">
+                                                                          <p *ngIf="No_ss.errors.required">No of Security is required</p>
+                                                                          <p *ngIf="No_ss.errors.minlength">Invalid Data </p>
+                                                                        </div>
+                                                                      
+                                                                        <div class="col-12 col-sm-5 form-group"
+                                                                        [ngClass]="{
+                                                                         'has-danger': No_ss.invalid && (No_ss.dirty || No_ss.touched),
+                                                                         'has-success': No_ss.valid && (No_ss.dirty || No_ss.touched) }">
+                                                                   
+                                                                        </div>
+                                                                      
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                                <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                  <div _ngcontent-c7="" class="row">
+                                                                    <div _ngcontent-c7="" class="col-md-3">
+                                                                      <label _ngcontent-c7="">Pay for one Security</label>
+                                                                    </div>
+                                                                    <div _ngcontent-c7="" class="col-md-9">
+                                                                        <input type="number" class="form-control" [(ngModel)]="addempreq.salary_s" name="salary_s" value="" #salary_s  min="0" formControlName="salary_ss" required>
+                                                                        <div class="form-control-feedback"
+                                                                            *ngIf="salary_ss.errors && (salary_ss.dirty || salary_ss.touched)">
+                                                                          <p *ngIf="salary_ss.errors.required">Pay for one Security is required</p>
+                                                                          <p *ngIf="salary_ss.errors.minlength">Invalid Data </p>
+                                                                        </div>
+                                                                      
+                                        
+                                                                        <div class="col-12 col-sm-5 form-group"
+                                                                        [ngClass]="{
+                                                                         'has-danger': salary_ss.invalid && (salary_ss.dirty || salary_ss.touched),
+                                                                         'has-success': salary_ss.valid && (salary_ss.dirty || salary_ss.touched) }">
+                                                                        </div>
+                                        
+                                        
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+
+
+
+
+
+
+                                                            <div _ngcontent-c7="" class="col-md-12">
+                                                                <div _ngcontent-c7="" class="row">
+                                                                  <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                    <div _ngcontent-c7="" class="row">
+                                                                      <div _ngcontent-c7="" class="col-md-3">
+                                                                        <label _ngcontent-c7="">Shift Type</label>
+                                                                      </div><div _ngcontent-c7="" class="col-md-9">
+                                                                      
+                                                                          <select class="form-control" [(ngModel)]="addempreq.shift_type" name="shift_type" value="" #shift_type id="exampleFormControlSelect1"class="form-control" formControlName="shift_types" required>
+                                                                              <option>Day</option>
+                                                                              <option>Night</option>
+                                                                            </select>  
+                                                                     
+                                                                      <div class="form-control-feedback"
+                                                                         *ngIf="shift_types.errors && (shift_types.dirty || shift_types.touched)">
+                                                                        <p *ngIf="shift_types.errors.required">Shift Type is required</p>
+                                                                        <p *ngIf="shift_types.errors.minlength">Invalid Data </p>
+                                                                      </div>
+                                                                        
+                                                                      <div class="col-12 col-sm-5 form-group"
+                                                                      [ngClass]="{
+                                                                       'has-danger': shift_types.invalid && (shift_types.dirty || shift_types.touched),
+                                                                       'has-success': shift_types.valid && (shift_types.dirty || shift_types.touched)}">
+                                                                           </div>
+                                                                        
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                  <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                    <div _ngcontent-c7="" class="row">
+                                                                      <div _ngcontent-c7="" class="col-md-3">
+                                                                        <label _ngcontent-c7="">Hours Type</label>
+                                                                      </div>
+                                                                      <div _ngcontent-c7="" class="col-md-9">
+                                                                          <select class="form-control" [(ngModel)]="addempreq.hour_type" name="hour_type" value="" #shift_type id="exampleFormControlSelect1"class="form-control" formControlName="hour_types" required>
+                                                                              <option>8 hrs</option>
+                                                                              <option>12 hrs</option>
+                                                                            </select>  
+                                                                     
+                                                                      <div class="form-control-feedback"
+                                                                         *ngIf="hour_types.errors && (hour_types.dirty || hour_types.touched)">
+                                                                        <p *ngIf="hour_types.errors.required">Hours Type is required</p>
+                                                                        <p *ngIf="hour_types.errors.minlength">Invalid Data </p>
+                                                                      </div>
+                                                                        
+                                          
+                                                                      <div class="col-12 col-sm-5 form-group"
+                                                                      [ngClass]="{
+                                                                       'has-danger': hour_types.invalid && (hour_types.dirty || hour_types.touched),
+                                                                       'has-success': hour_types.valid && (hour_types.dirty || hour_types.touched)}">  
+                                                                     </div>
+                                          
+                                          
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+
+
+
+
+
+
+
+                                                              <div _ngcontent-c7="" class="col-md-12">
+                                                                  <div _ngcontent-c7="" class="row">
+                                                                    <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                      <div _ngcontent-c7="" class="row">
+                                                                        <div _ngcontent-c7="" class="col-md-3">
+                                                                          <label _ngcontent-c7="">Over Time pay For Assistant Manager</label>
+                                                                        </div><div _ngcontent-c7="" class="col-md-9">
+                                                                        
+                                                                            <input type="number" class="form-control" [(ngModel)]="addempreq.over_time_am" name="over_time_am" value="" #over_time_am min="0" formControlName="over_time_ams" required>
+                                                                            <div class="form-control-feedback"
+                                                                            *ngIf="over_time_ams.errors && (over_time_ams.dirty || over_time_ams.touched)">
+                                                                            <p *ngIf="over_time_ams.errors.required">Over Time pay For Assistant Manager is required</p>
+                                                                            <p *ngIf="over_time_ams.errors.minlength">Invalid Data </p>
+                                                                            </div>
+                                                                          
+                                                                            <div class="col-12 col-sm-5 form-group"
+                                                                            [ngClass]="{
+                                                                             'has-danger': over_time_ams.invalid && (over_time_ams.dirty || over_time_ams.touched),
+                                                                             'has-success': over_time_ams.valid && (over_time_ams.dirty || over_time_ams.touched)
+                                                                            }">
+                                                                           </div>
+                                                                          
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                    <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                      <div _ngcontent-c7="" class="row">
+                                                                        <div _ngcontent-c7="" class="col-md-3">
+                                                                          <label _ngcontent-c7="">Over Time For supervisor</label>
+                                                                        </div>
+                                                                        <div _ngcontent-c7="" class="col-md-9">
+                                                                            <select class="form-control" [(ngModel)]="addempreq.hour_type" name="hour_type" value="" #shift_type id="exampleFormControlSelect1"class="form-control" formControlName="hour_types" required>
+                                                                                <option>8 hrs</option>
+                                                                                <option>12 hrs</option>
+                                                                              </select>  
+                                                                       
+                                                                        <div class="form-control-feedback"
+                                                                           *ngIf="hour_types.errors && (hour_types.dirty || hour_types.touched)">
+                                                                          <p *ngIf="hour_types.errors.required">Hours Type is required</p>
+                                                                          <p *ngIf="hour_types.errors.minlength">Invalid Data </p>
+                                                                        </div>
+                                                                          
+                                            
+                                                                        <div class="col-12 col-sm-5 form-group"
+                                                                        [ngClass]="{
+                                                                         'has-danger': hour_types.invalid && (hour_types.dirty || hour_types.touched),
+                                                                         'has-success': hour_types.valid && (hour_types.dirty || hour_types.touched)}">  
+                                                                       </div>
+                                            
+                                            
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+
+
+
+
+
+
+
+                                                                <div _ngcontent-c7="" class="col-md-12">
+                                                                    <div _ngcontent-c7="" class="row">
+                                                                      <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                        <div _ngcontent-c7="" class="row">
+                                                                          <div _ngcontent-c7="" class="col-md-3">
+                                                                            <label _ngcontent-c7="">Over Time pay for Security</label>
+                                                                          </div><div _ngcontent-c7="" class="col-md-9">
+                                                                          
+                                                                              <input type="number" class="form-control" [(ngModel)]="addempreq.over_time_s" name="over_time_s" value="" #over_time_s min="0" formControlName="over_time_ss" required>
+                                                                              <div class="form-control-feedback"
+                                                                              *ngIf="over_time_ss.errors && (over_time_ss.dirty || over_time_ss.touched)">
+                                                                              <p *ngIf="over_time_ss.errors.required">Over Time pay for Security is required</p>
+                                                                              <p *ngIf="over_time_ss.errors.minlength">Invalid Data </p>
+                                                                              </div>
+                                                                            
+                                                                              <div class="col-12 col-sm-5 form-group"
+                                                                              [ngClass]="{
+                                                                               'has-danger': over_time_ass.invalid && (over_time_ass.dirty || over_time_ass.touched),
+                                                                               'has-success': over_time_ass.valid && (over_time_ass.dirty || over_time_ass.touched)
+                                                                              }">
+                                                                              </div>
+                                                                            
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                      <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                        <div _ngcontent-c7="" class="row">
+                                                                          <div _ngcontent-c7="" class="col-md-3">
+                                                                            <label _ngcontent-c7="">Payment Type</label>
+                                                                          </div>
+                                                                          <div _ngcontent-c7="" class="col-md-9">
+                                                                              <select class="form-control" [(ngModel)]="addempreq.payment_type" name="payment_type" value="" #payment_type id="exampleFormControlSelect1"class="form-control" formControlName="payment_types" required>
+                                                                                  <option>Cash</option>
+                                                                                  <option>Bank Transection</option>
+                                                                                  <option>cheque</option>
+                                                                                </select>  
+                                                                          <div class="form-control-feedback"
+                                                                          *ngIf="payment_types.errors && (payment_types.dirty || payment_types.touched)">
+                                                                          <p *ngIf="payment_types.errors.required">Payment Type is required</p>
+                                                                          <p *ngIf="payment_types.errors.minlength">Invalid Data </p>
+                                                                          </div>
+                                                                            
+                                              
+                                                                          <div class="col-12 col-sm-5 form-group"
+                                                                            [ngClass]="{
+                                                                            'has-danger': payment_types.invalid && (payment_types.dirty || payment_types.touched),
+                                                                            'has-success': payment_types.valid && (payment_types.dirty || payment_types.touched)
+                                                                            }">
+                                                                            </div>
+                                              
+                                              
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+
+
+    
+                                                <div class="row">
+
+                                                       
+
+                                        <div class="col-md-12 col-sm-5 form-group">
+                                        <button class="input1" (click) = "addapi()">Next Step</button>
+                                        </div>
+                                 </div>   
+                                </form>
+                       
+        
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+      </form>
+
+
+
+  

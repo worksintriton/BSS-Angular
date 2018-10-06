@@ -1,0 +1,228 @@
+<div class="container">  
+    <div class="row">
+        <div class="col-12">
+        <label for="country">Select Client</label>
+      <select id="country" name="country">
+        <option value="australia">select</option>
+        <option value="australia">CLI01,M&CO</option>
+        <option value="canada">CLI02,T&CO</option>
+        <option value="usa">CLI4,G&co</option>
+      </select>
+      </div>
+     </div>
+     <div class="row">
+     <div class="col-12 ">
+      <div class="Emp" style="background: #ffffff; margin-left: -17px;
+      margin-right: -17px; width: 100% ; border: 1px solid #aaa;
+          border-radius: 4px;
+          padding: .5em .5em 0;">
+          <label>Client Details</label>
+              <table style="width:100%">
+                       <tr>
+                        <th>Client ID</th>
+                        <td>: {{model.Employee_No}}</td>
+                      </tr> 
+                          <tr>
+                        <th>Company Name</th>
+                        <td>: {{model.Designation}}</td>
+                      </tr>
+                      <tr>
+                        <th>Company Address</th>
+                        <td>: {{model.Name}}</td>
+                      </tr>    
+                       <tr>
+                        <th>Contact Number</th>
+                        <td>: {{model.Local_Address}}</td>
+                      </tr>
+                      <tr>
+                        <th>Contract Person</th>
+                        <td>: {{model.Contact_No}}</td>
+                      </tr>
+                       <tr>
+                        <th>Deployment</th>
+                        <td>: {{model.EPF_No}}</td>
+                      </tr>
+                      <tr>
+                        <th>No of Assistant Manager</th>
+                        <td>: {{model.ESIC_No}}</td>
+                      </tr>
+                       <tr>
+                        <th>No of supervisor</th>
+                        <td>: {{model.BSS_EPF_Number}}</td>
+                      </tr>
+                      <tr>
+                        <th>No of Security</th>
+                        <td>: {{model.BSSPL_EPF_Number}}</td>
+                      </tr>
+                       <tr>
+                        <th>Contract Start Date</th>
+                        <td>: {{model.PF_Elegible}}</td>
+                      </tr>
+                      <tr>
+                        <th>Contract End Date</th>
+                        <td>: {{model.ESI_Elegible}}</td>
+                      </tr>              
+              </table> 
+      </div>
+    </div>
+    </div>
+    <br>
+     <div class="row">
+        <div class="col-12 col-sm-6">
+            <p>Select Start Date</p>
+            <div class="input-group">
+                <input class="form-control" placeholder="yyyy-mm-dd"
+                       name="dp" [displayMonths]="displayMonths" [navigation]="navigation" ngbDatepicker
+                       #d="ngbDatepicker">
+    
+                <button class="btn px-gdn-btn px-gdn-btn-icon px-4 input-group-addon" type="button" (click)="d.toggle()">
+                  <i class="material-icons">date_range</i>
+                </button>
+              </div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <p>Select End Date</p>
+            <div class="input-group">
+                <input class="form-control" placeholder="yyyy-mm-dd"
+                       name="dp" [displayMonths]="displayMonths" [navigation]="navigation" ngbDatepicker
+                       #d2="ngbDatepicker">
+                <button class="btn px-gdn-btn px-gdn-btn-icon px-4 input-group-addon" type="button" (click)="d2.toggle()">
+                  <i class="material-icons">date_range</i>
+                </button>
+              </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-12 col-sm-5 form-group">
+          <div class="form-group service-form-group">
+                  <label>Select Employee Type</label>
+              <label class="control-label sr-only" for="name"></label>
+              <!-- <input type="text" placeholder="Gender"  [(ngModel)]="adduser.Gender" class="form-control col-md-12"   pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="Hrs_pattern" value="" #Hrs_pattern /> -->
+              <select class="form-control"  [(ngModel)]="adduser.Gender" name="Hrs_pattern" value="" #Hrs_pattern id="exampleFormControlSelect1">
+                  <option></option>  
+                <option>Assistant Manager</option>
+                  <option>Supervisor</option>
+                  <option>Security</option>
+                </select>  
+          </div>
+        </div>
+        <div class="col-12 col-sm-5 form-group">
+            <div class="form-group service-form-group">
+                    <label>Select Assiant Manager</label>
+                <label class="control-label sr-only" for="name"></label>
+                <!-- <input type="text" placeholder="Gender"  [(ngModel)]="adduser.Gender" class="form-control col-md-12"   pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="Hrs_pattern" value="" #Hrs_pattern /> -->
+                <select class="form-control"  [(ngModel)]="adduser.Gender" name="Hrs_pattern" value="" #Hrs_pattern id="exampleFormControlSelect1">
+                    <option></option>    
+                  <option>Mohan</option>
+                    <option>Karthick</option>
+                    
+                  </select>  
+            </div>
+          </div>
+          <div class="col-12 col-sm-5 form-group">
+              <div class="form-group service-form-group">
+                      <label>Select Supervisor</label>
+                  <label class="control-label sr-only" for="name"></label>
+                  <!-- <input type="text" placeholder="Gender"  [(ngModel)]="adduser.Gender" class="form-control col-md-12"   pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="Hrs_pattern" value="" #Hrs_pattern /> -->
+                  <select class="form-control"  [(ngModel)]="adduser.Gender" name="Hrs_pattern" value="" #Hrs_pattern id="exampleFormControlSelect1">
+                      <option></option>   
+                    <option>Kurmaran</option>
+                      <option>Sakthi</option>
+                      <option>Suri</option>
+                    </select>  
+              </div>
+            </div>
+      
+
+        <div class="service-form col-md-12">
+          <div class="row">
+              <div class="col">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="tabl" >
+                        <table class="table table-bordered table-responsive" style="border-collapse:collapse;">
+                            <thead>
+                                <tr>
+                                    <th>Select</th>
+                                    <th>Id</th>
+                                    <th>Employee_No</th>
+                                    <th>Name</th>
+                                    <th>Gender</th>
+                                    <th>Contact_No</th>
+                                    <th>Date_Of_Joining</th>
+                                    <th>Email_id</th>
+                                    <th>Local_Address</th>
+                               
+                                </tr>
+                            </thead>
+                            <tbody>
+                                        <!-- <ng-container  *ngFor="let data of datas.data"> -->
+                                            
+                                        <!-- <tr colspan="6" data-toggle="collapse" [attr.data-target]="10"  class="accordion-toggle"> -->
+                                          <tr>
+                                            <td><input type="checkbox" name="vehicle" value="Bike"></td>
+                                            <td>1</td>
+                                            <td id="l1">234</td>
+                                            <td id="a1">Mohammed</td>
+                                            <td id="pc1">Male</td>
+                                            <td id="pc1">8765432111</td>
+                                            <td id="pc1">23/09/2018</td>
+                                            <td id="pc1">mohammed@gmail.com</td>
+                                            <td id="pc1">Vadapalani</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox" name="vehicle" value="Bike"></td>
+                                            <td>1</td>
+                                            <td id="l1">234</td>
+                                            <td id="a1">Mohammed</td>
+                                            <td id="pc1">Male</td>
+                                            <td id="pc1">8765432111</td>
+                                            <td id="pc1">23/09/2018</td>
+                                            <td id="pc1">mohammed@gmail.com</td>
+                                            <td id="pc1">Vadapalani</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox" name="vehicle" value="Bike"></td>
+                                            <td>1</td>
+                                            <td id="l1">234</td>
+                                            <td id="a1">Mohammed</td>
+                                            <td id="pc1">Male</td>
+                                            <td id="pc1">8765432111</td>
+                                            <td id="pc1">23/09/2018</td>
+                                            <td id="pc1">mohammed@gmail.com</td>
+                                            <td id="pc1">Vadapalani</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox" name="vehicle" value="Bike"></td>
+                                            <td>1</td>
+                                            <td id="l1">234</td>
+                                            <td id="a1">Mohammed</td>
+                                            <td id="pc1">Male</td>
+                                            <td id="pc1">8765432111</td>
+                                            <td id="pc1">23/09/2018</td>
+                                            <td id="pc1">mohammed@gmail.com</td>
+                                            <td id="pc1">Vadapalani</td>
+                                        </tr>
+                                        <!-- </ng-container> -->
+        
+                            </tbody>
+                        </table>
+                        <div *ngIf="loading" ><div class="loader text-center"></div></div>
+        
+                        <div class="card-footer p-0">
+                        <ngb-pagination [collectionSize]="collsize" [(page)]="advancedPage" (pageChange)="newsync()" [boundaryLinks]="true" ></ngb-pagination>
+                                </div>
+        
+                  </div>
+                  </div>
+                </div>
+                </div>
+        </div>
+        </div>  
+                <div *ngIf="deleteLoading" id="snackbar" class="show">Deleting... Pleaser Wait!</div> 
+      <input type="submit" value="Submit"  (click) = "addapi()" >
+    
+  </div>

@@ -1,0 +1,314 @@
+<div class="container">
+
+
+    <div class="row justify-content-md-center">
+                          
+        <div class="col-md-auto">
+        <h3>Edit Report</h3>
+        </div>
+        <div class="col col-lg-2">                                        
+        </div>
+      </div>
+      <br>
+   
+  
+      <div class="row">
+          <div class="col-12 col-sm-6">
+          <div class="Emp" style="background: #ffffff; margin-left: -17px;
+          margin-right: -17px; width: 100% ; border: 1px solid #aaa;
+              border-radius: 4px;
+              padding: .5em .5em 0;">
+              <label>Employee Details</label>
+                  <table style="width:100%">
+                           <tr>
+                            <th>Employee_No</th>
+                            <td>: {{model.Employee_No}}</td>
+                          </tr>
+                          
+                              <tr>
+                            <th>Designation</th>
+                            <td>: {{model.Designation}}</td>
+                          </tr>
+                          <tr>
+                            <th>Name</th>
+                            <td>: {{model.Name}}</td>
+                          </tr>    
+                           <tr>
+                            <th>Address</th>
+                            <td>: {{model.Local_Address}}</td>
+                          </tr>
+                          <tr>
+                            <th>Contact_No</th>
+                            <td>: {{model.Contact_No}}</td>
+                          </tr>
+                           <tr>
+                            <th>EPF_No</th>
+                            <td>: {{model.EPF_No}}</td>
+                          </tr>
+                          <tr>
+                            <th>ESIC_No</th>
+                            <td>: {{model.ESIC_No}}</td>
+                          </tr>
+                         
+                         
+                           <tr>
+                            <th>BSS_EPF_Number</th>
+                            <td>: {{model.BSS_EPF_Number}}</td>
+                          </tr>
+                          <tr>
+                            <th>BSSPL_EPF_Number</th>
+                            <td>: {{model.BSSPL_EPF_Number}}</td>
+                          </tr>
+                           <tr>
+                            <th>MMSPL_EPF_Number</th>
+                            <td>: {{model.MMSPL_EPF_Number}}</td>
+                          </tr>
+                          <tr>
+                            <th>UAN_Number</th>
+                            <td>: {{model.UAN_Number}}</td>
+                          </tr>
+                           <tr>
+                            <th>Date_Of_Joining</th>
+                            <td>: {{model.Date_Of_Joining}}</td>
+                          </tr>
+                          <tr>
+                            <th>Date_Of_Relieving</th>
+                            <td>: {{model.Date_Of_Relieving}}</td>
+                          </tr>
+                          
+                        
+                           <tr>
+                            <th>PF_Elegible</th>
+                            <td>: {{model.PF_Elegible}}</td>
+                          </tr>
+                          <tr>
+                            <th>ESI_Elegible</th>
+                            <td>: {{model.ESI_Elegible}}</td>
+                          </tr>
+                          <tr>
+                            <th>Professional_Tax</th>
+                            <td>: {{model.Professional_Tax}}</td>
+                          </tr>
+                          <tr>
+                            <th>Working_Status</th>
+                            <td>: {{model.Working_Status}}</td>
+                          </tr>
+                          <tr>
+                            <th>Emi</th>
+                            <td>: {{model.Emi}}</td>
+                          </tr>                
+                  </table> 
+                        
+                        
+          
+          </div>
+  
+  
+        </div>
+        <div class="col-12 col-sm-6">
+            <div class="Emp" style="background: #ffffff; margin-left: -17px;
+            margin-right: -17px; width: 100% ; border: 1px solid #aaa; height: 100%;
+                border-radius: 4px;
+                padding: .5em .5em 0;">
+                <label>Work Details</label>
+                    <table style="width:100%">
+                        <tr>
+                            <th>Client ID</th>
+                            <td>: {{model.Employee_No}}</td>
+                          </tr>
+                             <tr>
+                              <th>Company Name</th>
+                              <td>: {{model.Employee_No}}</td>
+                            </tr>
+                            <tr>
+                                <th>Company Contact No</th>
+                                <td>: {{model.Employee_No}}</td>
+                              </tr>
+                              <tr>
+                                  <th>Company Address</th>
+                                  <td>: {{model.Employee_No}}</td>
+                                </tr>
+                                  <tr>
+                                      <th>Employee_No</th>
+                                      <td>: {{model.Employee_No}}</td>
+                                    </tr>
+                                <tr>
+                              <th>Designation</th>
+                              <td>: {{model.Designation}}</td>
+                            </tr>
+                            <tr>
+                              <th>Name</th>
+                              <td>: {{model.Name}}</td>
+                            </tr>
+                             <tr>
+                              <th>NO.OF Days Working</th>
+                              <td>: {{model.Father_Name}}</td>
+                            </tr>
+                            <tr>
+                              <th>No. of Days Leave</th>
+                              <td>: {{model.Date_Of_Birth}}</td>
+                            </tr>
+                             <tr>
+                              <th>Over time</th>
+                              <td>: {{model.Gender}}</td>
+                            </tr>
+                             <tr>
+                              <th>Penalty</th>
+                              <td>: {{model.contact_details}}</td>
+                             </tr>  
+                             <tr>
+                                <th>salary</th>
+                                <td>: {{model.contact_details}}</td>
+                               </tr>          
+                    </table>          
+            </div>
+          </div>
+          </div>
+  
+  <br>
+  
+  <form>
+      <!-- service-form -->
+      <div class="service-forms">
+  
+         
+          <div class="row">
+    
+            <div class="">
+              <div class="row">
+                <div class="col-sm-12 multistep-form-section">
+    
+                  <form name="form"  novalidate>
+  
+                          <div class="row justify-content-md-center">
+                          
+                                  <div class="col-md-auto">
+                                  <h3>Generate Report</h3>
+                                  </div>
+                                  <div class="col col-lg-2">                                        
+                                  </div>
+                                </div>
+                                
+                  <div class="row">
+                          <div class="col-12 col-sm-12 form-group">
+                              <form class="frms" name="form" novalidate>
+                              <div class="row">
+  
+                                      <div class="col-12  form-group">
+                                  
+                                       </div>
+                              <div class="col-12 col-sm-5 form-group">
+                                      <div class="form-group service-form-group">
+                                              <label>EPF Amount</label>
+                                          <input type="text" #Employee_ID [(ngModel)]="adduser.Employee_ID" placeholder="EPF Amount" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Employee_ID" value="" #Employee_ID>
+                                      </div>
+                               </div>
+                               <div class="col-12 col-sm-5 form-group">
+                                <div class="form-group service-form-group">
+                                     <label>ESIC Amount</label>
+                                    <input type="text" [(ngModel)]="adduser.Name" placeholder="ESIC Amount" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Name" value="" #Name>
+                                </div>
+                         </div>
+                         <div class="col-12 col-sm-5 form-group">
+                          <div class="form-group service-form-group">
+                                  <label>BSS EPF Amount</label>
+                              <label class="control-label sr-only" for="name"></label>
+                              <input type="text" placeholder="BSS EPF Amount"  [(ngModel)]="adduser.Designation" class="form-control col-md-12"   pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Designation" value="" #Designation>
+                          </div>
+                   </div>
+                   <div class="col-12 col-sm-5 form-group">
+                    <div class="form-group service-form-group">
+                            <label>BSSPL EPF Amount</label>
+                        <label class="control-label sr-only" for="name"></label>
+                        <input type="text" placeholder="BSSPL EPF Amount" [(ngModel)]="adduser.Phone_number" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="Phone_number" value="" #Phone_number>
+                        
+                    </div>
+             </div>
+          
+      
+    <div class="col-12 col-sm-5 form-group">
+      <div class="form-group service-form-group">
+              <label>MMSPL EPF Amount</label>
+          <label class="control-label sr-only" for="name"></label>
+          <input type="text" placeholder="MMSPL EPF Amount" [(ngModel)]="adduser.Email_id" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Email_id" value="" #Email_id>
+         
+      </div>
+    </div>
+    <div class="col-12 col-sm-5 form-group">
+          <div class="form-group service-form-group">
+                  <label>PF Amount</label>
+              <label class="control-label sr-only" for="name"></label>
+              <input type="text" placeholder="PF Amount" [(ngModel)]="adduser.Password" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Password" value="" #Password>
+             
+          </div>
+        </div>
+  
+  
+        <div class="col-12 col-sm-5 form-group">
+            <div class="form-group service-form-group">
+                    <label>ESI Amount</label>
+                <label class="control-label sr-only" for="name"></label>
+                <input type="text" placeholder="ESI Amount" [(ngModel)]="adduser.Password" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Password" value="" #Password>
+               
+            </div>
+          </div>
+  
+          <div class="col-12 col-sm-5 form-group">
+              <div class="form-group service-form-group">
+                      <label>Professional Tax</label>
+                  <label class="control-label sr-only" for="name"></label>
+                  <input type="text" placeholder="Professional Tax" [(ngModel)]="adduser.Password" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Password" value="" #Password>
+                 
+              </div>
+            </div>
+  
+            <div class="col-12 col-sm-5 form-group">
+                <div class="form-group service-form-group">
+                        <label>Emi Amount</label>
+                    <label class="control-label sr-only" for="name"></label>
+                    <input type="text" placeholder="Emi Amount" [(ngModel)]="adduser.Password" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Password" value="" #Password>
+                   
+                </div>
+              </div>
+  
+              <div class="col-12 col-sm-5 form-group">
+                  <div class="form-group service-form-group">
+                          <label>Penalty Amount</label>
+                      <label class="control-label sr-only" for="name"></label>
+                      <input type="text" placeholder="Penalty Amount" [(ngModel)]="adduser.Password" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Password" value="" #Password>
+                     
+                  </div>
+                </div>
+  
+  
+  
+    <div class="col-12 col-sm-5 form-group">
+    <button class="input1" (click) = "addapi()">Next</button>
+    </div>
+    
+    
+    
+                                   </div>
+                              </form>
+    
+                    </div>
+    
+    
+    
+                      </div>
+    
+    
+                    </form>
+                </div>
+                </div>
+              </div>
+            </div>
+    
+      </div>
+    </form>
+   
+      </div>
+  
+  
+      
+  
