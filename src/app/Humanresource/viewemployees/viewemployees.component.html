@@ -16,20 +16,19 @@
           <div class="col-md-12">
             <div class="row">
               <div class="tabl" >
-                  <table class="table table-bordered table-responsive" style="border-collapse:collapse;">
+                  <table class="table table-bordered " style="border-collapse:collapse;">
                       <thead>
                           <tr>
-                              <th>Id</th>
-                              <th>Employee_No</th>
-                              <th>Name</th>
-                              <th>Gender</th>
-                              <th>Contact_No</th>
-                              <th>Date_Of_Joining</th>
-                              <th>Email_id</th>
-                              <th>Local_Address</th>
-                              <th>View</th>
-                              <th>Edit</th>
-                              <th>Delete</th>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Contact_No</th>
+                            <th>Date_Of_Joining</th>
+                            <th>Email_id</th>
+                            <th>Local_Address</th>
+                            <th>View</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                           </tr>
                       </thead>
                       <tbody>
@@ -37,14 +36,13 @@
                                       
                                   <tr colspan="6" data-toggle="collapse" [attr.data-target]="10"  class="accordion-toggle">
                                      
-                                      <td>{{data.Employee_No}}</td>
-                                      <td id="l1">{{data.Name}}</td>
-                                      <td id="a1">{{data.Gender}}</td>
-                                      <td id="pc1">{{data.Contact_No}}</td>
-                                      <td id="pc1">{{data.Date_Of_Joining}}</td>
-                                      <td id="pc1">{{data.Email_id}}</td>
-                                      <td id="pc1">{{data.Local_Address}}</td>
-                                      <td id="pc1">{{data.Address}}</td>
+                                    <td>{{i+1}}</td>  
+                                    <td id="l1">{{data.Name}}</td>
+                                    <td id="a1">{{data.gender}}</td>
+                                    <td id="pc1">{{data.Mobile_No}}</td>
+                                    <td id="pc1">{{data.date_joining}}</td>
+                                    <td id="pc1">{{data.Email_ID}}</td>
+                                    <td id="pc1">{{data.Address}}</td>
                                       <td> <button class="accordion-toggle delete btn mat-button-wrapper btn-sm" data-toggle="collapse"  (click)="view($event, data)"><i _ngcontent-c6="" class="m-1 icon-screen-desktop"></i></button></td>
                                       <td><button type="button" data-toggle="modal"  data-uid="1" class="update btn btn-primary btn-sm"  (click)="edit($event, data)"><i _ngcontent-c6="" class="material-icons m-1 ng-star-inserted">create</i></button></td> 
                                       <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class="delete btn btn-danger btn-sm"   (click)="open($event, data)" ><i _ngcontent-c6="" class="m-1 icon-close"  ></i></button></td>

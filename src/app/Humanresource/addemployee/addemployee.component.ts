@@ -86,7 +86,7 @@ export class AddemployeeComponent {
       console.log(this.datas);
       if(this.datas.status == "Success"){
         alert(" Add SuccessFully");
-        this.router.navigate(['main/addemployee1/' + this.email_id])
+        this.router.navigate(['main/viewemployees'])
       }else{
       }
      
