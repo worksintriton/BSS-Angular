@@ -266,8 +266,8 @@ app-main-page .application .side-nav .user-info {
   padding-bottom: 0px;
 }
 .notifications {
-  width:50px;
-  height:50px;
+  width:40px;
+  height:40px;
   background:#fff;
   border-radius:30px;
   box-sizing:border-box;
@@ -278,8 +278,8 @@ app-main-page .application .side-nav .user-info {
 
 .notifications .fa {
   color:#cecece;
-  line-height:53px;
-  font-size:24px;
+  line-height:44px;
+  font-size:20px;
 }
 .notifications .num {
   position:absolute;
@@ -310,4 +310,8 @@ app-main-page .application .side-nav .user-info {
   display:none;
 }
 
-
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #13477e;
+  text-decoration: none;
+  background-color: inherit;
+}

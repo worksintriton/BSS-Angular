@@ -1,0 +1,504 @@
+<form>
+
+    <div class="service-forms">
+    <!-- service-form -->
+    <div class="row">
+            <div class="col-md-12">
+              <div class="row">
+                  
+                <div class="col-sm-12 multistep-form-section">
+                                     <form novalidate [formGroup]="myform">
+
+                                            <div class="col-md-12 justify-content-md-center">
+                                                   
+                                                    <h3 style="    width: 100%;
+                                                    background: #f1f4f7;padding: 10px;text-transform: uppercase;">Update Invoice Billing</h3>
+                                                    
+                                                    <div class="col col-lg-2">                                        
+                                                    </div>
+                                                  </div> 
+                                                  <br>
+
+
+
+                                                  <div _ngcontent-c7="" class="col-md-12">
+                                                      <div _ngcontent-c7="" class="row">
+                                                        <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                          <div _ngcontent-c7="" class="row">
+                                                            <div _ngcontent-c7="" class="col-md-3">
+                                                              <label _ngcontent-c7="">Bill Type</label>
+                                                            </div><div _ngcontent-c7="" class="col-md-9">
+                                                                <select class="form-control" [(ngModel)]="addempreq.billing_type" name="billing_type" value="" #billing_type id="exampleFormControlSelect1" class="form-control" formControlName="billing_types" required>
+                                                                    <option>Receivable</option>
+                                                                    <option>Payable</option>
+                                                                  </select>                      
+                                                                  <div class="form-control-feedback"
+                                                                   *ngIf="billing_types.errors && (billing_types.dirty || billing_types.touched)">
+                                                                  <p *ngIf="billing_types.errors.required">Bill Type is required</p>
+                                                                  <p *ngIf="billing_types.errors.minlength">Invalid Data </p>
+                                                                </div>
+                                                              
+                                                                <div class="col-12 col-sm-5 form-group"
+                                                                [ngClass]="{
+                                                                 'has-danger': billing_types.invalid && (billing_types.dirty || billing_types.touched),
+                                                                 'has-success': billing_types.valid && (billing_types.dirty || billing_types.touched) }">                                                                        
+                                                                </div>
+                                                              
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                        <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                          <div _ngcontent-c7="" class="row">
+                                                            <div _ngcontent-c7="" class="col-md-3">
+                                                              <label _ngcontent-c7="">Created By</label>
+                                                            </div>
+                                                            <div _ngcontent-c7="" class="col-md-9">
+                                                                <input type="text" class="form-control" [(ngModel)]="addempreq.created_by" name="created_by" value="" #created_by formControlName="created_bys" required>
+                                                              <div class="form-control-feedback"
+                                                                  *ngIf="created_bys.errors && (created_bys.dirty || created_bys.touched)">
+                                                                <p *ngIf="created_bys.errors.required">Created By is required</p>
+                                                                <p *ngIf="created_bys.errors.minlength">Invalid Data </p>
+                                                              </div>
+                                                              
+                                
+                                                              <div class="col-12 col-sm-5 form-group"
+                                                              [ngClass]="{
+                                                               'has-danger': created_bys.invalid && (created_bys.dirty || created_bys.touched),
+                                                               'has-success': created_bys.valid && (created_bys.dirty || created_bys.touched)}">                                                            
+                                                               </div>
+                                
+                                
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+
+
+
+
+
+
+
+                                                    <div _ngcontent-c7="" class="col-md-12">
+                                                        <div _ngcontent-c7="" class="row">
+                                                          <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                            <div _ngcontent-c7="" class="row">
+                                                              <div _ngcontent-c7="" class="col-md-3">
+                                                                <label _ngcontent-c7="">Reference No</label>
+                                                              </div><div _ngcontent-c7="" class="col-md-9">
+                                                              
+                                                                  <input type="text" class="form-control" [(ngModel)]="addempreq.Ref_no" name="Ref_no" value="" #Ref_no  formControlName="Ref_nos" required>
+                                                                  <div class="form-control-feedback"
+                                                                     *ngIf="Ref_nos.errors && (Ref_nos.dirty || Ref_nos.touched)">
+                                                                    <p *ngIf="Ref_nos.errors.required">Reference No is required</p>
+                                                                    <p *ngIf="Ref_nos.errors.minlength">Invalid Data </p>
+                                                                  </div>
+                                                                
+                                                                  <div class="col-12 col-sm-5 form-group"
+                                                                  [ngClass]="{
+                                                                   'has-danger': Ref_nos.invalid && (Ref_nos.dirty || Ref_nos.touched),
+                                                                   'has-success': Ref_nos.valid && (Ref_nos.dirty || Ref_nos.touched) }">                          
+                                                                 </div>
+                                                                
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                            <div _ngcontent-c7="" class="row">
+                                                              <div _ngcontent-c7="" class="col-md-3">
+                                                                <label _ngcontent-c7="">Customer</label>
+                                                              </div>
+                                                              <div _ngcontent-c7="" class="col-md-9">
+                                                                  <input type="text" class="form-control"  [(ngModel)]="addempreq.customer" name="customer" value="" #customer formControlName="customers" required>
+                                                              <div class="form-control-feedback"
+                                                                  *ngIf="customers.errors && (customers.dirty || customers.touched)">
+                                                                <p *ngIf="customers.errors.required">Customer is required</p>
+                                                                <p *ngIf="customers.errors.minlength">Invalid Data </p>
+                                                              </div>
+                                                                
+                                  
+                                                              <div class="col-12 col-sm-5 form-group"
+                                                              [ngClass]="{
+                                                               'has-danger': customers.invalid && (customers.dirty || customers.touched),
+                                                               'has-success': customers.valid && (customers.dirty || customers.touched) }">
+                                                              </div>
+                                  
+                                  
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+
+
+
+
+                                                      <div _ngcontent-c7="" class="col-md-12">
+                                                          <div _ngcontent-c7="" class="row">
+                                                            <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                              <div _ngcontent-c7="" class="row">
+                                                                <div _ngcontent-c7="" class="col-md-3">
+                                                                  <label _ngcontent-c7="">Title</label>
+                                                                </div><div _ngcontent-c7="" class="col-md-9">
+                                                                
+                                                                    <input type="text" class="form-control" [(ngModel)]="addempreq.title" name="title" value="" #title formControlName="titles" required>
+                                                                    <div class="form-control-feedback"
+                                                                       *ngIf="titles.errors && (titles.dirty || titles.touched)">
+                                                                      <p *ngIf="titles.errors.required">Title is required</p>
+                                                                      <p *ngIf="titles.errors.minlength">Invalid Data </p>
+                                                                    </div>
+                                                                  
+                                                                    <div class="col-12 col-sm-5 form-group"
+                                                                    [ngClass]="{
+                                                                     'has-danger': titles.invalid && (titles.dirty || titles.touched),
+                                                                     'has-success': titles.valid && (titles.dirty || titles.touched) }">
+                                                               
+                                                                    </div>
+                                                                  
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                              <div _ngcontent-c7="" class="row">
+                                                                <div _ngcontent-c7="" class="col-md-3">
+                                                                  <label _ngcontent-c7="">Description</label>
+                                                                </div>
+                                                                <div _ngcontent-c7="" class="col-md-9">
+                                                                    <input type="text" class="form-control" [(ngModel)]="addempreq.description" name="description" value="" #description   formControlName="descriptions" required>
+                                                                    <div class="form-control-feedback"
+                                                                        *ngIf="descriptions.errors && (descriptions.dirty || descriptions.touched)">
+                                                                      <p *ngIf="descriptions.errors.required">Descriptiony is required</p>
+                                                                      <p *ngIf="descriptions.errors.minlength">Invalid Data </p>
+                                                                    </div>
+                                                                  
+                                    
+                                                                    <div class="col-12 col-sm-5 form-group"
+                                                                    [ngClass]="{
+                                                                     'has-danger': descriptions.invalid && (descriptions.dirty || descriptions.touched),
+                                                                     'has-success': descriptions.valid && (descriptions.dirty || descriptions.touched) }">
+                                                                    </div>
+                                    
+                                    
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+
+
+
+
+
+                                                        <div _ngcontent-c7="" class="col-md-12">
+                                                            <div _ngcontent-c7="" class="row">
+                                                              <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                <div _ngcontent-c7="" class="row">
+                                                                  <div _ngcontent-c7="" class="col-md-3">
+                                                                    <label _ngcontent-c7="">Payment Type</label>
+                                                                  </div><div _ngcontent-c7="" class="col-md-9">
+                                                                  
+                                                                      <select class="form-control" [(ngModel)]="addempreq.payment_type" name="payment_type" value="" #payment_type id="exampleFormControlSelect1"class="form-control" formControlName="payment_types" required>
+                                                                          <option>Cash</option>
+                                                                          <option>Cheque</option>
+                                                                        </select>  
+                                                                 
+                                                                  <div class="form-control-feedback"
+                                                                     *ngIf="payment_types.errors && (payment_types.dirty || payment_types.touched)">
+                                                                    <p *ngIf="payment_types.errors.required">Payment Type is required</p>
+                                                                    <p *ngIf="payment_types.errors.minlength">Invalid Data </p>
+                                                                  </div>
+                                                                    
+                                                                  <div class="col-12 col-sm-5 form-group"
+                                                                  [ngClass]="{
+                                                                   'has-danger': payment_types.invalid && (payment_types.dirty || payment_types.touched),
+                                                                   'has-success': payment_types.valid && (payment_types.dirty || payment_types.touched)}">
+                                                                       </div>
+                                                                    
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                              <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                <div _ngcontent-c7="" class="row">
+                                                                  <div _ngcontent-c7="" class="col-md-3">
+                                                                    <label _ngcontent-c7="">Payment mode</label>
+                                                                  </div>
+                                                                  <div _ngcontent-c7="" class="col-md-9">
+                                                                      <select class="form-control" [(ngModel)]="addempreq.payment_mode" name="payment_mode" value="" #payment_mode id="exampleFormControlSelect1"class="form-control" formControlName="payment_modes" required>
+                                                                          <option>Full Cash</option>
+                                                                          <option>Due</option>
+                                                                        </select>  
+                                                                 
+                                                                  <div class="form-control-feedback"
+                                                                     *ngIf="payment_modes.errors && (payment_modes.dirty || payment_modes.touched)">
+                                                                    <p *ngIf="payment_modes.errors.required">Payment mode is required</p>
+                                                                    <p *ngIf="payment_modes.errors.minlength">Invalid Data </p>
+                                                                  </div>
+                                                                    
+                                      
+                                                                  <div class="col-12 col-sm-5 form-group"
+                                                                  [ngClass]="{
+                                                                   'has-danger': payment_modes.invalid && (payment_modes.dirty || payment_modes.touched),
+                                                                   'has-success': payment_modes.valid && (payment_modes.dirty || payment_modes.touched)}">  
+                                                                 </div>
+                                      
+                                      
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+
+
+
+
+
+
+
+                                                          <div _ngcontent-c7="" class="col-md-12">
+                                                              <div _ngcontent-c7="" class="row">
+                                                                <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                  <div _ngcontent-c7="" class="row">
+                                                                    <div _ngcontent-c7="" class="col-md-3">
+                                                                      <label _ngcontent-c7="">Total Amount</label>
+                                                                    </div><div _ngcontent-c7="" class="col-md-9">
+                                                                    
+                                                                        <input type="number" class="form-control" [(ngModel)]="addempreq.total_amount" name="total_amount" value="" #total_amount formControlName="total_amounts" required>
+                                                                        <div class="form-control-feedback"
+                                                                        *ngIf="total_amounts.errors && (total_amounts.dirty || total_amounts.touched)">
+                                                                        <p *ngIf="total_amounts.errors.required">Total Amount is required</p>
+                                                                        <p *ngIf="total_amounts.errors.minlength">Invalid Data </p>
+                                                                        </div>
+                                                                      
+                                                                        <div class="col-12 col-sm-5 form-group"
+                                                                        [ngClass]="{
+                                                                         'has-danger': total_amounts.invalid && (total_amounts.dirty || total_amounts.touched),
+                                                                         'has-success': total_amounts.valid && (total_amounts.dirty || total_amounts.touched)
+                                                                        }">
+                                                                       </div>
+                                                                      
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                                <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                  <div _ngcontent-c7="" class="row">
+                                                                    <div _ngcontent-c7="" class="col-md-3">
+                                                                      <label _ngcontent-c7="">Paid</label>
+                                                                    </div>
+                                                                    <div _ngcontent-c7="" class="col-md-9">
+                                                                        <input type="number" class="form-control" [(ngModel)]="addempreq.paid" name="paid" value="" #paid min="0" formControlName="paids" required>
+                                                                   
+                                                                    <div class="form-control-feedback"
+                                                                       *ngIf="paids.errors && (paids.dirty || paids.touched)">
+                                                                      <p *ngIf="paids.errors.required">Paid is required</p>
+                                                                      <p *ngIf="paids.errors.minlength">Invalid Data </p>
+                                                                    </div>
+                                                                      
+                                        
+                                                                    <div class="col-12 col-sm-5 form-group"
+                                                                    [ngClass]="{
+                                                                     'has-danger': paids.invalid && (paids.dirty || paids.touched),
+                                                                     'has-success': paids.valid && (paids.dirty || paids.touched)}">  
+                                                                   </div>
+                                        
+                                        
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+
+
+
+
+
+
+
+                                                            <div _ngcontent-c7="" class="col-md-12">
+                                                                <div _ngcontent-c7="" class="row">
+                                                                  <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                    <div _ngcontent-c7="" class="row">
+                                                                      <div _ngcontent-c7="" class="col-md-3">
+                                                                        <label _ngcontent-c7="">Balance Amount</label>
+                                                                      </div><div _ngcontent-c7="" class="col-md-9">
+                                                                      
+                                                                          <input type="number" class="form-control" [(ngModel)]="addempreq.balance_amount" name="balance_amount" value="" #balance_amount min="0" formControlName="balance_amounts" required>
+                                                                          <div class="form-control-feedback"
+                                                                          *ngIf="balance_amounts.errors && (balance_amounts.dirty || balance_amounts.touched)">
+                                                                          <p *ngIf="balance_amounts.errors.required">Balance Amount is required</p>
+                                                                          <p *ngIf="balance_amounts.errors.minlength">Invalid Data </p>
+                                                                          </div>
+                                                                        
+                                                                          <div class="col-12 col-sm-5 form-group"
+                                                                          [ngClass]="{
+                                                                           'has-danger': balance_amounts.invalid && (balance_amounts.dirty || balance_amounts.touched),
+                                                                           'has-success': balance_amounts.valid && (balance_amounts.dirty || balance_amounts.touched)
+                                                                          }">
+                                                                          </div>
+                                                                        
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                  <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                    <div _ngcontent-c7="" class="row">
+                                                                      <div _ngcontent-c7="" class="col-md-3">
+                                                                        <label _ngcontent-c7="">Status</label>
+                                                                      </div>
+                                                                      <div _ngcontent-c7="" class="col-md-9">
+                                                                          <select class="form-control" [(ngModel)]="addempreq.status" name="status" value="" #status id="exampleFormControlSelect1"class="form-control" formControlName="statuss" required>
+                                                                              <option>Pending</option>
+                                                                              <option>Paid</option>
+                                                                              <option>Not Paid</option>
+                                                                            </select>  
+                                                                      <div class="form-control-feedback"
+                                                                      *ngIf="statuss.errors && (statuss.dirty || statuss.touched)">
+                                                                      <p *ngIf="statuss.errors.required">Status is required</p>
+                                                                      <p *ngIf="statuss.errors.minlength">Invalid Data </p>
+                                                                      </div>
+                                                                        
+                                          
+                                                                      <div class="col-12 col-sm-5 form-group"
+                                                                        [ngClass]="{
+                                                                        'has-danger': statuss.invalid && (statuss.dirty || statuss.touched),
+                                                                        'has-success': statuss.valid && (statuss.dirty || statuss.touched)
+                                                                        }">
+                                                                        </div>
+                                          
+                                          
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+
+
+                                                              <div _ngcontent-c7="" class="col-md-12">
+                                                                  <div _ngcontent-c7="" class="row">
+                                                                    <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                      <div _ngcontent-c7="" class="row">
+                                                                        <div _ngcontent-c7="" class="col-md-3">
+                                                                          <label _ngcontent-c7="">GST%</label>
+                                                                        </div><div _ngcontent-c7="" class="col-md-9">
+                                                                        
+                                                                            <input type="number" class="form-control" [(ngModel)]="addempreq.GST" name="GST" value="" #GST min="0" formControlName="GSTs" required>
+                                                                            <div class="form-control-feedback"
+                                                                            *ngIf="GSTs.errors && (GSTs.dirty || GSTs.touched)">
+                                                                            <p *ngIf="GSTs.errors.required">GST% is required</p>
+                                                                            <p *ngIf="GSTs.errors.minlength">Invalid Data </p>
+                                                                            </div>
+                                                                          
+                                                                            <div class="col-12 col-sm-5 form-group"
+                                                                            [ngClass]="{
+                                                                             'has-danger': GSTs.invalid && (GSTs.dirty || GSTs.touched),
+                                                                             'has-success': GSTs.valid && (GSTs.dirty || GSTs.touched)
+                                                                            }">
+                                                                            </div>
+                                                                          
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                    <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                      <div _ngcontent-c7="" class="row">
+                                                                        <div _ngcontent-c7="" class="col-md-3">
+                                                                          <label _ngcontent-c7="">Prof. Tax</label>
+                                                                        </div>
+                                                                        <div _ngcontent-c7="" class="col-md-9">
+                                                                            <input type="number" class="form-control" [(ngModel)]="addempreq.prof_tax" name="prof_tax" value="" #prof_tax min="0" formControlName="prof_taxs" required>
+                                                                        <div class="form-control-feedback"
+                                                                        *ngIf="prof_taxs.errors && (prof_taxs.dirty || prof_taxs.touched)">
+                                                                        <p *ngIf="prof_taxs.errors.required">Prof. Tax is required</p>
+                                                                        <p *ngIf="prof_taxs.errors.minlength">Invalid Data </p>
+                                                                        </div>
+                                                                          
+                                            
+                                                                        <div class="col-12 col-sm-5 form-group"
+                                                                          [ngClass]="{
+                                                                          'has-danger': prof_taxs.invalid && (prof_taxs.dirty || prof_taxs.touched),
+                                                                          'has-success': prof_taxs.valid && (prof_taxs.dirty || prof_taxs.touched)
+                                                                          }">
+                                                                          </div>
+                                            
+                                            
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+
+
+                                                                <div _ngcontent-c7="" class="col-md-12">
+                                                                    <div _ngcontent-c7="" class="row">
+                                                                      <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                        <div _ngcontent-c7="" class="row">
+                                                                          <div _ngcontent-c7="" class="col-md-3">
+                                                                            <label _ngcontent-c7="">Service Tax</label>
+                                                                          </div><div _ngcontent-c7="" class="col-md-9">
+                                                                          
+                                                                              <input type="number" class="form-control" [(ngModel)]="addempreq.service_tax" name="service_tax" value="" #service_tax min="0" formControlName="service_taxs" required>
+                                                                              <div class="form-control-feedback"
+                                                                              *ngIf="service_taxs.errors && (service_taxs.dirty || service_taxs.touched)">
+                                                                              <p *ngIf="service_taxs.errors.required">Service Taxy is required</p>
+                                                                              <p *ngIf="service_taxs.errors.minlength">Invalid Data </p>
+                                                                              </div>
+                                                                            
+                                                                              <div class="col-12 col-sm-5 form-group"
+                                                                              [ngClass]="{
+                                                                               'has-danger': service_taxs.invalid && (service_taxs.dirty || service_taxs.touched),
+                                                                               'has-success': service_taxs.valid && (service_taxs.dirty || service_taxs.touched)
+                                                                              }">
+                                                                              </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                      <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                          <div _ngcontent-c7="" class="row">
+                                                                            <div _ngcontent-c7="" class="col-md-3">
+                                                                                <label>Attach Bill or Documents</label>
+                                                                            </div>
+                                                                            <div _ngcontent-c7="" class="col-md-9">
+                                                                                
+                                                                                <div class="card h-100">
+                                
+                                                                                    <div class="custom-file">
+                                                                                      <input type="file" class="custom-file-input" id="custom-file-input">
+                                                                                      <label class="custom-file-label px-3" for="custom-file-input">Choose file</label>
+                                                                                    </div>
+                                                                                 
+                                                                                </div>
+                                                                              <div _ngcontent-c7="" class="form-icon">
+                                                
+                                                                              </div><!----><!---->                                                                                  
+                                                                           
+                                                                             
+                                                
+                                                
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
+
+
+
+                                            <div class="row">
+
+                                                   
+
+                                    <div class="col-md-12 col-sm-5 form-group">
+                                    <button class="input1" (click) = "addapi()">Update</button>
+                                    </div>
+                             </div>   
+                            </form>
+                   
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+  </form>
+
+
+

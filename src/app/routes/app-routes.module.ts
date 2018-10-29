@@ -1,5 +1,5 @@
-import { ViewschooluserComponent } from './../viewschooluser/viewschooluser.component';
-import { UpdateschoolComponent } from './../updateschool/updateschool.component';
+
+
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {NgModule, ChangeDetectionStrategy} from '@angular/core';
 import {DashboardPageComponent} from '../pages/dashboard-page/dashboard-page.component';
@@ -47,71 +47,90 @@ import {IconsPageComponent} from '../pages/icons-page/icons-page.component';
 import {DataMapsPageComponent} from '../pages/data-maps-page/data-maps-page.component';
 import {TranslatePageComponent} from '../pages/translate-page/translate-page.component';
 import {ScrollPageComponent} from '../pages/scroll-page/scroll-page.component';
-import { SchoolmanagementComponent } from '../schoolmanagement/schoolmanagement.component';
+import { SchoolmanagementComponent } from '../Salesteam/schoolmanagement/schoolmanagement.component';
 
 
-import { AssignusertoschoolComponent } from '../assignusertoschool/assignusertoschool.component';
 
-import { UpdateuserComponent } from '../updateuser/updateuser.component';
+
 import { ForgotpswdComponent } from '../pages/forgotpswd/forgotpswd.component';
 import { ChangepaswordComponent } from '../pages/changepasword/changepasword.component';
-import { AssingComponent } from '../assing/assing.component';
-import { ViewassignComponent } from '../viewassign/viewassign.component';
 
-import { IssuesComponent } from '../issues/issues.component';
-import { ClientissuesComponent } from '../clientissues/clientissues.component';
 
-import { UpdateissuesComponent } from '../updateissues/updateissues.component';
-import { UpdateclientissuesComponent } from '../updateclientissues/updateclientissues.component';
 
-import { ViewuserComponent } from '../viewuser/viewuser.component';
+import { ViewuserComponent } from '../Users/viewuser/viewuser.component';
 
-import { ViewclientdetailComponent } from '../viewclientdetail/viewclientdetail.component';
+import { ViewclientdetailComponent } from '../Salesteam/viewclientdetail/viewclientdetail.component';
 
-import { EditclientComponent } from '../editclient/editclient.component';
-import { ViewemployeesComponent } from '../viewemployees/viewemployees.component';
-import { EmployeedetailsComponent } from '../employeedetails/employeedetails.component';
-import { EditemployeeComponent } from '../editemployee/editemployee.component';
-import { ViewusersComponent } from '../viewusers/viewusers.component';
-import { EditusersComponent } from '../editusers/editusers.component';
-import { AddclientComponent } from '../addclient/addclient.component';
-import { TestpageComponent } from '../testpage/testpage.component';
-import { Test1Component } from '../test1/test1.component';
-import { UpdateclientComponent } from '../updateclient/updateclient.component';
-import { UpdateemployeeComponent } from '../updateemployee/updateemployee.component';
-import { AddemployeeComponent } from '../addemployee/addemployee.component';
-import { AdduserComponent } from '../adduser/adduser.component';
-import { UserdetailsComponent } from '../userdetails/userdetails.component';
-import { HumanresoucesComponent } from '../humanresouces/humanresouces.component';
-import { HrreportlistComponent } from '../hrreportlist/hrreportlist.component';
-import { HrnewreportComponent } from '../hrnewreport/hrnewreport.component';
-import { HreditreportComponent } from '../hreditreport/hreditreport.component';
-import { HrviewclientComponent } from '../hrviewclient/hrviewclient.component';
-import { HrreportslipComponent } from '../hrreportslip/hrreportslip.component';
-import { HrreportComponent } from '../hrreport/hrreport.component';
-import { HrassassignemployeeComponent } from '../hrassassignemployee/hrassassignemployee.component';
-import { HrassignemployeelistComponent } from '../hrassignemployeelist/hrassignemployeelist.component';
-import { HreditassignemployeeComponent } from '../hreditassignemployee/hreditassignemployee.component';
-import { HrviewassignemployeeComponent } from '../hrviewassignemployee/hrviewassignemployee.component';
-import { SalesnewcontractComponent } from '../salesnewcontract/salesnewcontract.component';
-import { SalescontractlistComponent } from '../salescontractlist/salescontractlist.component';
-import { SaleseditcontractComponent } from '../saleseditcontract/saleseditcontract.component';
-import { SalesbillingComponent } from '../salesbilling/salesbilling.component';
-import { SalespipelineComponent } from '../salespipeline/salespipeline.component';
-import { SalesnotificationComponent } from '../salesnotification/salesnotification.component';
+import { ViewemployeesComponent } from '../Humanresource/viewemployees/viewemployees.component';
+import { EmployeedetailsComponent } from '../Humanresource/employeedetails/employeedetails.component';
+import { EditemployeeComponent } from '../Humanresource/editemployee/editemployee.component';
 
-import { SalesviewnoticeComponent } from '../salesviewnotice/salesviewnotice.component';
-import { SalesclienthistoryComponent } from '../salesclienthistory/salesclienthistory.component';
-import { ClienthistoryviewComponent } from '../clienthistoryview/clienthistoryview.component';
-import { Addemployeepg1Component } from '../addemployeepg1/addemployeepg1.component';
-import { Addemployeepg2Component } from '../addemployeepg2/addemployeepg2.component';
-import { Addemployeepg3Component } from '../addemployeepg3/addemployeepg3.component';
-import { Updateemployee1Component } from '../updateemployee1/updateemployee1.component';
-import { Updateclient1Component } from '../updateclient1/updateclient1.component';
-import { OpertionteamComplaintComponent } from '../opertionteam-complaint/opertionteam-complaint.component';
-import { OpertionteamComplaintviewComponent } from '../opertionteam-complaintview/opertionteam-complaintview.component';
-import { OpertionteamfeedbackComponent } from '../opertionteamfeedback/opertionteamfeedback.component';
-import { OpertionteamfeedbackviewComponent } from '../opertionteamfeedbackview/opertionteamfeedbackview.component';
+import { AddclientComponent } from '../Salesteam/addclient/addclient.component';
+
+import { UpdateclientComponent } from '../Salesteam/updateclient/updateclient.component';
+import { UpdateemployeeComponent } from '../Humanresource/updateemployee/updateemployee.component';
+import { AddemployeeComponent } from '../Humanresource/addemployee/addemployee.component';
+import { AdduserComponent } from '../Users/adduser/adduser.component';
+import { UserdetailsComponent } from '../Users/userdetails/userdetails.component';
+import { HumanresoucesComponent } from '../Humanresource/humanresouces/humanresouces.component';
+import { HrreportlistComponent } from '../Humanresource/hrreportlist/hrreportlist.component';
+import { HrnewreportComponent } from '../Humanresource/hrnewreport/hrnewreport.component';
+import { HreditreportComponent } from '../Humanresource/hreditreport/hreditreport.component';
+import { HrviewclientComponent } from '../Humanresource/hrviewclient/hrviewclient.component';
+import { HrreportslipComponent } from '../Humanresource/hrreportslip/hrreportslip.component';
+import { HrreportComponent } from '../Humanresource/hrreport/hrreport.component';
+import { HrassassignemployeeComponent } from '../Humanresource/hrassassignemployee/hrassassignemployee.component';
+import { HrassignemployeelistComponent } from '../Humanresource/hrassignemployeelist/hrassignemployeelist.component';
+import { HreditassignemployeeComponent } from '../Humanresource/hreditassignemployee/hreditassignemployee.component';
+import { HrviewassignemployeeComponent } from '../Humanresource/hrviewassignemployee/hrviewassignemployee.component';
+import { SalesnewcontractComponent } from '../Salesteam/salesnewcontract/salesnewcontract.component';
+import { SalescontractlistComponent } from '../Salesteam/salescontractlist/salescontractlist.component';
+import { SaleseditcontractComponent } from '../Salesteam/saleseditcontract/saleseditcontract.component';
+import { SalesbillingComponent } from '../Salesteam/salesbilling/salesbilling.component';
+import { SalespipelineComponent } from '../Salesteam/salespipeline/salespipeline.component';
+import { SalesnotificationComponent } from '../Salesteam/salesnotification/salesnotification.component';
+
+import { SalesviewnoticeComponent } from '../Salesteam/salesviewnotice/salesviewnotice.component';
+import { SalesclienthistoryComponent } from '../Salesteam/salesclienthistory/salesclienthistory.component';
+
+import { Updateemployee1Component } from '../Humanresource/updateemployee1/updateemployee1.component';
+import { Updateclient1Component } from '../Salesteam/updateclient1/updateclient1.component';
+
+import { OperationcomplaintlistComponent } from '../operationteam/operationcomplaintlist/operationcomplaintlist.component';
+import { OperationfeedbacklistComponent } from '../operationteam/operationfeedbacklist/operationfeedbacklist.component';
+import { OperacomcompleteviewComponent } from '../operationteam/operacomcompleteview/operacomcompleteview.component';
+import { OperacominprogresslistComponent } from '../operationteam/operacominprogresslist/operacominprogresslist.component';
+import { OperacomcompletelistComponent } from '../operationteam/operacomcompletelist/operacomcompletelist.component';
+import { OperationfeedbackinprogressComponent } from '../operationteam/operationfeedbackinprogress/operationfeedbackinprogress.component';
+import { OperationfeedbackcompletedlistComponent } from '../operationteam/operationfeedbackcompletedlist/operationfeedbackcompletedlist.component';
+import { OperationfeedbackcompletedviewComponent } from '../operationteam/operationfeedbackcompletedview/operationfeedbackcompletedview.component';
+import { EmployeeComponent } from '../searchquery/employee/employee.component';
+import { ClientComponent } from '../searchquery/client/client.component';
+import { CreateinvoiceComponent } from '../FinanceManagement/createinvoice/createinvoice.component';
+import { UpdateinvoiceComponent } from '../FinanceManagement/updateinvoice/updateinvoice.component';
+import { InvoicelistComponent } from '../FinanceManagement/invoicelist/invoicelist.component';
+import { InvoiceviewComponent } from '../FinanceManagement/invoiceview/invoiceview.component';
+import { InvoicebillingComponent } from '../FinanceManagement/invoicebilling/invoicebilling.component';
+import { SalarypaymentComponent } from '../FinanceManagement/salarypayment/salarypayment.component';
+import { AddsalarypaymentComponent } from '../FinanceManagement/addsalarypayment/addsalarypayment.component';
+import { OperationcomlistComponent } from '../operationteam/operationcomlist/operationcomlist.component';
+import { OperationfeedlistComponent } from '../operationteam/operationfeedlist/operationfeedlist.component';
+import { FinanceyearComponent } from '../FinanceManagement/financeyear/financeyear.component';
+import { FinancemonthComponent } from '../FinanceManagement/financemonth/financemonth.component';
+import { FinancedateComponent } from '../FinanceManagement/financedate/financedate.component';
+import { FinancesinglebillComponent } from '../FinanceManagement/financesinglebill/financesinglebill.component';
+import { AttendancemanagementComponent } from '../Humanresource/attendancemanagement/attendancemanagement.component';
+import { SalaryyearlyComponent } from '../FinanceManagement/salaryyearly/salaryyearly.component';
+import { SalarymonthlyComponent } from '../FinanceManagement/salarymonthly/salarymonthly.component';
+import { SalarydateComponent } from '../FinanceManagement/salarydate/salarydate.component';
+import { SalarylistComponent } from '../FinanceManagement/salarylist/salarylist.component';
+import { ViewdetailsComponent } from 'app/Users/viewdetails/viewdetails.component';
+import { ConfigurenumberComponent } from 'app/operationteam/configurenumber/configurenumber.component';
+import { SettrainingComponent } from 'app/operationteam/settraining/settraining.component';
+import { SettrainingvideosComponent } from 'app/operationteam/settrainingvideos/settrainingvideos.component';
+import { SettraininglistComponent } from 'app/operationteam/settraininglist/settraininglist.component';
+import { SettraininglessonsComponent } from 'app/operationteam/settraininglessons/settraininglessons.component';
+import { EmployeetrackingComponent } from 'app/employeetracking/employeetracking.component';
 
 
 
@@ -126,8 +145,7 @@ const APP_ROUTES: Routes = [
   {
     path: 'main', component: MainPageComponent, children: [
       {path: 'dashboard', component: DashboardPageComponent},
-      {path: 'testpage', component: TestpageComponent},
-      {path: 'issues', component: IssuesComponent},
+ 
      { path: 'viewemployees', component: ViewemployeesComponent},
      { path: 'employeedetails', component: EmployeedetailsComponent},
      { path: 'editemployee', component: EditemployeeComponent},
@@ -146,6 +164,7 @@ const APP_ROUTES: Routes = [
      {path: 'hrreportslip', component: HrreportslipComponent},
      {path: 'hreditreort', component: HreditreportComponent},
      {path: 'hrreport', component: HrreportComponent},
+     {path: 'hrattendance', component: AttendancemanagementComponent},
 
 
 
@@ -157,29 +176,19 @@ const APP_ROUTES: Routes = [
      {path: 'salespipeline', component: SalespipelineComponent}, 
      {path: 'salesnotification', component: SalesnotificationComponent},
      {path: 'salesviewnotice', component: SalesviewnoticeComponent},
-     {path: 'clienthistoryview', component: ClienthistoryviewComponent},
      {path: 'salesclienthistory', component: SalesclienthistoryComponent},
 
-     {path: 'addemployee1/:id', component: Addemployeepg1Component},
-     {path: 'addemployee2/:id', component: Addemployeepg2Component},
-     {path: 'addemployee3/:id', component: Addemployeepg3Component},
    
 
 
-     
-     { path: 'viewusers', component: ViewusersComponent},
-     { path: 'editusers', component: EditusersComponent},
-     { path: 'test1', component: Test1Component},
+    
       
-      {path: 'clientissues', component: ClientissuesComponent},
     
     
-      {path: 'assign', component: AssingComponent},
-      {path: 'viewassign', component: ViewassignComponent},
+      
      
       {path: 'clientmanagement', component: SchoolmanagementComponent},
    
-      {path: 'assignusertoschool', component: AssignusertoschoolComponent},
       
       {path: 'addclient', component: AddclientComponent},
 
@@ -191,10 +200,8 @@ const APP_ROUTES: Routes = [
       {path: 'addusers', component: AdduserComponent},
       {path: 'form-elements', component: FormElementsPageComponent},
    
-      {path: 'updateissues/:id', component: UpdateissuesComponent},
-      {path: 'updateclientissues/:id', component: UpdateclientissuesComponent},
    
-      {path: 'viewuserschool', component: ViewschooluserComponent},
+
       {path: 'product-details', component: ProductDetailsPageComponent},
       {path: 'tabs', component: TabsPageComponent},
       {path: 'gallery', component: GalleryPageComponent},
@@ -215,6 +222,8 @@ const APP_ROUTES: Routes = [
       {path: 'table', component: TablePageComponent},
       {path: 'accordion', component: AccordionPageComponent},
       
+      {path: 'Configurenumber', component: ConfigurenumberComponent},
+      
       {path: 'clientdetails/:id', component: ViewclientdetailComponent},
       {path: 'updateclient/:id', component: UpdateclientComponent},
       {path: 'updateclient1/:id', component: Updateclient1Component},
@@ -223,14 +232,65 @@ const APP_ROUTES: Routes = [
       {path: 'updateemployee/:id', component: UpdateemployeeComponent},
       {path: 'updateemployee1/:id', component: Updateemployee1Component},
 
+
       {path: 'userdetails/:id', component: UserdetailsComponent},
-      {path: 'updateuser/:id', component: UpdateuserComponent},
+      {path: 'viewdetails/:id', component: ViewdetailsComponent},
+    
+
+      {path: 'Operationcomlist', component: OperationcomlistComponent},
+      {path: 'Operationcomplaintlist', component: OperationcomplaintlistComponent},
+      {path: 'operacominprogresslist', component: OperacominprogresslistComponent},
+      {path: 'operacomcompletelist', component: OperacomcompletelistComponent},
+
+      
+      {path: 'operacomcompleteview/:id', component: OperacomcompleteviewComponent},
+
+      {path: 'settrainingtop', component: SettrainingComponent},
+
+      {path: 'settrainingvideos/:id', component: SettrainingvideosComponent },
+
+      {path: 'settraininglist', component: SettraininglistComponent},
+
+      {path: 'settraininglessons/:id', component: SettraininglessonsComponent},
 
 
-      {path: 'opertionteamComplaint', component: OpertionteamComplaintComponent},
-      {path: 'opertionteamComplaintview', component: OpertionteamComplaintviewComponent},
-      {path: 'opertionteamfeedback', component: OpertionteamfeedbackComponent},
-      {path: 'opertionteamfeedbackview', component: OpertionteamfeedbackviewComponent},
+      {path: 'employeetracking', component: EmployeetrackingComponent},
+
+
+
+
+
+
+
+      {path: 'operationfeedlist', component: OperationfeedlistComponent},
+      {path: 'Operationfeedbacklist', component: OperationfeedbacklistComponent},
+      {path: 'Operationfeedbackinprogress', component: OperationfeedbackinprogressComponent},
+      {path: 'Operationfeedbackcompletedlist', component: OperationfeedbackcompletedlistComponent},
+      {path: 'Operationfeedbackcompletedview', component: OperationfeedbackcompletedviewComponent},
+   
+
+      {path: 'employeesearch', component: EmployeeComponent},
+      {path: 'clientsearch', component: ClientComponent},
+
+      {path: 'Financecreateinvoice', component: CreateinvoiceComponent},
+      {path: 'Financeupdateinvoice', component: UpdateinvoiceComponent},
+      {path: 'Financeinvoicelist', component: InvoicelistComponent},
+      {path: 'Financeinvoiceview', component: InvoiceviewComponent},
+      {path: 'Financeinvoicebilling', component: InvoicebillingComponent},
+      {path: 'FinanceyearComponent', component: FinanceyearComponent},
+      {path: 'FinancemonthComponent', component: FinancemonthComponent},
+      {path: 'FinancedateComponent', component: FinancedateComponent},
+      {path: 'Financesinglebill', component: FinancesinglebillComponent},
+
+   
+
+      {path: 'Financesalarypayment', component: SalarypaymentComponent},
+ 
+      {path: 'Financesalyear', component: SalaryyearlyComponent},
+      {path: 'Financesalmonth', component: SalarymonthlyComponent},
+      {path: 'Finanacesaledate', component: SalarydateComponent},
+      {path: 'Finanacesalelist', component: SalarylistComponent},
+      {path: 'Finanacesalepayment', component: SalarypaymentComponent},
 
 
 
@@ -240,7 +300,6 @@ const APP_ROUTES: Routes = [
 
 
 
-      {path: 'editclientdetails', component: EditclientComponent},
       {path: 'employye', component: DatepickerPageComponent},
       {path: 'datepicker', component: DatepickerPageComponent},
       {path: 'modal', component: ModalPageComponent},

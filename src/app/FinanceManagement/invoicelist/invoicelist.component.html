@@ -1,0 +1,87 @@
+<!-- BEGIN # BOOTSNIP INFO -->
+<div class="container">
+    <div class="row">
+        <div _ngcontent-c4="" class="header">
+          <div _ngcontent-c4="" class="row">
+            <div _ngcontent-c4="" class="col-12 col-md-6 mb-3">
+              <div _ngcontent-c4="" class="col-md-8">
+                <h3 _ngcontent-c4="" class="adsc">
+                  <i _ngcontent-c4="" class="fa fa-university"></i> &nbsp;Finance Management</h3>
+                </div>
+              </div>
+              <div _ngcontent-c4="" class="col-md-6">
+                  <button class="add pull-right" (click) = "addapi5()" style="    padding: 5px 2px 7px 7px;
+                  width: 23%;">Add</button>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col-md-12 pull-left">
+               
+                           
+                   </div>
+                   <br>
+                   <br>
+           <br>
+  
+          <div class="col">
+      
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="tabl" >
+                      <table class="table table-bordered " style="border-collapse:collapse;">
+                          <thead>
+                              <tr>
+                                  <th>SL.NO</th>
+                                  <th>Invoice ID</th>
+                                  <th>Created by</th>
+                                  <th>Customer</th>
+                                  <th>Payment Type</th>
+                                  <th>Payment Mode</th>
+                                  <th>Total Amount</th>
+                                  <th>Paid</th>
+                                  <th>Balance</th>
+                                  <th>Status</th>
+                                  <th>View</th>
+                                  <th>Edit</th>
+                                  <th>Action</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                                <ng-container  *ngFor="let data of datas ;  let i = index">
+
+                                        <tr>
+                                              <td>{{data.id}}</td> 
+                                          <td>INV23</td>
+                                          <td>USER234</td>
+                                          <td id="l1">Mohammed</td>
+                                          <td id="a1">Cash</td>
+                                          <td id="pc1">Full Cash</td>
+                                          <td id="pc1">6000</td>
+                                          <td id="pc1">6000</td>
+                                          <td id="pc1">-</td>
+                                          <td id="pc1">Paid</td>
+                                          <td> <button class="accordion-toggle  btn mat-button-wrapper btn-sm" data-toggle="collapse" (click)="addapi1()"><i _ngcontent-c6="" class="m-1 icon-screen-desktop"></i></button></td>
+                                          <td><button type="button" data-toggle="modal"  data-uid="1" class=" btn btn-primary btn-sm" (click)="addapi2()"><i _ngcontent-c6="" class="m-1 icon-note"></i></button></td> 
+                                          <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class=" btn  btn-sm" data-toggle="modal" data-target="#login-modal3"><i _ngcontent-c6="" class="m-1 icon-close"  ></i></button></td>
+                                      </tr>
+                                      </ng-container>      
+                          </tbody>
+                      </table>
+                      <div *ngIf="loading" ><div class="loader text-center"></div></div>     
+                      <div class="card-footer p-0">
+                      <ngb-pagination  [collectionSize]="collsize" [(page)]="advancedPage" (pageChange)="newsync()" [boundaryLinks]="true" ></ngb-pagination>
+                      </div>     
+                </div>
+                </div>
+              </div>
+              </div>
+          
+         
+    </div>
+  </div>
+  <!-- END # BOOTSNIP INFO -->
+  
+  
+  
+  

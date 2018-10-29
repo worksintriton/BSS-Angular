@@ -10218,7 +10218,7 @@ window.global = window;
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!********************************!*\
   !*** multi ./src/polyfills.ts ***!
   \********************************/
@@ -10230,5 +10230,5 @@ module.exports = __webpack_require__(/*! /Users/mohammedimthiyas/Documents/BSS 2
 
 /***/ })
 
-},[[2,"runtime"]]]);
+},[[1,"runtime"]]]);
 //# sourceMappingURL=polyfills.js.map

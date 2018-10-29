@@ -1,0 +1,235 @@
+<form>
+
+    <div class="service-forms">
+    <!-- service-form -->
+    <div class="row">
+            <div class="">
+              <div class="row">
+                  
+                <div class="col-sm-12 multistep-form-section">
+                                     <form novalidate [formGroup]="myform">
+
+                                            <div class="row justify-content-md-center">
+                                                    <div class="col-md-auto">
+                                                    <h3>Required Employee</h3>
+                                                    </div>
+                                                    <div class="col col-lg-2">                                        
+                                                    </div>
+                                                  </div> 
+                                                  <br>
+
+                                            <div class="row">
+
+                                                   
+
+                                                        
+
+                                     <div class="col-12 col-sm-5 form-group"
+                                     [ngClass]="{
+                                      'has-danger': No_ams.invalid && (No_ams.dirty || No_ams.touched),
+                                      'has-success': No_ams.valid && (No_ams.dirty || No_ams.touched)
+                                 }">
+                                  <label>No of Assistant Manager</label>
+                                  <input type="number" class="form-control" [(ngModel)]="model.No_am" name="No_am" value="" #No_am  min="0" formControlName="No_ams" required>
+                                  <div class="form-control-feedback"
+                                     *ngIf="No_ams.errors && (No_ams.dirty || No_ams.touched)">
+                                    <p *ngIf="No_ams.errors.required">No of Assistant Manager is required</p>
+                                    <p *ngIf="No_ams.errors.minlength">Invalid Data </p>
+                                  </div>
+                                </div>
+
+
+
+                                <div class="col-12 col-sm-5 form-group"
+                                [ngClass]="{
+                                 'has-danger': salary_ams.invalid && (salary_ams.dirty || salary_ams.touched),
+                                 'has-success': salary_ams.valid && (salary_ams.dirty || salary_ams.touched)
+                            }">
+                             <label>Amount for One AM</label>
+                             <input type="number" class="form-control" [(ngModel)]="model.salary_am" name="salary_am" value="" #salary_am min="0" formControlName="salary_ams" required>
+                             <div class="form-control-feedback"
+                                *ngIf="salary_ams.errors && (salary_ams.dirty || salary_ams.touched)">
+                               <p *ngIf="salary_ams.errors.required">Amount for One AM is required</p>
+                               <p *ngIf="salary_ams.errors.minlength">Invalid Data </p>
+                             </div>
+                           </div>
+
+
+                           <div class="col-12 col-sm-5 form-group"
+                           [ngClass]="{
+                            'has-danger': No_ass.invalid && (No_ass.dirty || No_ass.touched),
+                            'has-success': No_ass.valid && (No_ass.dirty || No_ass.touched)
+                       }">
+                        <label>No of Supervisor</label>
+                        <input type="number" class="form-control" [(ngModel)]="model.No_as" name="No_as" value="" #No_as min="0" formControlName="No_ass" required>
+                        <div class="form-control-feedback"
+                           *ngIf="No_ass.errors && (No_ass.dirty || No_ass.touched)">
+                          <p *ngIf="No_ass.errors.required">No of Supervisor is required</p>
+                          <p *ngIf="No_ass.errors.minlength">Invalid Data </p>
+                        </div>
+                      </div>
+
+
+                      <div class="col-12 col-sm-5 form-group"
+                      [ngClass]="{
+                       'has-danger': salary_ass.invalid && (salary_ass.dirty || salary_ass.touched),
+                       'has-success': salary_ass.valid && (salary_ass.dirty || salary_ass.touched)
+                  }">
+                   <label>Pay for one supervisor</label>
+                   <input type="number" class="form-control"  [(ngModel)]="model.salary_as" name="salary_as" value="" #salary_as min="0" formControlName="salary_ass" required>
+                   <div class="form-control-feedback"
+                      *ngIf="salary_ass.errors && (salary_ass.dirty || salary_ass.touched)">
+                     <p *ngIf="salary_ass.errors.required">Pay for one supervisor is required</p>
+                     <p *ngIf="salary_ass.errors.minlength">Invalid Data </p>
+                   </div>
+                 </div>
+
+
+                 <div class="col-12 col-sm-5 form-group"
+                 [ngClass]="{
+                  'has-danger': No_ss.invalid && (No_ss.dirty || No_ss.touched),
+                  'has-success': No_ss.valid && (No_ss.dirty || No_ss.touched)
+             }">
+              <label>No of Security</label>
+              <input type="number" class="form-control" [(ngModel)]="model.No_s" name="No_s" value="" #No_s  min="0" formControlName="No_ss" required>
+              <div class="form-control-feedback"
+                 *ngIf="No_ss.errors && (No_ss.dirty || No_ss.touched)">
+                <p *ngIf="No_ss.errors.required">No of Security is required</p>
+                <p *ngIf="No_ss.errors.minlength">Invalid Data </p>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-sm-5 form-group"
+            [ngClass]="{
+             'has-danger': salary_ss.invalid && (salary_ss.dirty || salary_ss.touched),
+             'has-success': salary_ss.valid && (salary_ss.dirty || salary_ss.touched)
+        }">
+         <label>Pay for one Security</label>
+         <input type="number" class="form-control" [(ngModel)]="model.salary_s" name="salary_s" value="" #salary_s  min="0" formControlName="salary_ss" required>
+         <div class="form-control-feedback"
+            *ngIf="salary_ss.errors && (salary_ss.dirty || salary_ss.touched)">
+           <p *ngIf="salary_ss.errors.required">Pay for one Security is required</p>
+           <p *ngIf="salary_ss.errors.minlength">Invalid Data </p>
+         </div>
+       </div>
+
+
+       <div class="col-12 col-sm-5 form-group"
+  [ngClass]="{
+   'has-danger': shift_types.invalid && (shift_types.dirty || shift_types.touched),
+   'has-success': shift_types.valid && (shift_types.dirty || shift_types.touched)
+}">
+<label>Shift Type</label>
+<select class="form-control" [(ngModel)]="model.shift_type" name="shift_type" value="" #shift_type id="exampleFormControlSelect1"class="form-control" formControlName="shift_types" required>
+       <option>Day</option>
+       <option>Night</option>
+     </select>  
+
+<div class="form-control-feedback"
+  *ngIf="shift_types.errors && (shift_types.dirty || shift_types.touched)">
+ <p *ngIf="shift_types.errors.required">Shift Type is required</p>
+ <p *ngIf="shift_types.errors.minlength">Invalid Data </p>
+</div>
+</div>
+
+  
+  
+  <div class="col-12 col-sm-5 form-group"
+  [ngClass]="{
+   'has-danger': hour_types.invalid && (hour_types.dirty || hour_types.touched),
+   'has-success': hour_types.valid && (hour_types.dirty || hour_types.touched)
+}">
+<label>Hours Type</label>
+<select class="form-control" [(ngModel)]="model.hour_type" name="hour_type" value="" #shift_type id="exampleFormControlSelect1"class="form-control" formControlName="hour_types" required>
+       <option>8 hrs</option>
+       <option>12 hrs</option>
+     </select>  
+
+<div class="form-control-feedback"
+  *ngIf="hour_types.errors && (hour_types.dirty || hour_types.touched)">
+ <p *ngIf="hour_types.errors.required">Hours Type is required</p>
+ <p *ngIf="hour_types.errors.minlength">Invalid Data </p>
+</div>
+</div>
+
+
+<div class="col-12 col-sm-5 form-group"
+[ngClass]="{
+ 'has-danger': over_time_ams.invalid && (over_time_ams.dirty || over_time_ams.touched),
+ 'has-success': over_time_ams.valid && (over_time_ams.dirty || over_time_ams.touched)
+}">
+<label>Over Time pay For Assistant Manager</label>
+<input type="number" class="form-control" [(ngModel)]="model.over_time_am" name="over_time_am" value="" #over_time_am min="0" formControlName="over_time_ams" required>
+<div class="form-control-feedback"
+*ngIf="over_time_ams.errors && (over_time_ams.dirty || over_time_ams.touched)">
+<p *ngIf="over_time_ams.errors.required">Over Time pay For Assistant Manager is required</p>
+<p *ngIf="over_time_ams.errors.minlength">Invalid Data </p>
+</div>
+</div>
+
+<div class="col-12 col-sm-5 form-group"
+[ngClass]="{
+ 'has-danger': over_time_ass.invalid && (over_time_ass.dirty || over_time_ass.touched),
+ 'has-success': over_time_ass.valid && (over_time_ass.dirty || over_time_ass.touched)
+}">
+<label>Over Time For supervisor</label>
+<input type="number" class="form-control" [(ngModel)]="model.over_time_as" name="over_time_as" value="" #over_time_as  min="0" formControlName="over_time_ass" required>
+<div class="form-control-feedback"
+*ngIf="over_time_ass.errors && (over_time_ass.dirty || over_time_ass.touched)">
+<p *ngIf="over_time_ass.errors.required">Over Time For supervisor is required</p>
+<p *ngIf="over_time_ass.errors.minlength">Invalid Data </p>
+</div>
+</div>
+
+
+<div class="col-12 col-sm-5 form-group"
+[ngClass]="{
+ 'has-danger': over_time_ss.invalid && (over_time_ss.dirty || over_time_ss.touched),
+ 'has-success': over_time_ss.valid && (over_time_ss.dirty || over_time_ss.touched)
+}">
+<label>Over Time pay for Security</label>
+<input type="number" class="form-control" [(ngModel)]="model.over_time_s" name="over_time_s" value="" #over_time_s min="0" formControlName="over_time_ss" required>
+<div class="form-control-feedback"
+*ngIf="over_time_ss.errors && (over_time_ss.dirty || over_time_ss.touched)">
+<p *ngIf="over_time_ss.errors.required">Over Time pay for Security is required</p>
+<p *ngIf="over_time_ss.errors.minlength">Invalid Data </p>
+</div>
+</div>
+
+
+<div class="col-12 col-sm-5 form-group"
+[ngClass]="{
+ 'has-danger': payment_types.invalid && (payment_types.dirty || payment_types.touched),
+ 'has-success': payment_types.valid && (payment_types.dirty || payment_types.touched)
+}">
+<label>Payment Type</label>
+<select class="form-control" [(ngModel)]="model.payment_type" name="payment_type" value="" #payment_type id="exampleFormControlSelect1"class="form-control" formControlName="payment_types" required>
+        <option>Cash</option>
+        <option>Bank Transection</option>
+        <option>cheque</option>
+      </select>  
+<div class="form-control-feedback"
+*ngIf="payment_types.errors && (payment_types.dirty || payment_types.touched)">
+<p *ngIf="payment_types.errors.required">Payment Type is required</p>
+<p *ngIf="payment_types.errors.minlength">Invalid Data </p>
+</div>
+</div>
+
+  <div class="col-12 col-sm-5 form-group">
+  <button class="input1" (click) = "addapi()">Next Step</button>
+  </div>
+                             </div>   
+                            </form>
+                   
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+  </form>
+
+
+

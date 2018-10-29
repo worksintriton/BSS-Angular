@@ -1,0 +1,602 @@
+<!-- Adding Employee Page -->
+
+<form>
+    <!-- service-form -->
+    <div class="service-forms">
+        <div class="row">
+  
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-sm-12 multistep-form-section">
+                <form name="form"  novalidate>
+                        <div class="col-md-12 justify-content-md-center">
+                                <div class="">
+                                <h3 style="    width: 100%;
+                                background: #f1f4f7;padding: 10px;text-transform: uppercase;">Employee Registation</h3>
+                                </div>
+                                <div class="col col-lg-2">                                        
+                                </div>
+                              </div>  
+                              <br>                        
+                <div class="row">
+                        <div class="col-12 col-sm-12 form-group">
+                            <form class="frms" name="form" novalidate>
+
+                                    <div _ngcontent-c7="" class="col-md-12">
+                                            <div _ngcontent-c7="" class="row">
+                                              <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                <div _ngcontent-c7="" class="row">
+                                                  <div _ngcontent-c7="" class="col-md-3">
+                                                    <label _ngcontent-c7="">Login Mobile No</label>
+                                                  </div>
+                                                  <div _ngcontent-c7="" class="col-md-9">
+                                                  
+                                                      <div class="form-group service-form-group">                             
+                                                            <input type="text" #Mobile_No [(ngModel)]="adduser.Mobile_No" placeholder="Mobile_No" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Mobile_No" value="" #Mobile_No>
+                                                      </div>                                            
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                <div _ngcontent-c7="" class="row">
+                                                  <div _ngcontent-c7="" class="col-md-3">
+                                                    <label _ngcontent-c7="">Login Password</label>
+                                                  </div>
+                                                  <div _ngcontent-c7="" class="col-md-9">
+                                                        <input type="text" [(ngModel)]="adduser.Password" placeholder="Password" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Password" value="" #Password>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div _ngcontent-c7="" class="col-md-12">
+                                                <div _ngcontent-c7="" class="row">
+                                                  <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                    <div _ngcontent-c7="" class="row">
+                                                      <div _ngcontent-c7="" class="col-md-3">
+                                                        <label _ngcontent-c7="">Employee Type</label>
+                                                      </div>
+                                                      <div _ngcontent-c7="" class="col-md-9">
+                                                      
+                                                            <select class="form-control"  [(ngModel)]="adduser.employee_type" name="employee_type" value="" #employee_type id="exampleFormControlSelect1">
+                                                                    <option>Training</option>
+                                                                    <option>Employee</option>
+                                                                  </select>                                            
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                    <div _ngcontent-c7="" class="row">
+                                                      <div _ngcontent-c7="" class="col-md-3">
+                                                        <label _ngcontent-c7="">Employee ID</label>
+                                                      </div>
+                                                      <div _ngcontent-c7="" class="col-md-9">
+                                                            <input type="text" placeholder="employee_id" [(ngModel)]="adduser.employee_id" class="form-control col-md-12"     pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="employee_id" value="" #employee_id>
+               
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+
+
+
+                                              <div _ngcontent-c7="" class="col-md-12">
+                                                    <div _ngcontent-c7="" class="row">
+                                                      <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                        <div _ngcontent-c7="" class="row">
+                                                          <div _ngcontent-c7="" class="col-md-3">
+                                                            <label _ngcontent-c7="">Name</label>
+                                                          </div>
+                                                          <div _ngcontent-c7="" class="col-md-9">
+                                                          
+                                                                <input type="text" placeholder="Name" [(ngModel)]="adduser.Name" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Name" value="" #Name>                                         
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                        <div _ngcontent-c7="" class="row">
+                                                          <div _ngcontent-c7="" class="col-md-3">
+                                                            <label _ngcontent-c7="">Father_Name</label>
+                                                          </div>
+                                                          <div _ngcontent-c7="" class="col-md-9">
+                                                                <input type="text" placeholder="Father_Name" [(ngModel)]="adduser.father_name" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="father_name" value="" #father_name>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
+
+
+
+
+
+                                                  <div _ngcontent-c7="" class="col-md-12">
+                                                        <div _ngcontent-c7="" class="row">
+                                                          <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                            <div _ngcontent-c7="" class="row">
+                                                              <div _ngcontent-c7="" class="col-md-3">
+                                                                <label _ngcontent-c7="">Date_Of_Birth</label>
+                                                              </div>
+                                                              <div _ngcontent-c7="" class="col-md-9">
+                                                              
+                                                                    <input type="text" placeholder="Date Of Birth"   [(ngModel)]="adduser.Date_of_birth" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Date_of_birth" value="" #Date_of_birth>
+                                                
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                            <div _ngcontent-c7="" class="row">
+                                                              <div _ngcontent-c7="" class="col-md-3">
+                                                                <label _ngcontent-c7="">Gender</label>
+                                                              </div>
+                                                              <div _ngcontent-c7="" class="col-md-9">
+                                                                    <input type="text" placeholder="Gender" [(ngModel)]="adduser.gender" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="gender" value="" #gender>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div> 
+                                                      <div _ngcontent-c7="" class="col-md-12">
+                                                            <div _ngcontent-c7="" class="row">
+                                                              <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                <div _ngcontent-c7="" class="row">
+                                                                  <div _ngcontent-c7="" class="col-md-3">
+                                                                    <label _ngcontent-c7="">Marital_Status</label>
+                                                                  </div>
+                                                                  <div _ngcontent-c7="" class="col-md-9">
+                                                                  
+                                                                        <input type="text" placeholder="Marital Status" [(ngModel)]="adduser.material_status" class="form-control col-md-12"   pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="material_status" value="" #material_status />
+       
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                              <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                <div _ngcontent-c7="" class="row">
+                                                                  <div _ngcontent-c7="" class="col-md-3">
+                                                                    <label _ngcontent-c7="">Educational_Qualification</label>
+                                                                  </div>
+                                                                  <div _ngcontent-c7="" class="col-md-9">
+                                                                        <input type="text" placeholder="Educational Qualification" [(ngModel)]="adduser.Edq"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="Edq" value="" #Edq />
+      
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>  
+
+
+
+
+
+                                                          <div _ngcontent-c7="" class="col-md-12">
+                                                                <div _ngcontent-c7="" class="row">
+                                                                  <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                    <div _ngcontent-c7="" class="row">
+                                                                      <div _ngcontent-c7="" class="col-md-3">
+                                                                        <label _ngcontent-c7="">Nationality</label>
+                                                                      </div>
+                                                                      <div _ngcontent-c7="" class="col-md-9">
+                                                                            <input type="text" placeholder="nationality"  [(ngModel)]="adduser.nationality" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="nationality" value="" #nationality />
+      
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                  <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                    <div _ngcontent-c7="" class="row">
+                                                                      <div _ngcontent-c7="" class="col-md-3">
+                                                                        <label _ngcontent-c7="">Address</label>
+                                                                      </div>
+                                                                      <div _ngcontent-c7="" class="col-md-9">
+                                                                            <input type="textarea" placeholder="Address"  [(ngModel)]="adduser.Address" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="Address" value="" #Address />
+       
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div> 
+
+
+
+
+                                                               <div _ngcontent-c7="" class="col-md-12">
+                                                                <div _ngcontent-c7="" class="row">
+                                                                  <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                    <div _ngcontent-c7="" class="row">
+                                                                      <div _ngcontent-c7="" class="col-md-3">
+                                                                        <label _ngcontent-c7="">Email Id</label>
+                                                                      </div>
+                                                                      <div _ngcontent-c7="" class="col-md-9">
+                                                                            <input type="text" placeholder="Email Id" [(ngModel)]="adduser.Email_ID" class="form-control col-md-12"   pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="Email_ID" value="" #Email_ID />
+       
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                  <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                    <div _ngcontent-c7="" class="row">
+                                                                      <div _ngcontent-c7="" class="col-md-3">
+                                                                        <label _ngcontent-c7="">Languages_Known</label>
+                                                                      </div>
+                                                                      <div _ngcontent-c7="" class="col-md-9">
+                                                                            <input type="text" placeholder="Languages Known" [(ngModel)]="adduser.languages" class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="languages" value="" #languages />
+    
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div> 
+
+
+
+                                                              <div _ngcontent-c7="" class="col-md-12">
+                                                                    <div _ngcontent-c7="" class="row">
+                                                                      <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                        <div _ngcontent-c7="" class="row">
+                                                                          <div _ngcontent-c7="" class="col-md-3">
+                                                                            <label _ngcontent-c7="">Work_Experience</label>
+                                                                          </div>
+                                                                          <div _ngcontent-c7="" class="col-md-9">
+                                                                                
+                                                                             <input type="text" placeholder="Work Experience" [(ngModel)]="adduser.work_exp" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="work_exp" value="" #work_exp />
+       
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                      <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                        <div _ngcontent-c7="" class="row">
+                                                                          <div _ngcontent-c7="" class="col-md-3">
+                                                                            <label _ngcontent-c7="">Aadhar_Card_No</label>
+                                                                          </div>
+                                                                          <div _ngcontent-c7="" class="col-md-9">
+                                                                                <input  type="text" placeholder="Aadhar Card_No" [(ngModel)]="adduser.aadhar_card" class="form-control col-md-12" required=""   pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="aadhar_card" value="" #aadhar_card >   
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                  <div _ngcontent-c7="" class="col-md-12">
+                                                                        <div _ngcontent-c7="" class="row">
+                                                                          <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                            <div _ngcontent-c7="" class="row">
+                                                                              <div _ngcontent-c7="" class="col-md-3">
+                                                                                <label _ngcontent-c7="">Date Of Joining</label>
+                                                                              </div>
+                                                                              <div _ngcontent-c7="" class="col-md-9">
+                                                                                <input id="date_joining" type="text" placeholder="Date of Joining" [(ngModel)]="adduser.date_joining" class="form-control col-md-12" required=""    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="date_joining" value="" #date_joining >       
+
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                          <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                            <div _ngcontent-c7="" class="row">
+                                                                              <div _ngcontent-c7="" class="col-md-3">
+                                                                                <label _ngcontent-c7="">Voter ID</label>
+                                                                              </div>
+                                                                              <div _ngcontent-c7="" class="col-md-9">
+                                                                                    <input id="voter_id" type="text" placeholder="Voter ID" [(ngModel)]="adduser.voter_id" class="form-control col-md-12" required=""    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="voter_id" value="" #voter_id >       
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div> 
+
+
+
+
+                                                                      <div _ngcontent-c7="" class="col-md-12">
+                                                                            <div _ngcontent-c7="" class="row">
+                                                                              <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                <div _ngcontent-c7="" class="row">
+                                                                                  <div _ngcontent-c7="" class="col-md-3">
+                                                                                    <label _ngcontent-c7="">Driving Licence Number</label>
+                                                                                  </div>
+                                                                                  <div _ngcontent-c7="" class="col-md-9">
+                                                                                        <input id="name" type="text" placeholder="Driving Licence Number" [(ngModel)]="adduser.driving_licence" class="form-control col-md-12" required=""    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="driving_licence" value="" #driving_licence > 
+                                                                                  </div>
+                                                                                </div>
+                                                                              </div>
+                                                                              <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                <div _ngcontent-c7="" class="row">
+                                                                                  <div _ngcontent-c7="" class="col-md-3">
+                                                                                    <label _ngcontent-c7="">Attach Contract Document</label>
+                                                                                  </div>
+                                                                                  <div _ngcontent-c7="" class="col-md-9">
+                                                                                        <div class="custom-file">
+                                                                                                <input type="file" class="custom-file-input" id="custom-file-input">
+                                                                                                <label class="custom-file-label px-3" for="custom-file-input">Choose file</label>
+                                                                                              </div>    
+                                                                                  </div>
+                                                                                </div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div> 
+
+                                                                          <div _ngcontent-c7="" class="col-md-12">
+                                                                            <div _ngcontent-c7="" class="row">
+                                                                              <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                <div _ngcontent-c7="" class="row">
+                                                                                  <div _ngcontent-c7="" class="col-md-3">
+                                                                                    <label _ngcontent-c7="">EPN NO</label>
+                                                                                  </div>
+                                                                                  <div _ngcontent-c7="" class="col-md-9">
+                                                                                  
+                                                                                      <div class="form-group service-form-group">                             
+                                                                                          <input type="text" placeholder="EPN NO" [(ngModel)]="adduser.epn_no"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="epn_no" value="" #epn_no />
+                                              
+                                                                                      </div>                                            
+                                                                                  </div>
+                                                                                </div>
+                                                                              </div>
+                                                                              <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                <div _ngcontent-c7="" class="row">
+                                                                                  <div _ngcontent-c7="" class="col-md-3">
+                                                                                    <label _ngcontent-c7="">EPN Amount</label>
+                                                                                  </div>
+                                                                                  <div _ngcontent-c7="" class="col-md-9">
+                                                                                      <input type="text" placeholder="EPN Amount" [(ngModel)]="adduser.epn_amount"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="epn_amount" value="" #epn_amount />
+                                              
+                                                                                  </div>
+                                                                                </div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                        
+                                        
+                                        
+                                                                          <div _ngcontent-c7="" class="col-md-12">
+                                                                              <div _ngcontent-c7="" class="row">
+                                                                                <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                  <div _ngcontent-c7="" class="row">
+                                                                                    <div _ngcontent-c7="" class="col-md-3">
+                                                                                      <label _ngcontent-c7="">ESIC No</label>
+                                                                                    </div>
+                                                                                    <div _ngcontent-c7="" class="col-md-9">
+                                                                                    
+                                                                                        <div class="form-group service-form-group">                             
+                                                                                            <input type="text" placeholder="ESIC No" min="0" [(ngModel)]="adduser.esic_no"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="esic_no" value="" #esic_no />
+                                              
+                                                                                        </div>                                            
+                                                                                    </div>
+                                                                                  </div>
+                                                                                </div>
+                                                                                <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                  <div _ngcontent-c7="" class="row">
+                                                                                    <div _ngcontent-c7="" class="col-md-3">
+                                                                                      <label _ngcontent-c7="">ESIC Amount</label>
+                                                                                    </div>
+                                                                                    <div _ngcontent-c7="" class="col-md-9">
+                                                                                        <input type="text" placeholder="ESIC Amount" [(ngModel)]="adduser.esic_amount"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="esic_amount" value="" #esic_amount />
+                                              
+                                                                                    </div>
+                                                                                  </div>
+                                                                                </div>
+                                                                              </div>
+                                                                            </div>
+                                        
+                                        
+                                                                            <div _ngcontent-c7="" class="col-md-12">
+                                                                                <div _ngcontent-c7="" class="row">
+                                                                                  <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                    <div _ngcontent-c7="" class="row">
+                                                                                      <div _ngcontent-c7="" class="col-md-3">
+                                                                                        <label _ngcontent-c7="">EPF No</label>
+                                                                                      </div>
+                                                                                      <div _ngcontent-c7="" class="col-md-9">
+                                                                                      
+                                                                                          <div class="form-group service-form-group">                             
+                                                                                              <input type="text" placeholder="EPF No"  min="0" [(ngModel)]="adduser.epf_no"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="epf_no" value="" #epf_no />
+                                              
+                                                                                          </div>                                            
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                                                                  <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                    <div _ngcontent-c7="" class="row">
+                                                                                      <div _ngcontent-c7="" class="col-md-3">
+                                                                                        <label _ngcontent-c7="">EPF Amount</label>
+                                                                                      </div>
+                                                                                      <div _ngcontent-c7="" class="col-md-9">
+                                                                                          <input type="text" placeholder="MMSPL EPF Number" [(ngModel)]="adduser.epf_amount"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="epf_amount" value="" #epf_amount />
+                                              
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                                                                </div>
+                                                                              </div>
+                                        
+                                        
+                                                                              <div _ngcontent-c7="" class="col-md-12">
+                                                                                  <div _ngcontent-c7="" class="row">
+                                                                                    <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                      <div _ngcontent-c7="" class="row">
+                                                                                        <div _ngcontent-c7="" class="col-md-3">
+                                                                                          <label _ngcontent-c7="">MMSPL EPF NO</label>
+                                                                                        </div>
+                                                                                        <div _ngcontent-c7="" class="col-md-9">
+                                                                                        
+                                                                                            <div class="form-group service-form-group">                             
+                                                                                                <input type="text" placeholder="MMSPL EPF Amount" min="0"  [(ngModel)]="adduser.mmspl_no"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="mmspl_no" value="" #mmspl_no />
+                                              
+                                                                                            </div>                                            
+                                                                                        </div>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                    <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                      <div _ngcontent-c7="" class="row">
+                                                                                        <div _ngcontent-c7="" class="col-md-3">
+                                                                                          <label _ngcontent-c7="">MMSPL EPF Amount</label>
+                                                                                        </div>
+                                                                                        <div _ngcontent-c7="" class="col-md-9">
+                                                                                            <input type="text" placeholder="UAN Number" [(ngModel)]="adduser.mmspl_amount"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="mmspl_amount" value="" #mmspl_amount /> 
+                                                                                        </div>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                                                                </div>
+                                        
+                                        
+                                        
+                                                                                <div _ngcontent-c7="" class="col-md-12">
+                                                                                    <div _ngcontent-c7="" class="row">
+                                                                                      <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                        <div _ngcontent-c7="" class="row">
+                                                                                          <div _ngcontent-c7="" class="col-md-3">
+                                                                                            <label _ngcontent-c7="">UAN No</label>
+                                                                                          </div>
+                                                                                          <div _ngcontent-c7="" class="col-md-9">
+                                                                                          
+                                                                                              <div class="form-group service-form-group">                             
+                                                                                                  <input type="text" placeholder="UAN Amount"  min="0" [(ngModel)]="adduser.uan_no"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="uan_no" value="" #uan_no />
+                                              
+                                                                                              </div>                                            
+                                                                                          </div>
+                                                                                        </div>
+                                                                                      </div>
+                                                                                      <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                        <div _ngcontent-c7="" class="row">
+                                                                                          <div _ngcontent-c7="" class="col-md-3">
+                                                                                            <label _ngcontent-c7="">UAN Amount</label>
+                                                                                          </div>
+                                                                                          <div _ngcontent-c7="" class="col-md-9">
+                                                                                              <input type="text" placeholder="PF Elegible" [(ngModel)]="adduser.uan_amount"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="uan_amount" value="" #uan_amount /> 
+                                                                                          </div>
+                                                                                        </div>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                        
+                                        
+                                                                                  <div _ngcontent-c7="" class="col-md-12">
+                                                                                      <div _ngcontent-c7="" class="row">
+                                                                                        <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                          <div _ngcontent-c7="" class="row">
+                                                                                            <div _ngcontent-c7="" class="col-md-3">
+                                                                                              <label _ngcontent-c7="">PF Elegible</label>
+                                                                                            </div>
+                                                                                            <div _ngcontent-c7="" class="col-md-9">
+                                                                                            
+                                                                                                <div class="form-group service-form-group">                             
+                                                                                                    <input type="text" placeholder="PF Elegible" [(ngModel)]="adduser.pf_elegible"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="pf_elegible" value="" #pf_elegible />  
+                                                                                                </div>                                            
+                                                                                            </div>
+                                                                                          </div>
+                                                                                        </div>
+                                                                                        <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                          <div _ngcontent-c7="" class="row">
+                                                                                            <div _ngcontent-c7="" class="col-md-3">
+                                                                                              <label _ngcontent-c7="">PF_Amount</label>
+                                                                                            </div>
+                                                                                            <div _ngcontent-c7="" class="col-md-9">
+                                                                                                <input type="text" placeholder="PF Amount" min="0" [(ngModel)]="adduser.pf_amount"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="pf_amount" value="" #pf_amount />
+                                              
+                                                                                            </div>
+                                                                                          </div>
+                                                                                        </div>
+                                                                                      </div>
+                                                                                    </div>
+                                        
+                                        
+                                        
+                                                                                    <div _ngcontent-c7="" class="col-md-12">
+                                                                                        <div _ngcontent-c7="" class="row">
+                                                                                          <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                            <div _ngcontent-c7="" class="row">
+                                                                                              <div _ngcontent-c7="" class="col-md-3">
+                                                                                                <label _ngcontent-c7="">ESI Elegible</label>
+                                                                                              </div>
+                                                                                              <div _ngcontent-c7="" class="col-md-9">
+                                                                                              
+                                                                                                  <div class="form-group service-form-group">                             
+                                                                                                      <input type="text" placeholder="ESI Elegible" [(ngModel)]="adduser.esi_elegible"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="esi_elegible" value="" #esi_elegible /> 
+                                                                                                  </div>                                            
+                                                                                              </div>
+                                                                                            </div>
+                                                                                          </div>
+                                                                                          <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                            <div _ngcontent-c7="" class="row">
+                                                                                              <div _ngcontent-c7="" class="col-md-3">
+                                                                                                <label _ngcontent-c7="">ESI Amount</label>
+                                                                                              </div>
+                                                                                              <div _ngcontent-c7="" class="col-md-9">
+                                                                                                  <input type="text" placeholder="ESI Amount" min="0" [(ngModel)]="adduser.esi_amount"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="esi_amount" value="" #esi_amount />
+                                              
+                                                                                              </div>
+                                                                                            </div>
+                                                                                          </div>
+                                                                                        </div>
+                                                                                      </div>
+                                        
+                                        
+                                        
+                                                                                      <div _ngcontent-c7="" class="col-md-12">
+                                                                                          <div _ngcontent-c7="" class="row">
+                                                                                            <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                              <div _ngcontent-c7="" class="row">
+                                                                                                <div _ngcontent-c7="" class="col-md-3">
+                                                                                                  <label _ngcontent-c7="">Professional Tax Type</label>
+                                                                                                </div>
+                                                                                                <div _ngcontent-c7="" class="col-md-9">
+                                                                                                
+                                                                                                    <div class="form-group service-form-group">                             
+                                                                                                        <select class="form-control"  [(ngModel)]="adduser.professional_type" name="professional_type" value="" #professional_type id="exampleFormControlSelect1">
+                                                                                                            <option>State</option>
+                                                                                                            <option>Centrel</option>
+                                                                                                          </select> 
+                                                                                                    </div>                                            
+                                                                                                </div>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                            <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                              <div _ngcontent-c7="" class="row">
+                                                                                                <div _ngcontent-c7="" class="col-md-3">
+                                                                                                  <label _ngcontent-c7="">Professional Tax No</label>
+                                                                                                </div>
+                                                                                                <div _ngcontent-c7="" class="col-md-9">
+                                                                                                    <input type="text" placeholder="Professional Tax Amount" [(ngModel)]="adduser.professional_tax"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="professional_tax" value="" #professional_tax />
+                                                                                                </div>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                          </div>
+                                                                                        </div>
+                                        
+                                        
+                                        
+                                        
+                                                                                        <div _ngcontent-c7="" class="col-md-12">
+                                                                                            <div _ngcontent-c7="" class="row">
+                                                                                              <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
+                                                                                                <div _ngcontent-c7="" class="row">
+                                                                                                  <div _ngcontent-c7="" class="col-md-3">
+                                                                                                    <label _ngcontent-c7="">Professional Tax Amount</label>
+                                                                                                  </div>
+                                                                                                  <div _ngcontent-c7="" class="col-md-9">
+                                                                                                  
+                                                                                                      <div class="form-group service-form-group">                             
+                                                                                                          <input type="text" placeholder="Professional Tax Amount" min="0" [(ngModel)]="adduser.professional_amount"  class="form-control col-md-12"  pattern="^[a-zA-Z0-9_-\s]{2,150}$"name="professional_amount" value="" #professional_amount />
+                                                                                                      </div>                                            
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                              
+                                                                                            </div>
+                                                                                          </div>
+                            <div class="row">
+  <div class="col-md-12 col-sm-5 form-group">
+  <button class="input1" (click) = "addapi()">Next</button>
+  </div>
+  </div>
+  </form>
+ </div>
+</div>
+  
+  
+                  </form>
+              </div>
+              </div>
+            </div>
+          </div>
+  
+    </div>
+  </form>
+  

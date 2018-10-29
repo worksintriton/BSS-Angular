@@ -8,7 +8,7 @@
     <h2 class="text-center">BSS</h2>
 <div class="col-md-4"></div><div class="col-md-4">
 
-    <div class="notifications">
+    <div class="notifications"  (click)="addapi1()">
         <i class="fa fa-bell"></i>
         <span class="num">4</span>
        
@@ -61,50 +61,3 @@
                       (collapse)="isMenuCollapsed = $event"></px-gdn-multimenu>
   </div>
 </div>
-<!-- <div class="card options-panel options-closed" [class.options-closed]="isOptionsClosed">
-  <div class="card-body">
-    <div class="d-flex justify-content-between">
-      <h5 class="card-title ">
-        Options
-      </h5>
-      <i class="material-icons options-close-btn" (click)="isOptionsClosed =!isOptionsClosed">close</i>
-    </div>
-    <div class="d-flex align-items-center mb-2">
-      <div class="px-gdn-toggle">
-        <input id="toggle-boxed" type="checkbox" [ngModel]="isBoxedLayout" (change)="toggleBoxed()"/>
-        <label for="toggle-boxed" class="label-default"></label>
-      </div>
-      <div class="pl-3">
-        <label class="mb-0" for="toggle-boxed">Boxed</label>
-      </div>
-    </div>
-    <div class="d-flex align-items-center mb-2">
-      <div class="px-gdn-toggle">
-        <input id="toggle-compact" type="checkbox" [ngModel]="isSmallMenuMode" (change)="toggleCompactMenu()"/>
-        <label for="toggle-compact" class="label-default"></label>
-      </div>
-      <div class="pl-3">
-        <label class="mb-0" for="toggle-compact">Compact sidenav</label>
-      </div>
-    </div>
-    <div class="d-flex align-items-center mb-2">
-      <div class="px-gdn-toggle">
-        <input id="toggle-overlay" type="checkbox" [ngModel]="isOverlayMenuMode" (change)="toggleOverlayMode()"/>
-        <label for="toggle-overlay" class="label-default"></label>
-      </div>
-      <div class="pl-3">
-        <label class="mb-0" for="toggle-overlay">Sidenav overlay</label>
-      </div>
-    </div>
-    <div class="d-flex align-items-center">
-      <div class="px-gdn-toggle">
-        <input id="toggle-fixed" type="checkbox" [ngModel]="isFixedHeader" (change)="toggleFixedHeader()"/>
-        <label for="toggle-fixed" class="label-default"></label>
-      </div>
-      <div class="pl-3">
-        <label class="mb-0" for="toggle-fixed">Fixed header</label>
-      </div>
-    </div>
-  </div>
-  <i class="material-icons options-open-btn" (click)="isOptionsClosed =!isOptionsClosed">settings</i>
-</div> -->

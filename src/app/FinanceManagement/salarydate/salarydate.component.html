@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="row">
+      <div _ngcontent-c4="" class="header">
+        <div _ngcontent-c4="" class="row">
+          <div _ngcontent-c4="" class="col-12 col-md-6 mb-3">
+            <div _ngcontent-c4="" class="col-md-12">
+              <h3 _ngcontent-c4="" class="adsc">
+                <i _ngcontent-c4="" class="fa fa-university"></i> &nbsp;Date Salary Payment</h3>
+              </div>
+            </div>
+            <div _ngcontent-c4="" class="col-md-6">
+                <!-- <button class="input1" (click) = "addapi5()">Add</button> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row col-12">
+        <div class="col-12 col-lg-4">
+          <div class="input-group mt-3">
+            <input type="email" class="form-control" placeholder="Enter Date">
+            <span class="input-group-btn">
+              <button class="btn px-gdn-btn px-gdn-btn-icon px-4" type="button">
+                <i class="material-icons">search</i>
+              </button>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="input-group mt-3">
+              <form>
+                  <input type="radio" name="gender" value="male" checked> Year<br>
+                  <input type="radio" name="gender" value="female"> Month<br>
+                  <input type="radio" name="gender" value="other"> Day  
+                </form> 
+          </div>
+        </div>
+      </div>
+        
+        <br>
+        <br>
+        <!-- <div class="col-md-12 pull-left">
+
+                 <button class="input1" >Recivable amount = 23,34,534</button>
+                   
+                <button class="input1" >Payable Amount = 19,34,523</button>
+                 
+                
+                <button class="input1" >Paid Amount = 19,34,000</button>
+                    
+                  
+                <button class="input1" >Pending Amount =  500</button>
+                         
+                 </div>
+                 <br>
+                 <br>
+         <br> -->
+
+        <div class="col">
+    
+            <div class="col-md-12">
+              <div class="row">
+                <div class="tabl" >
+                    <table class="table table-bordered" style="border-collapse:collapse;">
+                        <thead>
+                            <tr>
+                              <th>SL.NO</th>
+                              <th>Date</th>
+                              <th>Total Salary Amount</th>
+                              <th>Salary Paid Amount</th>
+                              <th>Salary holding</th>
+                              <th>Status</th>
+                              <th>View</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <ng-container  *ngFor="let data of datas ;  let i = index">
+
+                                <tr>
+                                      <td>{{data.id}}</td> 
+                                      <td>2018</td>
+                                      <td>65,455</td>
+                                      <td>35,455</td>
+                                      <td id="pc1">30,000</td>
+                                      <td id="pc1">Inprocess</td>
+                                        <td> <button class="accordion-toggle  btn mat-button-wrapper btn-sm" data-toggle="collapse" (click)="addapi1()"><i _ngcontent-c6="" class="m-1 icon-screen-desktop"></i></button></td>
+                                       
+                                    </tr>
+                                    </ng-container>      
+                        </tbody>
+                    </table>
+                    <div *ngIf="loading" ><div class="loader text-center"></div></div>     
+                    <div class="card-footer p-0">
+                    <ngb-pagination  [collectionSize]="collsize" [(page)]="advancedPage" (pageChange)="newsync()" [boundaryLinks]="true" ></ngb-pagination>
+                    </div>     
+              </div>
+              </div>
+            </div>
+            </div>
+        
+       
+  </div>
+</div>
+<!-- END # BOOTSNIP INFO -->
+
+
+

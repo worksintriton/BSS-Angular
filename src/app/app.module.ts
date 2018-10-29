@@ -62,81 +62,101 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import { ScrollPageComponent } from './pages/scroll-page/scroll-page.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { SchoolmanagementComponent } from './schoolmanagement/schoolmanagement.component';
+import { SchoolmanagementComponent } from './Salesteam/schoolmanagement/schoolmanagement.component';
+import { StorageServiceModule } from 'angular-webstorage-service';
 
 
-import { AssignusertoschoolComponent } from './assignusertoschool/assignusertoschool.component';
 
 import { ApiIntegService } from './api-integ.service';
 import { HttpModule } from '@angular/http';
-import {SchoolsService} from './schools.service';
-import { UpdateschoolComponent } from './updateschool/updateschool.component';
-import { UpdateuserComponent } from './updateuser/updateuser.component';
-import { ViewschooluserComponent } from './viewschooluser/viewschooluser.component';
+
+
+
+
 import { ForgotpswdComponent } from './pages/forgotpswd/forgotpswd.component';
 import { ChangepaswordComponent } from './pages/changepasword/changepasword.component';
-import { AssingComponent } from './assing/assing.component';
-import { ViewassignComponent } from './viewassign/viewassign.component';
-
-import { IssuesComponent } from './issues/issues.component';
-import { ClientissuesComponent } from './clientissues/clientissues.component';
-
-import { UpdateissuesComponent } from './updateissues/updateissues.component';
-import { UpdateclientissuesComponent } from './updateclientissues/updateclientissues.component';
 
 
-import { ViewuserComponent } from './viewuser/viewuser.component';
-import { ViewclientdetailComponent } from './viewclientdetail/viewclientdetail.component';
-import { EditclientComponent } from './editclient/editclient.component';
-import { ViewemployeesComponent } from './viewemployees/viewemployees.component';
-import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
-import { EditemployeeComponent } from './editemployee/editemployee.component';
-import { ViewusersComponent } from './viewusers/viewusers.component';
-import { EditusersComponent } from './editusers/editusers.component';
-import { AddclientComponent } from './addclient/addclient.component';
-import { TestpageComponent } from './testpage/testpage.component';
-import { Test1Component } from './test1/test1.component';
+
+
+
+import { ViewuserComponent } from './Users/viewuser/viewuser.component';
+import { ViewclientdetailComponent } from './Salesteam/viewclientdetail/viewclientdetail.component';
+import { ViewemployeesComponent } from './Humanresource/viewemployees/viewemployees.component';
+import { EmployeedetailsComponent } from './Humanresource/employeedetails/employeedetails.component';
+import { EditemployeeComponent } from './Humanresource/editemployee/editemployee.component';
+
+import { AddclientComponent } from './Salesteam/addclient/addclient.component';
+
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { UpdateclientComponent } from './updateclient/updateclient.component';
-import { UpdateemployeeComponent } from './updateemployee/updateemployee.component';
-import { AddemployeeComponent } from './addemployee/addemployee.component';
-import { AdduserComponent } from './adduser/adduser.component';
-import { UserdetailsComponent } from './userdetails/userdetails.component';
-import { HumanresoucesComponent } from './humanresouces/humanresouces.component';
+import { UpdateclientComponent } from './Salesteam/updateclient/updateclient.component';
+import { UpdateemployeeComponent } from './Humanresource/updateemployee/updateemployee.component';
+import { AddemployeeComponent } from './Humanresource/addemployee/addemployee.component';
+import { AdduserComponent } from './Users/adduser/adduser.component';
+import { UserdetailsComponent } from './Users/userdetails/userdetails.component';
+import { HumanresoucesComponent } from './Humanresource/humanresouces/humanresouces.component';
 
-import { HrreportComponent } from './hrreport/hrreport.component';
-import { ViewassignemployeeComponent } from './viewassignemployee/viewassignemployee.component';
-import { HrreportlistComponent } from './hrreportlist/hrreportlist.component';
-import { HrnewreportComponent } from './hrnewreport/hrnewreport.component';
-import { HreditreportComponent } from './hreditreport/hreditreport.component';
-import { HrviewclientComponent } from './hrviewclient/hrviewclient.component';
-import { HrreportslipComponent } from './hrreportslip/hrreportslip.component';
-import { HrassassignemployeeComponent } from './hrassassignemployee/hrassassignemployee.component';
-import { HrassignemployeelistComponent } from './hrassignemployeelist/hrassignemployeelist.component';
-import { HreditassignemployeeComponent } from './hreditassignemployee/hreditassignemployee.component';
-import { HrviewassignemployeeComponent } from './hrviewassignemployee/hrviewassignemployee.component';
-import { SalesnewcontractComponent } from './salesnewcontract/salesnewcontract.component';
-import { SalescontractlistComponent } from './salescontractlist/salescontractlist.component';
-import { SaleseditcontractComponent } from './saleseditcontract/saleseditcontract.component';
-import { SalesbillingComponent } from './salesbilling/salesbilling.component';
-import { SalespipelineComponent } from './salespipeline/salespipeline.component';
-import { SalesnotificationComponent } from './salesnotification/salesnotification.component';
+import { HrreportComponent } from './Humanresource/hrreport/hrreport.component';
 
-import { SalesviewnoticeComponent } from './salesviewnotice/salesviewnotice.component';
-import { SalesclienthistoryComponent } from './salesclienthistory/salesclienthistory.component';
-import { ClienthistoryviewComponent } from './clienthistoryview/clienthistoryview.component';
+import { HrreportlistComponent } from './Humanresource/hrreportlist/hrreportlist.component';
+import { HrnewreportComponent } from './Humanresource/hrnewreport/hrnewreport.component';
+import { HreditreportComponent } from './Humanresource/hreditreport/hreditreport.component';
+import { HrviewclientComponent } from './Humanresource/hrviewclient/hrviewclient.component';
+import { HrreportslipComponent } from './Humanresource/hrreportslip/hrreportslip.component';
+import { HrassassignemployeeComponent } from './Humanresource/hrassassignemployee/hrassassignemployee.component';
+import { HrassignemployeelistComponent } from './Humanresource/hrassignemployeelist/hrassignemployeelist.component';
+import { HreditassignemployeeComponent } from './Humanresource/hreditassignemployee/hreditassignemployee.component';
+import { HrviewassignemployeeComponent } from './Humanresource/hrviewassignemployee/hrviewassignemployee.component';
+import { SalesnewcontractComponent } from './Salesteam/salesnewcontract/salesnewcontract.component';
+import { SalescontractlistComponent } from './Salesteam/salescontractlist/salescontractlist.component';
+import { SaleseditcontractComponent } from './Salesteam/saleseditcontract/saleseditcontract.component';
+import { SalesbillingComponent } from './Salesteam/salesbilling/salesbilling.component';
+import { SalespipelineComponent } from './Salesteam/salespipeline/salespipeline.component';
+import { SalesnotificationComponent } from './Salesteam/salesnotification/salesnotification.component';
 
-import { Addemployeepg1Component } from './addemployeepg1/addemployeepg1.component';
-import { Addemployeepg2Component } from './addemployeepg2/addemployeepg2.component';
+import { SalesviewnoticeComponent } from './Salesteam/salesviewnotice/salesviewnotice.component';
+import { SalesclienthistoryComponent } from './Salesteam/salesclienthistory/salesclienthistory.component';
 
-import { Addemployeepg3Component } from './addemployeepg3/addemployeepg3.component';
-import { Updateemployee1Component } from './updateemployee1/updateemployee1.component';
-import { Updateclient1Component } from './updateclient1/updateclient1.component';
-import { OpertionteamComplaintComponent } from './opertionteam-complaint/opertionteam-complaint.component';
-import { OpertionteamComplaintviewComponent } from './opertionteam-complaintview/opertionteam-complaintview.component';
-import { OpertionteamfeedbackComponent } from './opertionteamfeedback/opertionteamfeedback.component';
-import { OpertionteamfeedbackviewComponent } from './opertionteamfeedbackview/opertionteamfeedbackview.component';
-import { AdmindashboardComponent } from './admin/admindashboard/admindashboard.component';
+
+import { Updateemployee1Component } from './Humanresource/updateemployee1/updateemployee1.component';
+import { Updateclient1Component } from './Salesteam/updateclient1/updateclient1.component';
+
+import { OperationcomplaintlistComponent } from './operationteam/operationcomplaintlist/operationcomplaintlist.component';
+import { OperationfeedbacklistComponent } from './operationteam/operationfeedbacklist/operationfeedbacklist.component';
+import { OperacominprogresslistComponent } from './operationteam/operacominprogresslist/operacominprogresslist.component';
+
+import { OperacomcompletelistComponent } from './operationteam/operacomcompletelist/operacomcompletelist.component';
+import { OperacomcompleteviewComponent } from './operationteam/operacomcompleteview/operacomcompleteview.component';
+import { OperationfeedbackinprogressComponent } from './operationteam/operationfeedbackinprogress/operationfeedbackinprogress.component';
+import { OperationfeedbackcompletedlistComponent } from './operationteam/operationfeedbackcompletedlist/operationfeedbackcompletedlist.component';
+import { OperationfeedbackcompletedviewComponent } from './operationteam/operationfeedbackcompletedview/operationfeedbackcompletedview.component';
+import { EmployeeComponent } from './searchquery/employee/employee.component';
+import { ClientComponent } from './searchquery/client/client.component';
+import { CreateinvoiceComponent } from './FinanceManagement/createinvoice/createinvoice.component';
+import { UpdateinvoiceComponent } from './FinanceManagement/updateinvoice/updateinvoice.component';
+import { InvoicelistComponent } from './FinanceManagement/invoicelist/invoicelist.component';
+import { InvoiceviewComponent } from './FinanceManagement/invoiceview/invoiceview.component';
+import { InvoicebillingComponent } from './FinanceManagement/invoicebilling/invoicebilling.component';
+import { SalarypaymentComponent } from './FinanceManagement/salarypayment/salarypayment.component';
+import { AddsalarypaymentComponent } from './FinanceManagement/addsalarypayment/addsalarypayment.component';
+import { OperationcomlistComponent } from './operationteam/operationcomlist/operationcomlist.component';
+import { OperationfeedlistComponent } from './operationteam/operationfeedlist/operationfeedlist.component';
+import { FinanceyearComponent } from './FinanceManagement/financeyear/financeyear.component';
+import { FinancemonthComponent } from './FinanceManagement/financemonth/financemonth.component';
+import { FinancedateComponent } from './FinanceManagement/financedate/financedate.component';
+import { FinancesinglebillComponent } from './FinanceManagement/financesinglebill/financesinglebill.component';
+import { AttendancemanagementComponent } from './Humanresource/attendancemanagement/attendancemanagement.component';
+import { SalaryyearlyComponent } from './FinanceManagement/salaryyearly/salaryyearly.component';
+import { SalarymonthlyComponent } from './FinanceManagement/salarymonthly/salarymonthly.component';
+import { SalarydateComponent } from './FinanceManagement/salarydate/salarydate.component';
+import { SalarylistComponent } from './FinanceManagement/salarylist/salarylist.component';
+import { ViewdetailsComponent } from './Users/viewdetails/viewdetails.component';
+import { ConfigurenumberComponent } from './operationteam/configurenumber/configurenumber.component';
+import { SettrainingComponent } from './operationteam/settraining/settraining.component';
+import { SettraininglistComponent } from './operationteam/settraininglist/settraininglist.component';
+import { SettrainingvideosComponent } from './operationteam/settrainingvideos/settrainingvideos.component';
+import { SettraininglessonsComponent } from './operationteam/settraininglessons/settraininglessons.component';
+import { EmployeetrackingComponent } from './employeetracking/employeetracking.component';
 
 
 
@@ -207,29 +227,22 @@ export function createTranslateLoader(http: HttpClient) {
     TranslatePageComponent,
     ScrollPageComponent,
     SchoolmanagementComponent,
-    AssignusertoschoolComponent,
-    UpdateschoolComponent,
-    UpdateuserComponent,
-    ViewschooluserComponent,
+    
+  
+
+ 
     ForgotpswdComponent,
     ChangepaswordComponent,
-    AssingComponent,
-    ViewassignComponent,
-    IssuesComponent,
-    ClientissuesComponent,
-    UpdateissuesComponent,
-    UpdateclientissuesComponent,
+
+   
     ViewuserComponent,
     ViewclientdetailComponent,
-    EditclientComponent,
     ViewemployeesComponent,
     EmployeedetailsComponent,
     EditemployeeComponent,
-    ViewusersComponent,
-    EditusersComponent,
+
     AddclientComponent,
-    TestpageComponent,
-    Test1Component,
+
     UpdateclientComponent,
     UpdateemployeeComponent,
     AddemployeeComponent,
@@ -237,7 +250,7 @@ export function createTranslateLoader(http: HttpClient) {
     UserdetailsComponent,
     HumanresoucesComponent,
     HrreportComponent,
-    ViewassignemployeeComponent,
+ 
     HrreportlistComponent,
     HrnewreportComponent,
     HreditreportComponent,
@@ -255,18 +268,45 @@ export function createTranslateLoader(http: HttpClient) {
     SalesnotificationComponent,
     SalesviewnoticeComponent,
     SalesclienthistoryComponent,
-    ClienthistoryviewComponent,
-    Addemployeepg1Component,
-    Addemployeepg2Component,
-    Addemployeepg3Component,
+  
     Updateemployee1Component,
     Updateclient1Component,
-    OpertionteamComplaintComponent,
-    OpertionteamComplaintviewComponent,
-    OpertionteamfeedbackComponent,
-    OpertionteamfeedbackviewComponent,
-    AdmindashboardComponent
-   
+    OperationcomplaintlistComponent,
+    OperationfeedbacklistComponent,
+    OperacominprogresslistComponent,
+    OperacomcompletelistComponent,
+    OperacomcompleteviewComponent,
+    OperationfeedbackinprogressComponent,
+    OperationfeedbackcompletedlistComponent,
+    OperationfeedbackcompletedviewComponent,
+    EmployeeComponent,
+    ClientComponent,
+    CreateinvoiceComponent,
+    UpdateinvoiceComponent,
+    InvoicelistComponent,
+    InvoiceviewComponent,
+    InvoicebillingComponent,
+    SalarypaymentComponent,
+    AddsalarypaymentComponent,
+    OperationcomlistComponent,
+    OperationfeedlistComponent,
+    FinanceyearComponent,
+    FinancemonthComponent,
+    FinancedateComponent,
+    FinancesinglebillComponent,
+    AttendancemanagementComponent,
+    SalaryyearlyComponent,
+    SalarymonthlyComponent,
+    SalarydateComponent,
+    SalarylistComponent,
+    ViewdetailsComponent,
+    ConfigurenumberComponent,
+    SettrainingComponent,
+    SettraininglistComponent,
+    SettrainingvideosComponent,
+    SettraininglessonsComponent,
+    EmployeetrackingComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -280,7 +320,7 @@ export function createTranslateLoader(http: HttpClient) {
     NgxGalleryModule,
     TextMaskModule,
     BrowserAnimationsModule,
-    HttpModule,
+    HttpModule,StorageServiceModule,
 
 
     // Insert your google maps api key, if you do not need google map in your project, you can remove this import
@@ -297,7 +337,7 @@ export function createTranslateLoader(http: HttpClient) {
     }),
   ],
   providers: [
-    SchoolsService,
+  
     ApiIntegService,
     ResizeService,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
