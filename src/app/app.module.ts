@@ -118,7 +118,6 @@ import { SalesviewnoticeComponent } from './Salesteam/salesviewnotice/salesviewn
 import { SalesclienthistoryComponent } from './Salesteam/salesclienthistory/salesclienthistory.component';
 
 
-import { Updateemployee1Component } from './Humanresource/updateemployee1/updateemployee1.component';
 import { Updateclient1Component } from './Salesteam/updateclient1/updateclient1.component';
 
 import { OperationcomplaintlistComponent } from './operationteam/operationcomplaintlist/operationcomplaintlist.component';
@@ -157,6 +156,9 @@ import { SettraininglistComponent } from './operationteam/settraininglist/settra
 import { SettrainingvideosComponent } from './operationteam/settrainingvideos/settrainingvideos.component';
 import { SettraininglessonsComponent } from './operationteam/settraininglessons/settraininglessons.component';
 import { EmployeetrackingComponent } from './employeetracking/employeetracking.component';
+import{ FAQComponent } from './operationteam/faq/faq.component';
+import { ExamlistComponent } from './operationteam/examlist/examlist.component';
+import { QuestionpaperComponent } from './operationteam/questionpaper/questionpaper.component';
 
 
 
@@ -227,6 +229,7 @@ export function createTranslateLoader(http: HttpClient) {
     TranslatePageComponent,
     ScrollPageComponent,
     SchoolmanagementComponent,
+    FAQComponent,
     
   
 
@@ -240,9 +243,7 @@ export function createTranslateLoader(http: HttpClient) {
     ViewemployeesComponent,
     EmployeedetailsComponent,
     EditemployeeComponent,
-
     AddclientComponent,
-
     UpdateclientComponent,
     UpdateemployeeComponent,
     AddemployeeComponent,
@@ -250,7 +251,6 @@ export function createTranslateLoader(http: HttpClient) {
     UserdetailsComponent,
     HumanresoucesComponent,
     HrreportComponent,
- 
     HrreportlistComponent,
     HrnewreportComponent,
     HreditreportComponent,
@@ -268,8 +268,6 @@ export function createTranslateLoader(http: HttpClient) {
     SalesnotificationComponent,
     SalesviewnoticeComponent,
     SalesclienthistoryComponent,
-  
-    Updateemployee1Component,
     Updateclient1Component,
     OperationcomplaintlistComponent,
     OperationfeedbacklistComponent,
@@ -306,7 +304,8 @@ export function createTranslateLoader(http: HttpClient) {
     SettrainingvideosComponent,
     SettraininglessonsComponent,
     EmployeetrackingComponent,
-  
+    ExamlistComponent,
+    QuestionpaperComponent,
   ],
   imports: [
     BrowserModule,

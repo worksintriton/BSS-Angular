@@ -63,7 +63,7 @@ export class OperacomcompletelistComponent implements OnInit {
     this.model = new form1model();
   }
   ngOnInit() {
-    this.http.post('https://bssservice.herokuapp.com/issue/listmyissues',{"LoginKey":"vishnu.m@tritonadc.in"}).subscribe(data => {
+    this.http.post('https://bssservice.herokuapp.com/issue/listissues',{"LoginKey":"vishnu.m@tritonadc.in"}).subscribe(data => {
     this.datas=[];  
     let dat = <Issuelist>data;
       for (let index = 0; index < dat.issue.length; index++){

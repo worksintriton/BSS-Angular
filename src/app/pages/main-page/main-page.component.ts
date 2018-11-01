@@ -49,19 +49,30 @@ export class MainPageComponent {
           // iconCode: 'work',
           routerUrl: '/main/Operationcomlist'
         },
-        {
-          title: 'Feedback',
-          iconClass: 'material-icons',
-          // iconCode: 'work',
-          routerUrl: '/main/operationfeedlist',
-        },
+        // {
+        //   title: 'Feedback',
+        //   iconClass: 'material-icons',
+        //   // iconCode: 'work',
+        //   routerUrl: '/main/operationfeedlist',
+        // },
         {
           title: 'Training Materials',
           iconClass: 'material-icons',
           // iconCode: 'work',
           routerUrl: '/main/settraininglist',
+        },
+        {
+          title: 'FAQ',
+          iconClass: 'material-icons',
+          // iconCode: 'work',
+          routerUrl: '/main/FAQ',
+        },
+        {
+          title: 'Examination',
+          iconClass: 'material-icons',
+          // iconCode: 'work',
+          routerUrl: '/main/Examlist',
         }
-       
       ]
     },
 
@@ -89,54 +100,54 @@ export class MainPageComponent {
     
   
 
-    {
-      title: 'Query Search',
-      iconClass: 'material-icons',
-      iconCode: 'assignment_ind',
-      children: [
-        {
-          title: 'Search Employee',
-          iconClass: 'material-icons',
-          // iconCode: 'work',
-          routerUrl: '/main/employeesearch'
-        },
-        {
-          title: 'Search Client',
-          iconClass: 'material-icons',
-          // iconCode: 'work',
-          routerUrl: '/main/clientsearch',
-        }
-      ]
-    },
+    // {
+    //   title: 'Query Search',
+    //   iconClass: 'material-icons',
+    //   iconCode: 'assignment_ind',
+    //   children: [
+    //     {
+    //       title: 'Search Employee',
+    //       iconClass: 'material-icons',
+    //       // iconCode: 'work',
+    //       routerUrl: '/main/employeesearch'
+    //     },
+    //     {
+    //       title: 'Search Client',
+    //       iconClass: 'material-icons',
+    //       // iconCode: 'work',
+    //       routerUrl: '/main/clientsearch',
+    //     }
+    //   ]
+    // },
 
 
 
 
-    {
-      title: 'Finance Management',
-      iconClass: 'material-icons',
-      iconCode: 'assignment_ind',
-      children: [
-        {
-          title: 'Accounts Management',
-          iconClass: 'material-icons',
-          // iconCode: 'work',
-          routerUrl: '/main/Financeinvoicelist'
-        },
-        {
-          title: 'Salary Payments',
-          iconClass: 'material-icons',
-          // iconCode: 'work',
-          routerUrl: '/main/Financesalyear',
-        },
-        {
-          title: 'Payments History',
-          iconClass: 'material-icons',
-          // iconCode: 'work',
-          routerUrl: '/main/FinanceyearComponent',
-        }
-      ]
-    },
+    // {
+    //   title: 'Finance Management',
+    //   iconClass: 'material-icons',
+    //   iconCode: 'assignment_ind',
+    //   children: [
+    //     {
+    //       title: 'Accounts Management',
+    //       iconClass: 'material-icons',
+    //       // iconCode: 'work',
+    //       routerUrl: '/main/Financeinvoicelist'
+    //     },
+    //     {
+    //       title: 'Salary Payments',
+    //       iconClass: 'material-icons',
+    //       // iconCode: 'work',
+    //       routerUrl: '/main/Financesalyear',
+    //     },
+    //     {
+    //       title: 'Payments History',
+    //       iconClass: 'material-icons',
+    //       // iconCode: 'work',
+    //       routerUrl: '/main/FinanceyearComponent',
+    //     }
+    //   ]
+    // },
     
     {
       title: 'Human Resoucre',
@@ -162,58 +173,58 @@ export class MainPageComponent {
         }
       ]
     },
-    {
-      title: 'Assign Management',
-      iconClass: 'material-icons',
-      iconCode: 'radio_button_checked',
-      children: [
-        {
-          title: 'View Assign',
-          iconClass: 'material-icons',
-          // iconCode: 'work',
-          routerUrl: '/main/hrassignemployeelist',
-        },
-        {
-          title: 'New Assign',
-          iconClass: 'material-icons',
-          // iconCode: 'work',
-          routerUrl: '/main/hrassignemployee',
-        }
-      ]
-    },
+    // {
+    //   title: 'Assign Management',
+    //   iconClass: 'material-icons',
+    //   iconCode: 'radio_button_checked',
+    //   children: [
+    //     {
+    //       title: 'View Assign',
+    //       iconClass: 'material-icons',
+    //       // iconCode: 'work',
+    //       routerUrl: '/main/hrassignemployeelist',
+    //     },
+    //     {
+    //       title: 'New Assign',
+    //       iconClass: 'material-icons',
+    //       // iconCode: 'work',
+    //       routerUrl: '/main/hrassignemployee',
+    //     }
+    //   ]
+    // },
 
-     {
-      title: 'Report Management',
-      iconClass: 'material-icons',
-      iconCode: 'radio_button_checked',
-      children: [
-    {
-      title: 'Report List',
-      iconClass: 'material-icons',
-      // iconCode: 'work',
-      routerUrl: '/main/hrreportlist'
-    },
-    {
-      title: 'New Report',
-      iconClass: 'material-icons',
-      // iconCode: 'work',
-      routerUrl: '/main/hrnewreport',
-    }
-  ]
-     },
-     {
-      title: 'Client List',
-      iconClass: 'material-icons',
-      iconCode: 'radio_button_checked',
-      // iconCode: 'work',
-      routerUrl: '/main/hrviewclient'
-    },
-    {
-      title: 'Attendence Management',
-      routerUrl: '/main/hrattendance',
-      iconClass: 'material-icons',
-      iconCode: 'event_available'
-    },
+  //    {
+  //     title: 'Report Management',
+  //     iconClass: 'material-icons',
+  //     iconCode: 'radio_button_checked',
+  //     children: [
+  //   {
+  //     title: 'Report List',
+  //     iconClass: 'material-icons',
+  //     // iconCode: 'work',
+  //     routerUrl: '/main/hrreportlist'
+  //   },
+  //   {
+  //     title: 'New Report',
+  //     iconClass: 'material-icons',
+  //     // iconCode: 'work',
+  //     routerUrl: '/main/hrnewreport',
+  //   }
+  // ]
+  //    },
+    //  {
+    //   title: 'Client List',
+    //   iconClass: 'material-icons',
+    //   iconCode: 'radio_button_checked',
+    //   // iconCode: 'work',
+    //   routerUrl: '/main/hrviewclient'
+    // },
+    // {
+    //   title: 'Attendence Management',
+    //   routerUrl: '/main/hrattendance',
+    //   iconClass: 'material-icons',
+    //   iconCode: 'event_available'
+    // },
       ]
     },
 
@@ -242,52 +253,54 @@ export class MainPageComponent {
         }
       ]
     },
-    {
-      title: 'Contract Management',
-      iconClass: 'material-icons',
-      iconCode: 'radio_button_checked',
-      children: [
-        {
-          title: 'View Contracts',
-          iconClass: 'material-icons',
-          // iconCode: 'work',
-          routerUrl: '/main/salescontractlist',
-        },
-        {
-          title: 'New Contracts',
-          iconClass: 'material-icons',
-          // iconCode: 'work',
-          routerUrl: '/main/salesnewcontract',
-        }
-      ]
-    },
 
-     {
-      title: 'Notification',
-      iconClass: 'material-icons',
-      iconCode: 'radio_button_checked',
-      children: [
-    {
-      title: 'Viewed Notice',
-      iconClass: 'material-icons',
-      // iconCode: 'work',
-      routerUrl: '/main/salesnotification'
-    },
-    {
-      title: 'New Notice',
-      iconClass: 'material-icons',
-      // iconCode: 'work',
-      // routerUrl: '/main/hrnewreport',
-    },
-  ]
-     },
-     {
-      title: 'Client history',
-      iconClass: 'material-icons',
-      iconCode: 'radio_button_checked',
-      // iconCode: 'work',
-      routerUrl: '/main/salesclienthistory'
-    },
+    
+    // {
+    //   title: 'Contract Management',
+    //   iconClass: 'material-icons',
+    //   iconCode: 'radio_button_checked',
+    //   children: [
+    //     {
+    //       title: 'View Contracts',
+    //       iconClass: 'material-icons',
+    //       // iconCode: 'work',
+    //       routerUrl: '/main/salescontractlist',
+    //     },
+    //     {
+    //       title: 'New Contracts',
+    //       iconClass: 'material-icons',
+    //       // iconCode: 'work',
+    //       routerUrl: '/main/salesnewcontract',
+    //     }
+    //   ]
+    // },
+
+  //    {
+  //     title: 'Notification',
+  //     iconClass: 'material-icons',
+  //     iconCode: 'radio_button_checked',
+  //     children: [
+  //   {
+  //     title: 'Viewed Notice',
+  //     iconClass: 'material-icons',
+  //     // iconCode: 'work',
+  //     routerUrl: '/main/salesnotification'
+  //   },
+  //   {
+  //     title: 'New Notice',
+  //     iconClass: 'material-icons',
+  //     // iconCode: 'work',
+  //     // routerUrl: '/main/hrnewreport',
+  //   },
+  // ]
+  //    },
+    //  {
+    //   title: 'Client history',
+    //   iconClass: 'material-icons',
+    //   iconCode: 'radio_button_checked',
+    //   // iconCode: 'work',
+    //   routerUrl: '/main/salesclienthistory'
+    // },
     {
       title: 'Configure Number',
       iconClass: 'material-icons',

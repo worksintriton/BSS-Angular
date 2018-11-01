@@ -22,12 +22,12 @@ export class ViewemployeesComponent {
     });   
     }
     public view(event, item) {
-      console.log(item.empid);
-      this.router.navigate(['main/employeedetails/' + item.empid])
+      console.log(item.id);
+      this.router.navigate(['main/employeedetails/' + item.id])
     }
     public edit(event, item) {
-      console.log(item.empid);
-      this.router.navigate(['main/updateemployee/' + item.empid])
+      console.log(item.id);
+      this.router.navigate(['main/updateemployee/' + item.id])
     }
     public open($event, item){
       console.log(item.empid);

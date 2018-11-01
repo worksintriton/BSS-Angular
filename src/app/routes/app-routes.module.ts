@@ -93,7 +93,6 @@ import { SalesnotificationComponent } from '../Salesteam/salesnotification/sales
 import { SalesviewnoticeComponent } from '../Salesteam/salesviewnotice/salesviewnotice.component';
 import { SalesclienthistoryComponent } from '../Salesteam/salesclienthistory/salesclienthistory.component';
 
-import { Updateemployee1Component } from '../Humanresource/updateemployee1/updateemployee1.component';
 import { Updateclient1Component } from '../Salesteam/updateclient1/updateclient1.component';
 
 import { OperationcomplaintlistComponent } from '../operationteam/operationcomplaintlist/operationcomplaintlist.component';
@@ -131,6 +130,9 @@ import { SettrainingvideosComponent } from 'app/operationteam/settrainingvideos/
 import { SettraininglistComponent } from 'app/operationteam/settraininglist/settraininglist.component';
 import { SettraininglessonsComponent } from 'app/operationteam/settraininglessons/settraininglessons.component';
 import { EmployeetrackingComponent } from 'app/employeetracking/employeetracking.component';
+import { FAQComponent } from 'app/operationteam/faq/faq.component';
+import { ExamlistComponent } from 'app/operationteam/examlist/examlist.component';
+import { QuestionpaperComponent } from 'app/operationteam/questionpaper/questionpaper.component';
 
 
 
@@ -230,7 +232,6 @@ const APP_ROUTES: Routes = [
       
       {path: 'employeedetails/:id', component: EmployeedetailsComponent},
       {path: 'updateemployee/:id', component: UpdateemployeeComponent},
-      {path: 'updateemployee1/:id', component: Updateemployee1Component},
 
 
       {path: 'userdetails/:id', component: UserdetailsComponent},
@@ -241,20 +242,30 @@ const APP_ROUTES: Routes = [
       {path: 'Operationcomplaintlist', component: OperationcomplaintlistComponent},
       {path: 'operacominprogresslist', component: OperacominprogresslistComponent},
       {path: 'operacomcompletelist', component: OperacomcompletelistComponent},
-
-      
       {path: 'operacomcompleteview/:id', component: OperacomcompleteviewComponent},
 
+
       {path: 'settrainingtop', component: SettrainingComponent},
-
       {path: 'settrainingvideos/:id', component: SettrainingvideosComponent },
-
       {path: 'settraininglist', component: SettraininglistComponent},
-
       {path: 'settraininglessons/:id', component: SettraininglessonsComponent},
 
 
+
       {path: 'employeetracking', component: EmployeetrackingComponent},
+
+
+      {path: 'FAQ', component: FAQComponent},
+
+      {path: 'Examlist', component: ExamlistComponent},
+
+
+      {path: 'questionpaper', component: QuestionpaperComponent},
+
+      
+
+
+
 
 
 

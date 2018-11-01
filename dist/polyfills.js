@@ -10225,7 +10225,7 @@ window.global = window;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/mohammedimthiyas/Documents/BSS 2/src/polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! /Users/mohammedimthiyas/Documents/GitHub/BSS-Angular/src/polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })

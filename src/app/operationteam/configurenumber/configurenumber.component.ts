@@ -74,15 +74,23 @@ export class ConfigurenumberComponent implements OnInit {
 
 
   datas: any;
-  addclient: Addclient;
+  public addclient: Addclient;
 
   constructor(private http: HttpClient ,private route: ActivatedRoute, private router: Router) { 
     this.addclient = new Addclient();
+    
+    this.http.post('https://bssservice.herokuapp.com/authentication/getconfignumber',{"client_ID":"1"}).subscribe((data:any)  => {
+    this.addclient = data.data[0];
+    console.log(this.addclient.Red_alert);
+    });
+
+
 
     }
     addapi(){
       console.log(this.addclient);
-      this.http.post('http://localhost/authentication/confignumber', this.addclient).subscribe(data => {
+      this.addclient.temp = "1"
+        this.http.post('http://localhost/authentication/confignumber',this.addclient).subscribe(data => {
         this.datas = data;
         console.log(this.datas);
          this.cliid = this.datas.cliid;
@@ -96,9 +104,9 @@ export class ConfigurenumberComponent implements OnInit {
 }
 
 class Addclient{
-  Red_alert: number;
-  Fire_alert: number;
-  Ambulance_alert: number; 
-  Police_alert:number;
-  client_ID:string;
+  Red_alert: string;
+  Fire_alert: string;
+  Ambulance_alert: string; 
+  Police_alert:string;
+  temp:string;
 }

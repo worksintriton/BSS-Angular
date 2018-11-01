@@ -1,0 +1,223 @@
+<!-- BEGIN # BOOTSNIP INFO -->
+<div class="container">
+  <div class="row">
+      <div _ngcontent-c4="" class="header">
+        <div _ngcontent-c4="" class="row">
+          <div _ngcontent-c4="" class="col-12 col-md-6 mb-3">
+            <div _ngcontent-c4="" class="col-md-8">
+              <h3 _ngcontent-c4="" class="adsc">
+                <i _ngcontent-c4="" class="fa fa-university"></i> &nbsp;FAQ List</h3>
+              </div>
+            </div>
+            <div _ngcontent-c4="" class="col-md-6">
+              <button type="button" class="btn btn-info btn-lg pull-right" data-toggle="collapse"  data-toggle="modal" data-target="#login-modal1" (click)="send()">Add FAQ</button>
+            </div>
+          </div>
+         
+        </div>
+        <div class="col">
+    
+            <div class="col-md-12">
+              <div class="row">
+                <div class="tabl" >
+                    <table class="table table-bordered" style="border-collapse:collapse;">
+                        <thead>
+                            <tr>
+                                <th>SL.NO</th>
+                                <th>FAQ ID</th>
+                                <th>Questions</th>
+                                <th>Answers</th>
+                                <th>View</th> 
+                                <th>Update</th>      
+                                <th>Delete</th>    
+                            </tr>
+                        </thead>
+                        <tbody>
+                              <ng-container  *ngFor="let data of datas ;  let i = index">
+                                      <tr>
+                                          <td>{{i+1}}</td> 
+                                          <td>{{data.faq_id}}</td>
+                                          <td>{{data.questions}}</td>
+                                          <td id="l1">{{data.answers}}</td>
+                                        <td> <button class="accordion-toggle  btn mat-button-wrapper btn-sm" data-toggle="collapse"  data-toggle="modal"  data-toggle="modal" data-target="#login-modal3" (click)="view($event, data)"><i _ngcontent-c6="" class="m-1 icon-screen-desktop"></i></button></td>
+                                        <td><button type="button" data-toggle="modal"  data-uid="1" class=" btn  btn-sm"><i _ngcontent-c6="" class="m-1 icon-note" data-toggle="modal" data-target="#login-modal2" (click)="edit($event,data)"></i></button></td> 
+                                        <td><button type="button" data-toggle="modal" data-target="#delete" data-uid="1" class=" btn  btn-sm" ><i _ngcontent-c6="" class="m-1 icon-check" (click)="delete($event,data)"></i></button></td>
+                                    </tr>
+                                    </ng-container>      
+                        </tbody>
+                    </table>
+                    <div *ngIf="loading" ><div class="loader text-center"></div></div>     
+                    <div class="card-footer p-0">
+                    <ngb-pagination   [collectionSize]="collsize" [(page)]="advancedPage" (pageChange)="newsync()" [boundaryLinks]="true" ></ngb-pagination>
+                    </div>     
+              </div>
+              </div>
+            </div>
+            </div>
+        
+       
+  </div>
+</div>
+
+
+<!-- BEGIN # MODAL LOGIN -->
+<div class="modal fade" id="login-modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog" style="max-width: 500px;margin-right: 17%;">
+  <div class="modal-content">
+    
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         
+       
+            
+            <!-- Begin # DIV Form -->
+            <div id="div-forms">
+            
+                <!-- Begin # Login Form -->
+                <form id="login-form">
+                <div class="modal-body">
+          
+                    <div class="login-form">
+                        <div class="main-div">
+                            <div class="panel">
+                                <h3>Add FAQ</h3>
+                          
+                           </div>
+                            <form id="Login">
+                                <div class="form-group">  
+                                <label>Questions</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Topic title" value ="" name="" #quest >
+                                </div>
+                                <div class="form-group">  
+                                  <label>Answers</label>
+                                  <textarea type="text" class="form-control" id="name" placeholder="Description" value="" name="" #ans></textarea>
+                                  </div>
+                            </form>
+                            </div>
+                            <button class="btn btn-primary" data-dismiss="modal" style="color:#fff; background:#13477e!important;" (click)="assign(quest.value,ans.value)">Submit</button>
+                        </div>
+              </div>
+            
+                </form>
+                <!-- End # Login Form -->
+                
+                <!-- Begin | Lost Password Form -->
+              
+                
+                
+            </div>
+            <!-- End # DIV Form -->
+            
+  </div>
+</div>
+</div>
+<!-- END # MODAL LOGIN -->
+
+
+  <!-- BEGIN # MODAL LOGIN -->
+<div class="modal fade" id="login-modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog" style="max-width: 700px;margin-right: 17%;">
+  <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+   
+            
+            <!-- Begin # DIV Form -->
+            <div id="div-forms">
+            
+                <!-- Begin # Login Form -->
+                <form id="login-form">
+                <div class="modal-body">
+          
+                    <div class="login-form">
+                        <div class="main-div">
+                            <div class="panel">
+                                <h3>Update FAQ</h3>
+                          
+                           </div>
+                            <form id="Login">
+                        
+  
+                                <div class="form-group">
+                        
+                                <label>Question</label>
+                                    <input type="text" class="form-control" id="name" value="{{datass.questions}}" #questions >
+                        
+                                </div>
+  
+                                <div class="form-group">
+                        
+                                    <label>Answer</label>
+                                    <textarea class="form-control" id="name" value="{{datass.answers}}" #answers ></textarea>
+                        
+                                </div>
+                            </form>
+                            </div>
+                            <button class="btn btn-primary" data-dismiss="modal" style="color:#fff; background:#13477e!important;" (click) = "update(questions.value,answers.value)">Submit</button>
+                        </div>
+              </div>
+            
+                </form>
+                <!-- End # Login Form -->
+                
+                <!-- Begin | Lost Password Form -->
+              
+                
+                
+            </div>
+            <!-- End # DIV Form -->
+            
+  </div>
+  </div>
+  </div>
+  <!-- END # MODAL LOGIN -->
+
+  <!-- BEGIN # MODAL LOGIN -->
+<div class="modal fade" id="login-modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog" style="max-width: 700px;margin-right: 17%;">
+  <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+   
+            
+            <!-- Begin # DIV Form -->
+            <div id="div-forms">
+            
+                <!-- Begin # Login Form -->
+                <form id="login-form">
+                <div class="modal-body">
+          
+                    <div class="login-form">
+                        <div class="main-div">
+                            <div class="panel">
+                                <h3>View FAQ</h3>
+                          
+                           </div>
+                            <form id="Login">
+                                <div class="form-group">
+                                <label>Question</label>
+                                    <input type="text" class="form-control" id="name" value="{{datass.questions}}" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label>Answer</label>
+                                    <textarea class="form-control" id="name" value="{{datass.answers}}" disabled ></textarea>
+                        
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+              </div>
+            
+                </form>
+                <!-- End # Login Form -->
+                
+                <!-- Begin | Lost Password Form -->
+              
+                
+                
+            </div>
+            <!-- End # DIV Form -->
+            
+  </div>
+  </div>
+  </div>
+  <!-- END # MODAL LOGIN -->
+
+

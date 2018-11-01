@@ -539,7 +539,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/mohammedimthiyas/Documents/BSS 2/src/styles/styles.scss */"./src/styles/styles.scss");
+module.exports = __webpack_require__(/*! /Users/mohammedimthiyas/Documents/GitHub/BSS-Angular/src/styles/styles.scss */"./src/styles/styles.scss");
 
 
 /***/ })

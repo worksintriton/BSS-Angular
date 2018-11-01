@@ -43,7 +43,7 @@
                                                     <label _ngcontent-c7="">Login Password</label>
                                                   </div>
                                                   <div _ngcontent-c7="" class="col-md-9">
-                                                        <input type="text" [(ngModel)]="adduser.Password" placeholder="Password" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Password" value="" #Password>
+                                                        <input type="password" [(ngModel)]="adduser.Password" placeholder="Password" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Password" value="" #Password>
                                                   </div>
                                                 </div>
                                               </div>
@@ -120,9 +120,10 @@
                                                                 <label _ngcontent-c7="">Date_Of_Birth</label>
                                                               </div>
                                                               <div _ngcontent-c7="" class="col-md-9">
-                                                              
-                                                                    <input type="text" placeholder="Date Of Birth"   [(ngModel)]="adduser.Date_of_birth" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Date_of_birth" value="" #Date_of_birth>
-                                                
+                                                                <input [max]="maxDate" (change)="dateChange($event.target.value)" type="date"  [(ngModel)]="adduser.Date_of_birth" class="form-control col-md-12"   name="Date_of_birth" value="" #Date_of_birth>
+
+                                                                    <!-- <input type="text" placeholder="Date Of Birth"   [(ngModel)]="adduser.Date_of_birth" class="form-control col-md-12"    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="Date_of_birth" value="" #Date_of_birth> -->
+      
                                                               </div>
                                                             </div>
                                                           </div>
@@ -263,7 +264,7 @@
                                                                                 <label _ngcontent-c7="">Date Of Joining</label>
                                                                               </div>
                                                                               <div _ngcontent-c7="" class="col-md-9">
-                                                                                <input id="date_joining" type="text" placeholder="Date of Joining" [(ngModel)]="adduser.date_joining" class="form-control col-md-12" required=""    pattern="^[a-zA-Z0-9_-\s]{2,150}$" name="date_joining" value="" #date_joining >       
+                                                                                <input [max]="maxDate" (change)="dateChange($event.target.value)" type="date"  [(ngModel)]="adduser.date_joining" class="form-control col-md-12" required=""     name="date_joining" value="" #date_joining>
 
                                                                               </div>
                                                                             </div>
@@ -562,7 +563,7 @@
                                         
                                         
                                         
-                                        
+                              
                                                                                         <div _ngcontent-c7="" class="col-md-12">
                                                                                             <div _ngcontent-c7="" class="row">
                                                                                               <div _ngcontent-c7="" class="form-group service-form-group col-md-6">
@@ -583,7 +584,7 @@
                                                                                           </div>
                             <div class="row">
   <div class="col-md-12 col-sm-5 form-group">
-  <button class="input1" (click) = "addapi()">Next</button>
+  <button class="input1" (click) = "addapi()">Submit</button>
   </div>
   </div>
   </form>
