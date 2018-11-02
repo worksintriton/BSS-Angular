@@ -159,7 +159,7 @@ import { EmployeetrackingComponent } from './employeetracking/employeetracking.c
 import{ FAQComponent } from './operationteam/faq/faq.component';
 import { ExamlistComponent } from './operationteam/examlist/examlist.component';
 import { QuestionpaperComponent } from './operationteam/questionpaper/questionpaper.component';
-
+import { PointtrackComponent }from './operationteam/pointtracking/pointtrack/pointtrack.component'
 
 
 
@@ -230,6 +230,7 @@ export function createTranslateLoader(http: HttpClient) {
     ScrollPageComponent,
     SchoolmanagementComponent,
     FAQComponent,
+    PointtrackComponent,
     
   
 

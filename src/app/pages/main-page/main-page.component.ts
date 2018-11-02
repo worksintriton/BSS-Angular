@@ -78,6 +78,45 @@ export class MainPageComponent {
 
 
     {
+      title: 'Point Tracking',
+      iconClass: 'material-icons',
+      iconCode: 'payment',
+      children: [
+        {
+          title: 'Point Track',
+          iconClass: 'material-icons',
+          // iconCode: 'work',
+          routerUrl: '/main/Pointtracking'
+        },
+        // {
+        //   title: 'Feedback',
+        //   iconClass: 'material-icons',
+        //   // iconCode: 'work',
+        //   routerUrl: '/main/operationfeedlist',
+        // },
+        // {
+        //   title: 'Training Materials',
+        //   iconClass: 'material-icons',
+        //   // iconCode: 'work',
+        //   routerUrl: '/main/settraininglist',
+        // },
+        // {
+        //   title: 'FAQ',
+        //   iconClass: 'material-icons',
+        //   // iconCode: 'work',
+        //   routerUrl: '/main/FAQ',
+        // },
+        // {
+        //   title: 'Examination',
+        //   iconClass: 'material-icons',
+        //   // iconCode: 'work',
+        //   routerUrl: '/main/Examlist',
+        // }
+      ]
+    },
+
+
+    {
       title: 'User Management',
       iconClass: 'material-icons',
       iconCode: 'assignment_ind',

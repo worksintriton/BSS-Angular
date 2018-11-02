@@ -133,6 +133,7 @@ import { EmployeetrackingComponent } from 'app/employeetracking/employeetracking
 import { FAQComponent } from 'app/operationteam/faq/faq.component';
 import { ExamlistComponent } from 'app/operationteam/examlist/examlist.component';
 import { QuestionpaperComponent } from 'app/operationteam/questionpaper/questionpaper.component';
+import { PointtrackComponent } from 'app/operationteam/pointtracking/pointtrack/pointtrack.component';
 
 
 
@@ -263,6 +264,11 @@ const APP_ROUTES: Routes = [
       {path: 'questionpaper', component: QuestionpaperComponent},
 
       
+      // point Tacrking Process//
+
+
+      {path: 'Pointtracking', component: PointtrackComponent},
+
 
 
 

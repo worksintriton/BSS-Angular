@@ -64,7 +64,7 @@ export class OperationcomlistComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.post('http://localhost/issue/listissues',{"LoginKey":"vishnu.m@tritonadc.in"}).subscribe(data => {
+    this.http.post('https://bssservice.herokuapp.com/issue/listissues',{"LoginKey":"vishnu.m@tritonadc.in"}).subscribe(data => {
       this.datas = data;
       this.data=this.datas.issue;      
       console.log(data);
