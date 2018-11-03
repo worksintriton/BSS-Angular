@@ -159,7 +159,8 @@ import { EmployeetrackingComponent } from './employeetracking/employeetracking.c
 import{ FAQComponent } from './operationteam/faq/faq.component';
 import { ExamlistComponent } from './operationteam/examlist/examlist.component';
 import { QuestionpaperComponent } from './operationteam/questionpaper/questionpaper.component';
-import { PointtrackComponent }from './operationteam/pointtracking/pointtrack/pointtrack.component'
+import { PointtrackComponent }from './operationteam/pointtracking/pointtrack/pointtrack.component';
+import { PointtrackdetailsComponent } from './operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component'
 
 
 
@@ -307,6 +308,7 @@ export function createTranslateLoader(http: HttpClient) {
     EmployeetrackingComponent,
     ExamlistComponent,
     QuestionpaperComponent,
+    PointtrackdetailsComponent,
   ],
   imports: [
     BrowserModule,

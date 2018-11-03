@@ -3382,7 +3382,7 @@ var Adduser = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- BEGIN # BOOTSNIP INFO -->\n<div class=\"container\">\n  <div class=\"row\">\n      <div _ngcontent-c4=\"\" class=\"header\">\n        <div _ngcontent-c4=\"\" class=\"row\">\n          <div _ngcontent-c4=\"\" class=\"col-12 col-md-6 mb-3\">\n            <div _ngcontent-c4=\"\" class=\"col-md-8\">\n              <h3 _ngcontent-c4=\"\" class=\"adsc\">\n                <i _ngcontent-c4=\"\" class=\"fa fa-university\"></i> &nbsp;Employee List</h3>\n              </div>\n            </div>\n            <div _ngcontent-c4=\"\" class=\"col-md-6\">\n               \n            </div>\n          </div>\n         \n        </div>\n\n        <div class=\"col\">\n    \n            <div class=\"col-md-12\">\n              <div class=\"row\">\n                <div class=\"tabl\" >\n                    <table class=\"table table-bordered table-responsive\" style=\"border-collapse:collapse;\">\n                        <thead>\n                            <tr>\n                                <th>SL.NO</th>\n                                <th>Name</th>\n                                <th>Gender</th>\n                                <th>Contact No</th>\n                                <th>Date of Joining</th>\n                                <th>Email-id</th>\n                                <th>Address</th>\n                                <th>View</th>\n                                <th>Edit</th>\n                                <th>Disable</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                                <ng-container  *ngFor=\"let data of datas.data;  let i = index\">\n                                        <tr>\n                                        <td>{{i+1}}</td>  \n                                        <td>{{data.Name}}</td>\n                                        <td>{{data.gender}}</td>\n                                        <td id=\"l1\">{{data.Mobile_No}}</td>\n                                        <td id=\"a1\">{{data.date_joining}}</td>\n                                        <td id=\"pc1\">{{data.Email_ID}}</td>\n                                        <td id=\"pc1\">{{data.Address}}</td>\n                                        <td> <button class=\"accordion-toggle  btn mat-button-wrapper btn-sm\" (click)=\"view($event, data)\"><i _ngcontent-c6=\"\" class=\"m-1 icon-screen-desktop\"></i></button></td>\n                                        <td><button type=\"button\" data-toggle=\"modal\"  data-uid=\"1\" class=\" btn  btn-sm\"><i _ngcontent-c6=\"\" class=\"m-1 icon-note\" (click)=\"edit($event,data)\"></i></button></td> \n                                        <td><button type=\"button\" data-toggle=\"modal\" data-target=\"#delete\" data-uid=\"1\" class=\" btn  btn-sm\" ><i _ngcontent-c6=\"\" class=\"m-1 icon-check\" (click)=\"open($event,data)\"></i></button></td>\n                                    </tr>\n                                    </ng-container>      \n                        </tbody>\n                    </table>\n                    <div *ngIf=\"loading\" ><div class=\"loader text-center\"></div></div>     \n                    <div class=\"card-footer p-0\">\n                    <ngb-pagination   [collectionSize]=\"collsize\" [(page)]=\"advancedPage\" (pageChange)=\"newsync()\" [boundaryLinks]=\"true\" ></ngb-pagination>\n                    </div>     \n              </div>\n              </div>\n            </div>\n            </div>\n        \n       \n  </div>\n</div>\n"
+module.exports = "<!-- BEGIN # BOOTSNIP INFO -->\n<div class=\"container\">\n  <div class=\"row\">\n      <div _ngcontent-c4=\"\" class=\"header\">\n        <div _ngcontent-c4=\"\" class=\"row\">\n          <div _ngcontent-c4=\"\" class=\"col-12 col-md-6 mb-3\">\n            <div _ngcontent-c4=\"\" class=\"col-md-8\">\n              <h3 _ngcontent-c4=\"\" class=\"adsc\">\n                <i _ngcontent-c4=\"\" class=\"fa fa-university\"></i> &nbsp;Employee List</h3>\n              </div>\n            </div>\n            <div _ngcontent-c4=\"\" class=\"col-md-6\">\n               \n            </div>\n          </div>\n         \n        </div>\n\n        <div class=\"col\">\n    \n            <div class=\"col-md-12\">\n              <div class=\"row\">\n                <div class=\"tabl\" >\n                    <table class=\"table table-bordered \" style=\"border-collapse:collapse;\">\n                        <thead>\n                            <tr>\n                                <th>SL.NO</th>\n                                <th>Name</th>\n                                <th>Gender</th>\n                                <th>Contact No</th>\n                                <th>Date of Joining</th>\n                                <th>Email-id</th>\n                                <th>Address</th>\n                                <th>View</th>\n                                <th>Edit</th>\n                                <th>Disable</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                                <ng-container  *ngFor=\"let data of datas.data;  let i = index\">\n                                        <tr>\n                                        <td>{{i+1}}</td>  \n                                        <td>{{data.Name}}</td>\n                                        <td>{{data.gender}}</td>\n                                        <td id=\"l1\">{{data.Mobile_No}}</td>\n                                        <td id=\"a1\">{{data.date_joining}}</td>\n                                        <td id=\"pc1\">{{data.Email_ID}}</td>\n                                        <td id=\"pc1\">{{data.Address}}</td>\n                                        <td> <button class=\"accordion-toggle  btn mat-button-wrapper btn-sm\" (click)=\"view($event, data)\"><i _ngcontent-c6=\"\" class=\"m-1 icon-screen-desktop\"></i></button></td>\n                                        <td><button type=\"button\" data-toggle=\"modal\"  data-uid=\"1\" class=\" btn  btn-sm\"><i _ngcontent-c6=\"\" class=\"m-1 icon-note\" (click)=\"edit($event,data)\"></i></button></td> \n                                        <td><button type=\"button\" data-toggle=\"modal\" data-target=\"#delete\" data-uid=\"1\" class=\" btn  btn-sm\" ><i _ngcontent-c6=\"\" class=\"m-1 icon-check\" (click)=\"open($event,data)\"></i></button></td>\n                                    </tr>\n                                    </ng-container>      \n                        </tbody>\n                    </table>\n                    <div *ngIf=\"loading\" ><div class=\"loader text-center\"></div></div>     \n                    <div class=\"card-footer p-0\">\n                    <ngb-pagination   [collectionSize]=\"collsize\" [(page)]=\"advancedPage\" (pageChange)=\"newsync()\" [boundaryLinks]=\"true\" ></ngb-pagination>\n                    </div>     \n              </div>\n              </div>\n            </div>\n            </div>\n        \n       \n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -6058,12 +6058,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _operationteam_examlist_examlist_component__WEBPACK_IMPORTED_MODULE_137__ = __webpack_require__(/*! ./operationteam/examlist/examlist.component */ "./src/app/operationteam/examlist/examlist.component.ts");
 /* harmony import */ var _operationteam_questionpaper_questionpaper_component__WEBPACK_IMPORTED_MODULE_138__ = __webpack_require__(/*! ./operationteam/questionpaper/questionpaper.component */ "./src/app/operationteam/questionpaper/questionpaper.component.ts");
 /* harmony import */ var _operationteam_pointtracking_pointtrack_pointtrack_component__WEBPACK_IMPORTED_MODULE_139__ = __webpack_require__(/*! ./operationteam/pointtracking/pointtrack/pointtrack.component */ "./src/app/operationteam/pointtracking/pointtrack/pointtrack.component.ts");
+/* harmony import */ var _operationteam_pointtracking_pointtrackdetails_pointtrackdetails_component__WEBPACK_IMPORTED_MODULE_140__ = __webpack_require__(/*! ./operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component */ "./src/app/operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -6338,6 +6340,7 @@ var AppModule = /** @class */ (function () {
                 _employeetracking_employeetracking_component__WEBPACK_IMPORTED_MODULE_135__["EmployeetrackingComponent"],
                 _operationteam_examlist_examlist_component__WEBPACK_IMPORTED_MODULE_137__["ExamlistComponent"],
                 _operationteam_questionpaper_questionpaper_component__WEBPACK_IMPORTED_MODULE_138__["QuestionpaperComponent"],
+                _operationteam_pointtracking_pointtrackdetails_pointtrackdetails_component__WEBPACK_IMPORTED_MODULE_140__["PointtrackdetailsComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -8792,7 +8795,7 @@ var form1model = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- BEGIN # BOOTSNIP INFO -->\n\n\n<div class=\"container\">\n  <div class=\"row\">\n      <div _ngcontent-c4=\"\" class=\"header\">\n        <div _ngcontent-c4=\"\" class=\"row\">\n          <div _ngcontent-c4=\"\" class=\"col-12 col-md-6 mb-3\">\n            <div _ngcontent-c4=\"\" class=\"col-md-8\">\n              <h3 _ngcontent-c4=\"\" class=\"adsc\">\n                <i _ngcontent-c4=\"\" class=\"fa fa-university\"></i> &nbsp;Point Tracking</h3>\n              </div>\n            </div>\n            <div _ngcontent-c4=\"\" class=\"col-md-6\">\n                <button type=\"button\" class=\"btn btn-info btn-lg pull-right\" data-toggle=\"collapse\"  data-toggle=\"modal\" data-target=\"#login-modal1\" (click)=\"send()\">Add Map Points</button>\n            </div>\n          </div>\n        </div>\n        \n        \n\n        <div class=\"col\">\n    \n            <div class=\"col-md-12\">\n              <div class=\"row\">\n                <div class=\"tabl\" >\n                    <table class=\"table table-bordered\" style=\"border-collapse:collapse;\">\n                        <thead>\n                            <tr>\n                                <th>SL.NO</th>\n                                <th>Assigned Employee</th>\n                                <th>Map Title</th>\n                                <th>Descriptions</th>\n                                <th>Created Time</th>\n                                <th>Updated Time</th>\n                                <th>Status</th>\n                                <th>Delete</th>\n                                <th>Send</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                                <!-- <ng-container  *ngFor=\"let data of datas ;  let i = index\"> -->\n                                        <tr>\n                                        <td>1</td> \n                                        <td>Empolyee23</td> \n                                        <td>Hellow</td>\n                                        <td>This is called descriptions</td>\n                                        <td id=\"l1\">23/10/2018 11.00pm</td>\n                                        <td id=\"a1\">24/10/2018 11.00pm</td>\n                                        <td id=\"pc1\">Open</td>\n                                        <td> <button class=\"accordion-toggle  btn mat-button-wrapper btn-sm\" data-toggle=\"collapse\"  data-toggle=\"modal\" data-target=\"#login-modal2\" (click)=\"open($event, data)\"><i _ngcontent-c6=\"\" class=\"m-1 icon-screen-desktop\"></i></button></td>\n                                        <td> <button class=\"accordion-toggle  btn mat-button-wrapper btn-sm\" data-toggle=\"collapse\"  data-toggle=\"modal\" data-target=\"#login-modal2\" (click)=\"open($event, data)\"><i _ngcontent-c6=\"\" class=\"m-1 icon-screen-desktop\"></i></button></td>\n\n                                    </tr>\n                                    <!-- </ng-container>       -->\n                        </tbody>\n                    </table>\n                    <div *ngIf=\"loading\" ><div class=\"loader text-center\"></div></div>     \n                    <div class=\"card-footer p-0\">\n                    <ngb-pagination   [collectionSize]=\"collsize\" [(page)]=\"advancedPage\" (pageChange)=\"newsync()\" [boundaryLinks]=\"true\" ></ngb-pagination>\n                    </div>     \n              </div>\n              </div>\n            </div>\n            </div>\n        \n       \n  </div>\n</div>\n<!-- END # BOOTSNIP INFO -->\n\n\n\n\n        <!-- BEGIN # MODAL LOGIN -->\n<div class=\"modal fade\" id=\"login-modal1\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\" style=\"display: none;\">\n  <div class=\"modal-dialog\" style=\"max-width: 700px;margin-right: 17%;\">\n  <div class=\"modal-content\">\n\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n   \n            \n            <!-- Begin # DIV Form -->\n            <div id=\"div-forms\">\n            \n                <!-- Begin # Login Form -->\n                <form id=\"login-form\">\n                <div class=\"modal-body\">\n          \n                    <div class=\"login-form\">\n                        <div class=\"main-div\">\n                            <div class=\"panel\">\n                                <h3>Add Map points</h3>\n                          \n                           </div>\n                            <form id=\"Login\">\n\n                                <div class=\"form-group\">\n                                    <label>Select Employee</label>\n                                       <select class=\"form-control\"   name=\"professional_type\" value=\"\" #professional_type id=\"exampleFormControlSelect1\">\n                                        <option>Select Employee</option>\n                                        <option>Employee 091</option>\n                                        <option>Employee 093</option>\n                                      </select>                                     \n                                    </div>\n                                <div class=\"form-group\">\n                        \n                                    <label>Title</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"name\" value=\"\" #complaint_id disabled>\n                                    </div>\n\n                                <div class=\"form-group\">\n                        \n                                <label>Description</label>\n                                    <input type=\"text\" class=\"form-control\" id=\"name\" value=\"\" #taken_by>\n                                </div>  \n                            </form>\n                            </div>\n                            <button class=\"btn btn-primary\" data-dismiss=\"modal\" style=\"color:#fff; background:#13477e!important;\" (click) = \"assign(taken_by.value,complaint_id.value)\">Submit</button>\n                        </div>\n              </div>\n                </form>\n                <!-- End # Login Form -->\n                \n                <!-- Begin | Lost Password Form -->\n              \n                \n                \n            </div>\n            <!-- End # DIV Form -->\n            \n  </div>\n</div>\n</div>\n<!-- END # MODAL LOGIN -->\n\n\n\n"
+module.exports = "<!-- BEGIN # BOOTSNIP INFO -->\n\n\n<div class=\"container\">\n  <div class=\"row\">\n      <div _ngcontent-c4=\"\" class=\"header\">\n        <div _ngcontent-c4=\"\" class=\"row\">\n          <div _ngcontent-c4=\"\" class=\"col-12 col-md-6 mb-3\">\n            <div _ngcontent-c4=\"\" class=\"col-md-8\">\n              <h3 _ngcontent-c4=\"\" class=\"adsc\">\n                <i _ngcontent-c4=\"\" class=\"fa fa-university\"></i> &nbsp;Point Tracking</h3>\n              </div>\n            </div>\n            <div _ngcontent-c4=\"\" class=\"col-md-6\">\n                <button type=\"button\" class=\"btn btn-info btn-lg pull-right\" data-toggle=\"collapse\"  data-toggle=\"modal\" data-target=\"#login-modal1\" (click)=\"send()\">Add Map Points</button>\n            </div>\n          </div>\n        </div>\n        \n        \n\n        <div class=\"col\">\n    \n            <div class=\"col-md-12\">\n              <div class=\"row\">\n                <div class=\"tabl\" >\n                    <table class=\"table table-bordered\" style=\"border-collapse:collapse;\">\n                        <thead>\n                            <tr>\n                                <th>SL.NO</th>\n                                <th>Assigned Employee</th>\n                                <th>Map Title</th>\n                                <th>Descriptions</th>\n                                <th>Created Time</th>\n                                <th>Updated Time</th>\n                                <th>Status</th>\n                                <th>View</th>\n                                <th>Update</th>\n                                <th>Delete</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                                <ng-container  *ngFor=\"let data of datas ;  let i = index\">\n                                        <tr>\n                                        <td>{{i+1}}</td> \n                                        <td>{{data.Employee_Name}}</td> \n                                        <td>{{data.title}}</td>\n                                        <td>{{data.description}}</td>\n                                        <td id=\"l1\">{{data.createdtime}}</td>\n                                        <td id=\"a1\">{{data.updatedtime}}</td>\n                                        <td id=\"pc1\">{{data.status}}</td>\n                                        <td> <button class=\"accordion-toggle  btn mat-button-wrapper btn-sm\" data-toggle=\"collapse\"   (click)=\"view($event, data)\"><i _ngcontent-c6=\"\" class=\"m-1 icon-screen-desktop\"></i></button></td>\n                                        <td> <button class=\"accordion-toggle  btn mat-button-wrapper btn-sm\" data-toggle=\"collapse\"  data-toggle=\"modal\" data-target=\"#login-modal2\" (click)=\"edit($event, data)\"><i _ngcontent-c6=\"\" class=\"m-1 icon-screen-desktop\"></i></button></td>\n                                        <td> <button class=\"accordion-toggle  btn mat-button-wrapper btn-sm\" data-toggle=\"collapse\"   (click)=\"delete($event, data)\"><i _ngcontent-c6=\"\" class=\"m-1 icon-screen-desktop\"></i></button></td>\n\n                                    </tr>\n                                    </ng-container>      \n                        </tbody>\n                    </table>\n                    <div *ngIf=\"loading\" ><div class=\"loader text-center\"></div></div>     \n                    <div class=\"card-footer p-0\">\n                    <ngb-pagination   [collectionSize]=\"collsize\" [(page)]=\"advancedPage\" (pageChange)=\"newsync()\" [boundaryLinks]=\"true\" ></ngb-pagination>\n                    </div>     \n              </div>\n              </div>\n            </div>\n            </div>\n        \n       \n  </div>\n</div>\n<!-- END # BOOTSNIP INFO -->\n\n\n\n\n        <!-- BEGIN # MODAL LOGIN -->\n<div class=\"modal fade\" id=\"login-modal1\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\" style=\"display: none;\">\n  <div class=\"modal-dialog\" style=\"max-width: 700px;margin-right: 17%;\">\n  <div class=\"modal-content\">\n\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n   \n            \n            <!-- Begin # DIV Form -->\n            <div id=\"div-forms\">\n            \n                <!-- Begin # Login Form -->\n                <form id=\"login-form\">\n                <div class=\"modal-body\">\n          \n                    <div class=\"login-form\">\n                        <div class=\"main-div\">\n                            <div class=\"panel\">\n                                <h3>Add Map points</h3>\n                          \n                           </div>\n                            <form id=\"Login\">\n\n                                <div class=\"form-group\">\n                                    <label>Select Employee</label>\n                                       <select class=\"form-control\"   name=\"professional_type\" value=\"\" #employees id=\"exampleFormControlSelect1\">\n                                        <option>Select Employee</option>\n                                        <ng-container  *ngFor=\"let data of Employee_data\">\n                                        <option  value=\"{{data.id}}\">{{data.Name}}</option>\n                                      </ng-container>\n                                      </select>                                     \n                                    </div>\n                                <div class=\"form-group\">\n                        \n                                    <label>Title</label>\n                                        <input type=\"text\" class=\"form-control\" id=\"name\" value=\"\" #titles>\n                                    </div>\n\n                                <div class=\"form-group\">\n                        \n                                <label>Description</label>\n                                    <input type=\"text\" class=\"form-control\" id=\"name\" value=\"\" #Descriptions>\n                                </div>  \n                            </form>\n                            </div>\n                            <button class=\"btn btn-primary\" data-dismiss=\"modal\" style=\"color:#fff; background:#13477e!important;\" (click) = \"assign(employees.value,titles.value,Descriptions.value)\">Submit</button>\n                        </div>\n              </div>\n                </form>\n                <!-- End # Login Form -->\n                \n                <!-- Begin | Lost Password Form -->\n              \n                \n                \n            </div>\n            <!-- End # DIV Form -->\n            \n  </div>\n</div>\n</div>\n<!-- END # MODAL LOGIN -->\n\n\n\n<div class=\"modal fade\" id=\"login-modal2\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\" style=\"display: none;\">\n    <div class=\"modal-dialog\" style=\"max-width: 700px;margin-right: 17%;\">\n    <div class=\"modal-content\">\n  \n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n     \n              \n              <!-- Begin # DIV Form -->\n              <div id=\"div-forms\">\n              \n                  <!-- Begin # Login Form -->\n                  <form id=\"login-form\">\n                  <div class=\"modal-body\">\n            \n                      <div class=\"login-form\">\n                          <div class=\"main-div\">\n                              <div class=\"panel\">\n                                  <h3>Update Map points</h3>\n                            \n                             </div>\n                              <form id=\"Login\">\n\n                                  <div class=\"form-group\">\n                                      <label>Employee Name</label>\n                                          <input type=\"text\" class=\"form-control\" id=\"name\" value=\"{{Points.Employee_Name}}\" #employee>\n                                      </div>\n                                      <div class=\"form-group\">\n                                          <label>Title</label>\n                                              <input type=\"text\" class=\"form-control\" id=\"name\" value=\"{{Points.title}}\" #title>\n                                          </div>\n                                          <div class=\"form-group\">\n                                              <label>Description</label>\n                                                  <input type=\"text\" class=\"form-control\" id=\"name\" value=\"{{Points.description}}\" #Description>\n                                              </div>\n                                  <div class=\"form-group\">\n                                      <label>Status</label>\n                                          <input type=\"text\" class=\"form-control\" id=\"name\" value=\"{{Points.status}}\" #status>\n                                      </div>\n                              </form>\n                              </div>\n                              <button class=\"btn btn-primary\" data-dismiss=\"modal\" style=\"color:#fff; background:#13477e!important;\" (click) = \"assign1(employee.value,title.value,Description.value,status.value)\">Submit</button>\n                          </div>\n                </div>\n                  </form>\n                  <!-- End # Login Form -->\n                  \n                  <!-- Begin | Lost Password Form -->\n                \n                  \n                  \n              </div>\n              <!-- End # DIV Form -->\n              \n    </div>\n  </div>\n  </div>\n  <!-- END # MODAL LOGIN -->\n\n\n\n"
 
 /***/ }),
 
@@ -8818,6 +8821,9 @@ module.exports = "#login-modal .modal-dialog {\n  width: 600px;\n  margin-left: 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PointtrackComponent", function() { return PointtrackComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8828,10 +8834,86 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var PointtrackComponent = /** @class */ (function () {
-    function PointtrackComponent() {
+    function PointtrackComponent(http, route, router, datePipe) {
+        this.http = http;
+        this.route = route;
+        this.router = router;
+        this.datePipe = datePipe;
+        this.model = new form1model();
+        this.Points = [];
+        this.Employee_data = [];
     }
     PointtrackComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.http.post('https://bssservice.herokuapp.com/PointTracking/pointslist', { "Employee_id": "1" }).subscribe(function (data) {
+            _this.datas = data.data;
+            console.log(_this.datas);
+        });
+        this.http.post('https://bssservice.herokuapp.com/authentication/employeelist', { "Email_id": "1" }).subscribe(function (data) {
+            _this.Employee_data = data.data;
+            console.log(_this.Employee_data);
+        });
+    };
+    PointtrackComponent.prototype.assign = function (employees, titles, Descriptions) {
+        var _this = this;
+        console.log(employees);
+        this.http.post('https://bssservice.herokuapp.com/authentication/employee_id', { "employee_id": employees }).subscribe(function (data) {
+            _this.Employee_name = data.data.Name;
+            var stringForm = data.data.id.toString();
+            _this.Employee_id = stringForm;
+            console.log(_this.Employee_name);
+            if (_this.Employee_name === "") {
+                alert("retry later");
+            }
+            else {
+                _this.assign2(_this.Employee_id, _this.Employee_name, titles, Descriptions);
+            }
+        });
+    };
+    PointtrackComponent.prototype.assign2 = function (Employee_id, employees, titles, Descriptions) {
+        var _this = this;
+        var date = new Date();
+        this.create_date = (this.datePipe.transform(date, "yyyy-MM-dd"));
+        this.update_date = (this.datePipe.transform(date, "yyyy-MM-dd")); //output : 2018-02-13
+        this.http.post('https://bssservice.herokuapp.com/PointTracking/Addpoints', { "Emp_id": Employee_id, "Employee_Name": employees, "createdtime": this.create_date, "description": Descriptions, "title": titles, "updatedtime": this.update_date, "status": "Open" }).subscribe(function (data) {
+            alert("Added Successfully");
+            _this.ngOnInit();
+        });
+    };
+    PointtrackComponent.prototype.edit = function (event, data) {
+        var _this = this;
+        var stringForm = data.ukey.toString();
+        this.mappoint_id = stringForm;
+        this.create_date = data.created_date;
+        this.http.post('https://bssservice.herokuapp.com/PointTracking/fetchpoints', { "ukey": this.mappoint_id }).subscribe(function (data) {
+            _this.Points = data.data[0];
+            console.log(_this.Points.Employee_id);
+        });
+    };
+    PointtrackComponent.prototype.delete = function (event, data) {
+        var _this = this;
+        var stringForm = data.ukey.toString();
+        this.mappoint_id = stringForm;
+        this.http.post('https://bssservice.herokuapp.com/PointTracking/deletepoints', { "ukey": this.mappoint_id }).subscribe(function (data) {
+            alert("Deleted Successfully");
+            _this.ngOnInit();
+        });
+    };
+    PointtrackComponent.prototype.assign1 = function (employee, title, Description, status) {
+        var _this = this;
+        var date = new Date();
+        this.update_date = (this.datePipe.transform(date, "yyyy-MM-dd")); //output : 2018-02-13
+        this.http.post('https://bssservice.herokuapp.com/PointTracking/pointsupdate', { "Employee_id": employee, "mapdescription": Description, "maptitle": title, "updated_date": this.update_date, "status": status, "mappoint_id": this.mappoint_id }).subscribe(function (data) {
+            alert("Updated Successfully");
+            _this.ngOnInit();
+        });
+    };
+    PointtrackComponent.prototype.view = function ($event, data) {
+        this.router.navigate(["main/Pointtrackingdetails/" + data.ukey]);
     };
     PointtrackComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -8839,11 +8921,155 @@ var PointtrackComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./pointtrack.component.html */ "./src/app/operationteam/pointtracking/pointtrack/pointtrack.component.html"),
             styles: [__webpack_require__(/*! ./pointtrack.component.scss */ "./src/app/operationteam/pointtracking/pointtrack/pointtrack.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["DatePipe"]])
     ], PointtrackComponent);
     return PointtrackComponent;
 }());
 
+var form1model = /** @class */ (function () {
+    function form1model() {
+    }
+    return form1model;
+}());
+
+
+/***/ }),
+
+/***/ "./src/app/operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component.html":
+/*!************************************************************************************************!*\
+  !*** ./src/app/operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component.html ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!-- BEGIN # BOOTSNIP INFO -->\n<div class=\"container\">\n  <div class=\"row\">\n      <div _ngcontent-c4=\"\" class=\"header\">\n        <div _ngcontent-c4=\"\" class=\"row\">\n          <div _ngcontent-c4=\"\" class=\"col-12 col-md-6 mb-3\">\n            <div _ngcontent-c4=\"\" class=\"col-md-8\">\n              <h3 _ngcontent-c4=\"\" class=\"adsc\">\n                <i _ngcontent-c4=\"\" class=\"fa fa-university\"></i> &nbsp;{{Client_Place}}</h3>\n              </div>\n            </div>\n            <div _ngcontent-c4=\"\" class=\"col-md-6\">\n            </div>\n          </div>\n        </div>\n   \n        <select class=\"form-control\"   name=\"professional_type\" value=\"\" #employees id=\"exampleFormControlSelect1\">\n            <option>Select Employee</option>\n            <ng-container  *ngFor=\"let data of Employee_data\">\n            <option  value=\"{{data.id}}\">{{data.Name}}</option>\n          </ng-container>\n          </select>  \n          <div class=\"col-12\">\n          <button type=\"button\" class=\"btn btn-info \" data-toggle=\"collapse\"  (click)=\"assign(employees.value)\">Add Map Points</button>\n          </div>\n        <div class=\"col\">\n            <div class=\"col-md-12\">\n              <div class=\"row\">\n                <div class=\"tabl\" >\n                    <table class=\"table table-bordered \" style=\"border-collapse:collapse;\">\n                        <thead>\n                            <tr>\n                                <th>SL.NO</th>\n                                <th>Employee_ID</th>\n                                <th>Name</th>\n                                <th>Gender</th>\n                                <th>Contact No</th>\n                                <th>Client_Place</th>\n                                <th>Email-id</th>\n                                <th>Address</th>\n                                <th>Map_ID</th>\n                                <th>Remove</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                                <ng-container  *ngFor=\"let data of datas;  let i = index\">\n                                        <tr>\n                                        <td>{{i+1}}</td>  \n                                        <td>{{data.Emp_id}}</td>\n                                        <td>{{data.Employee_name}}</td>\n                                        <td id=\"l1\">{{data.gender}}</td>\n                                        <td id=\"a1\">{{data.contact_no}}</td>\n                                        <td id=\"pc1\">{{data.Client_place}}</td>\n                                        <td id=\"pc1\">{{data.Email_id}}</td>\n                                        <td id=\"pc1\">{{data.Address}}</td>\n                                        <td id=\"pc1\">{{data.Map_id}}</td>\n                                        <td><button type=\"button\" data-toggle=\"modal\" data-target=\"#delete\" data-uid=\"1\" class=\" btn  btn-sm\" ><i _ngcontent-c6=\"\" class=\"m-1 icon-check\" (click)=\"delete($event,data)\"></i></button></td>\n                                    </tr>\n                                    </ng-container>      \n                        </tbody>\n                    </table>\n                    <div *ngIf=\"loading\" ><div class=\"loader text-center\"></div></div>     \n                    <div class=\"card-footer p-0\">\n                    <ngb-pagination   [collectionSize]=\"collsize\" [(page)]=\"advancedPage\" (pageChange)=\"newsync()\" [boundaryLinks]=\"true\" ></ngb-pagination>\n                    </div>     \n              </div>\n              </div>\n            </div>\n            </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component.scss":
+/*!************************************************************************************************!*\
+  !*** ./src/app/operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component.scss ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "#login-modal .modal-dialog {\n  width: 600px;\n  margin-left: 40%; }\n\n.btn-primary {\n  background-color: #13477e !important;\n  border-radius: 100px; }\n\n#login-modal input[type=text], input[type=password] {\n  margin-top: 10px; }\n\n.close:not(:disabled):not(.disabled) {\n  cursor: pointer;\n  /* float: right; */\n  text-align: right;\n  margin-right: 15px;\n  margin-top: 10px; }\n\n#div-login-msg,\n#div-lost-msg,\n#div-register-msg {\n  border: 1px solid #dadfe1;\n  height: 30px;\n  line-height: 28px;\n  transition: all ease-in-out 500ms; }\n\n#div-login-msg.success,\n#div-lost-msg.success,\n#div-register-msg.success {\n  border: 1px solid #68c3a3;\n  background-color: #c8f7c5; }\n\n#div-login-msg.error,\n#div-lost-msg.error,\n#div-register-msg.error {\n  border: 1px solid #eb575b;\n  background-color: #ffcad1; }\n\n#icon-login-msg,\n#icon-lost-msg,\n#icon-register-msg {\n  width: 30px;\n  float: left;\n  line-height: 28px;\n  text-align: center;\n  background-color: #dadfe1;\n  margin-right: 5px;\n  transition: all ease-in-out 500ms; }\n\n#icon-login-msg.success,\n#icon-lost-msg.success,\n#icon-register-msg.success {\n  background-color: #68c3a3 !important; }\n\n#icon-login-msg.error,\n#icon-lost-msg.error,\n#icon-register-msg.error {\n  background-color: #eb575b !important; }\n\n#img_logo {\n  max-height: 100px;\n  max-width: 100px; }\n\n/* #########################################\n   #    override the bootstrap configs     #\n   ######################################### */\n\n.modal-backdrop.in {\n  filter: alpha(opacity=50);\n  opacity: .8; }\n\n.modal-content {\n  background-color: #ececec;\n  border: 1px solid #bdc3c7;\n  border-radius: 0px;\n  outline: 0; }\n\n.modal-header {\n  min-height: 16.43px;\n  padding: 15px 15px 15px 15px;\n  border-bottom: 0px; }\n\n.modal-body {\n  position: relative;\n  padding: 5px 15px 5px 15px; }\n\n.modal-footer {\n  padding: 15px 15px 15px 15px;\n  text-align: left;\n  border-top: 0px; }\n\n.checkbox {\n  margin-bottom: 0px; }\n\n.btn {\n  border-radius: 0px; }\n\n.btn:focus,\n.btn:active:focus,\n.btn.active:focus,\n.btn.focus,\n.btn:active.focus,\n.btn.active.focus {\n  outline: none; }\n\n.btn-lg, .btn-group-lg > .btn {\n  border-radius: 0px; }\n\n.btn-link {\n  padding: 5px 10px 0px 0px;\n  color: #95a5a6; }\n\n.btn-link:hover, .btn-link:focus {\n  color: #2c3e50;\n  text-decoration: none; }\n\n.glyphicon {\n  top: 0px; }\n\n.btn-primary[_ngcontent-c4] {\n  background-color: transparent !important; }\n\n.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {\n  padding: 6px;\n  line-height: 1.42857143;\n  vertical-align: top;\n  border: 1px solid #ddd; }\n\n.btn[_ngcontent-c4] {\n  border-radius: 0px;\n  color: #1d4b7c; }\n\n.btn-primary:hover {\n  color: #fff;\n  border-color: #fff; }\n\n.btn:hover {\n  box-shadow: 0px 4px 5px -2px rgba(255, 255, 255, 0), 0px 7px 10px 1px white, 0px 2px 16px 1px rgba(255, 255, 255, 0.12); }\n\n.btn:hover, .btn:focus, .btn.focus {\n  color: #1d4b7c;\n  text-decoration: none; }\n\n.add {\n  background-color: #13477e !important;\n  color: white;\n  border-radius: 100px; }\n\n.form-control {\n  border-radius: 0px; }\n\n.form-heading {\n  color: #fff;\n  font-size: 23px; }\n\n.panel h2 {\n  color: #444444;\n  font-size: 18px;\n  margin: 0 0 8px 0; }\n\n.panel p {\n  color: #777777;\n  font-size: 14px;\n  margin-bottom: 30px;\n  line-height: 24px; }\n\n.login-form .form-control {\n  background: #f7f7f7 none repeat scroll 0 0;\n  border: 1px solid #d4d4d4;\n  border-radius: 4px;\n  font-size: 14px;\n  height: 50px;\n  line-height: 50px; }\n\n.main-div {\n  background: #ffffff none repeat scroll 0 0;\n  border-radius: 2px;\n  margin: 10px auto 30px;\n  padding: 10px 10px 10px 10px; }\n\n.login-form .form-group {\n  margin-bottom: 10px; }\n\n.login-form {\n  text-align: center; }\n\n.forgot a {\n  color: #777777;\n  font-size: 14px;\n  text-decoration: underline; }\n\n.login-form .btn.btn-primary {\n  background: #f0ad4e none repeat scroll 0 0;\n  border-color: #f0ad4e;\n  color: #ffffff;\n  font-size: 14px;\n  width: 100%;\n  height: 50px;\n  line-height: 50px;\n  padding: 0; }\n\n.forgot {\n  text-align: left;\n  margin-bottom: 30px; }\n\n.botto-text {\n  color: #ffffff;\n  font-size: 14px;\n  margin: auto; }\n\n.login-form .btn.btn-primary.reset {\n  background: #ff9900 none repeat scroll 0 0; }\n\n.back {\n  text-align: left;\n  margin-top: 10px; }\n\n.back a {\n  color: #444444;\n  font-size: 13px;\n  text-decoration: none; }\n\nlabel {\n  display: inline-block;\n  max-width: 100%;\n  margin-bottom: 5px;\n  font-weight: 700;\n  text-align: right;\n  float: left; }\n\n.btn-lg[_ngcontent-c4], .btn-group-lg[_ngcontent-c4] > .btn[_ngcontent-c4] {\n  border-radius: 0px;\n  padding: 8px 10px 7px 13px;\n  margin-top: -3px;\n  border-radius: 100px;\n  color: #fff; }\n\n.btn:focus, .btn:active, button:focus, button:active {\n  outline: none !important;\n  box-shadow: none !important; }\n\n#image-gallery .modal-footer {\n  display: block; }\n\n.ngx-gallery-icon {\n  color: rgba(255, 255, 255, 0.59) !important; }\n\n.thumb {\n  margin-top: 15px;\n  margin-bottom: 15px; }\n\n.login-form[_ngcontent-c4] .form-control[_ngcontent-c4] {\n  background: #f7f7f7 none repeat scroll 0 0;\n  border: 1px solid #d4d4d4;\n  border-radius: 4px;\n  font-size: 14px;\n  line-height: initial; }\n\nul.pagination {\n  display: flex;\n  list-style: none;\n  border-radius: .125rem;\n  padding: 10px;\n  margin: 0 10px 10px 40% !important;\n  width: 100%; }\n\n.input1 {\n  margin: 0px 0px 0px 5%;\n  width: 20%;\n  border-radius: 0px !important;\n  float: left !important; }\n\n.tabl {\n  width: 100%; }\n\n.table {\n  background: #fff; }\n\n.input1 {\n  background-color: #084280 !important;\n  color: white;\n  padding: 12px 20px;\n  border: none;\n  border-radius: 100px !important;\n  cursor: pointer;\n  margin-bottom: 20px; }\n\n.input2 {\n  background-color: #0867cc !important;\n  color: white;\n  padding: 12px 20px;\n  border: none;\n  border-radius: 100px !important;\n  cursor: pointer;\n  margin: 0px 0px 0px 5%;\n  width: 20%;\n  border-radius: 0px !important;\n  float: left !important; }\n\n.notifications2 {\n  width: 45px;\n  height: 45px;\n  background: #fff;\n  border-radius: 30px;\n  box-sizing: border-box;\n  text-align: center;\n  float: right;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);\n  position: absolute;\n  z-index: 1111;\n  margin-left: 47%;\n  margin-top: -22px;\n  float: right;\n  text-align: right; }\n\n.notifications2 .num {\n  position: absolute;\n  top: 11px;\n  right: 14px;\n  width: 25px;\n  height: 25px;\n  border-radius: 50%;\n  background: #fff;\n  color: #222;\n  line-height: 25px;\n  font-family: sans-serif;\n  text-align: center; }\n\n.notifications1 {\n  width: 45px;\n  height: 45px;\n  background: #fff;\n  border-radius: 30px;\n  box-sizing: border-box;\n  text-align: center;\n  float: right;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);\n  position: absolute;\n  z-index: 1111;\n  margin-left: 22%;\n  margin-top: -22px;\n  float: right;\n  text-align: right; }\n\n.notifications1 .num {\n  position: absolute;\n  top: 11px;\n  right: 14px;\n  width: 25px;\n  height: 25px;\n  border-radius: 50%;\n  background: #fff;\n  color: #222;\n  line-height: 25px;\n  font-family: sans-serif;\n  text-align: center; }\n\n.notifications3 {\n  width: 45px;\n  height: 45px;\n  background: #fff;\n  border-radius: 30px;\n  box-sizing: border-box;\n  text-align: center;\n  float: right;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);\n  position: absolute;\n  z-index: 1111;\n  margin-left: 72%;\n  margin-top: -22px;\n  float: right;\n  text-align: right; }\n\n.notifications3 .num {\n  position: absolute;\n  top: 11px;\n  right: 14px;\n  width: 25px;\n  height: 25px;\n  border-radius: 50%;\n  background: #fff;\n  color: #222;\n  line-height: 25px;\n  font-family: sans-serif;\n  text-align: center; }\n\n.notifications4 {\n  width: 45px;\n  height: 45px;\n  background: #fff;\n  border-radius: 30px;\n  box-sizing: border-box;\n  text-align: center;\n  float: right;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);\n  position: absolute;\n  z-index: 1111;\n  margin-left: 97%;\n  margin-top: -22px;\n  float: right;\n  text-align: right; }\n\n.notifications4 .num {\n  position: absolute;\n  top: 11px;\n  right: 14px;\n  width: 25px;\n  height: 25px;\n  border-radius: 50%;\n  background: #fff;\n  color: #222;\n  line-height: 25px;\n  font-family: sans-serif;\n  text-align: center; }\n"
+
+/***/ }),
+
+/***/ "./src/app/operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component.ts":
+/*!**********************************************************************************************!*\
+  !*** ./src/app/operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component.ts ***!
+  \**********************************************************************************************/
+/*! exports provided: PointtrackdetailsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PointtrackdetailsComponent", function() { return PointtrackdetailsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var PointtrackdetailsComponent = /** @class */ (function () {
+    function PointtrackdetailsComponent(http, route, router, datePipe) {
+        var _this = this;
+        this.http = http;
+        this.route = route;
+        this.router = router;
+        this.datePipe = datePipe;
+        this.model = new form1model();
+        this.route.params.subscribe(function (params) {
+            _this.Map_ID = params['id']; // (+) converts string 'id' to a number
+            console.log('this id: ' + _this.Map_ID);
+            _this.http.post('https://bssservice.herokuapp.com/PointTracking/fetchpoints', { "ukey": _this.Map_ID }).subscribe(function (data) {
+                var stringForm = data.data[0].ukey.toString();
+                _this.Map_ID = stringForm;
+                console.log(_this.Map_ID);
+                _this.Client_Place = data.data[0].title;
+                console.log(_this.Client_Place);
+            });
+        });
+        this.Points = [];
+        this.Employee_data = [];
+    }
+    PointtrackdetailsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.http.post('https://bssservice.herokuapp.com/mapTracking/addmapuserlist', { "Map_id": this.Map_ID }).subscribe(function (data) {
+            _this.datas = data.data;
+            console.log(_this.datas);
+        });
+        this.http.post('https://bssservice.herokuapp.com/authentication/employeelist', { "Email_id": "1" }).subscribe(function (data) {
+            _this.Employee_data = data.data;
+            console.log(_this.Employee_data);
+        });
+    };
+    PointtrackdetailsComponent.prototype.assign = function (employees) {
+        var _this = this;
+        console.log(employees);
+        this.http.post('https://bssservice.herokuapp.com/authentication/employee_id', { "employee_id": employees }).subscribe(function (data) {
+            _this.Employee_names = data.data.Name;
+            _this.Gender = data.data.gender;
+            _this.Contact_No = data.data.Mobile_No;
+            _this.Email_id = data.data.Email_ID;
+            _this.Address = data.data.Address;
+            var stringForm = data.data.id.toString();
+            _this.Employee_id = stringForm;
+            console.log(_this.Employee_names);
+            if (_this.Employee_names === "") {
+                alert("retry later");
+            }
+            else {
+                _this.assign2(_this.Employee_id, _this.Employee_names, _this.Gender, _this.Contact_No, _this.Email_id, _this.Address);
+            }
+        });
+    };
+    PointtrackdetailsComponent.prototype.assign2 = function (Employee_id, Employee_names, Gender, Contact_No, Email_id, Address) {
+        var _this = this;
+        console.log(Employee_id, Employee_names, Gender, Contact_No, Email_id, Address);
+        this.http.post('https://bssservice.herokuapp.com/mapTracking/addmapuser', { "Emp_id": Employee_id, "Employee_name": Employee_names, "Map_id": this.Map_ID, "gender": Gender, "Email_id": Email_id, "contact_no": Contact_No, "Client_place": this.Client_Place, "Address": Address }).subscribe(function (data) {
+            alert("Added Successfully");
+            _this.ngOnInit();
+        });
+    };
+    PointtrackdetailsComponent.prototype.delete = function (event, data) {
+        var _this = this;
+        var stringForm = data.Emp_id.toString();
+        this.Employee_id = stringForm;
+        this.http.post('https://bssservice.herokuapp.com/mapTracking/mapuserdelete', { "Emp_id": this.Employee_id }).subscribe(function (data) {
+            alert("Deleted Successfully");
+            _this.ngOnInit();
+        });
+    };
+    PointtrackdetailsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-pointtrackdetails',
+            template: __webpack_require__(/*! ./pointtrackdetails.component.html */ "./src/app/operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component.html"),
+            styles: [__webpack_require__(/*! ./pointtrackdetails.component.scss */ "./src/app/operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_common__WEBPACK_IMPORTED_MODULE_3__["DatePipe"]])
+    ], PointtrackdetailsComponent);
+    return PointtrackdetailsComponent;
+}());
+
+var form1model = /** @class */ (function () {
+    function form1model() {
+    }
+    return form1model;
+}());
 
 
 /***/ }),
@@ -19205,12 +19431,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var app_operationteam_examlist_examlist_component__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! app/operationteam/examlist/examlist.component */ "./src/app/operationteam/examlist/examlist.component.ts");
 /* harmony import */ var app_operationteam_questionpaper_questionpaper_component__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! app/operationteam/questionpaper/questionpaper.component */ "./src/app/operationteam/questionpaper/questionpaper.component.ts");
 /* harmony import */ var app_operationteam_pointtracking_pointtrack_pointtrack_component__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! app/operationteam/pointtracking/pointtrack/pointtrack.component */ "./src/app/operationteam/pointtracking/pointtrack/pointtrack.component.ts");
+/* harmony import */ var app_operationteam_pointtracking_pointtrackdetails_pointtrackdetails_component__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! app/operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component */ "./src/app/operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -19407,6 +19635,7 @@ var APP_ROUTES = [
             { path: 'questionpaper', component: app_operationteam_questionpaper_questionpaper_component__WEBPACK_IMPORTED_MODULE_114__["QuestionpaperComponent"] },
             // point Tacrking Process//
             { path: 'Pointtracking', component: app_operationteam_pointtracking_pointtrack_pointtrack_component__WEBPACK_IMPORTED_MODULE_115__["PointtrackComponent"] },
+            { path: 'Pointtrackingdetails/:id', component: app_operationteam_pointtracking_pointtrackdetails_pointtrackdetails_component__WEBPACK_IMPORTED_MODULE_116__["PointtrackdetailsComponent"] },
             { path: 'operationfeedlist', component: _operationteam_operationfeedlist_operationfeedlist_component__WEBPACK_IMPORTED_MODULE_95__["OperationfeedlistComponent"] },
             { path: 'Operationfeedbacklist', component: _operationteam_operationfeedbacklist_operationfeedbacklist_component__WEBPACK_IMPORTED_MODULE_79__["OperationfeedbacklistComponent"] },
             { path: 'Operationfeedbackinprogress', component: _operationteam_operationfeedbackinprogress_operationfeedbackinprogress_component__WEBPACK_IMPORTED_MODULE_83__["OperationfeedbackinprogressComponent"] },

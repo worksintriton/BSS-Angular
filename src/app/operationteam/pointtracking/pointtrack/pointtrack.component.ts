@@ -36,10 +36,10 @@ export class PointtrackComponent implements OnInit {
       console.log(this.Employee_data);
     });
   }
-
+  
   assign(employees,titles,Descriptions){
     console.log(employees);
-    this.http.post('http://localhost/authentication/employee_id',{"employee_id": employees }).subscribe((data:any) => {
+    this.http.post('https://bssservice.herokuapp.com/authentication/employee_id',{"employee_id": employees }).subscribe((data:any) => {
     this.Employee_name = data.data.Name; 
     var stringForm = data.data.id.toString();
     this.Employee_id = stringForm;
@@ -56,7 +56,7 @@ export class PointtrackComponent implements OnInit {
   var date = new Date();
    this.create_date=(this.datePipe.transform(date,"yyyy-MM-dd"));
    this.update_date=(this.datePipe.transform(date,"yyyy-MM-dd")); //output : 2018-02-13
-    this.http.post('https://bssservice.herokuapp.com/PointTracking/Addpoints',{"Emp_id":Employee_id,"Employee_id": employees,"created_date": this.create_date,"mapdescription": Descriptions,"maptitle": titles,"updated_date": this.update_date,"status":"Open"}).subscribe((data:any) => {
+    this.http.post('https://bssservice.herokuapp.com/PointTracking/Addpoints',{"Emp_id":Employee_id,"Employee_Name": employees,"createdtime": this.create_date,"description": Descriptions,"title": titles,"updatedtime": this.update_date,"status":"Open"}).subscribe((data:any) => {
     alert("Added Successfully");
     this.ngOnInit();
     });
@@ -64,10 +64,10 @@ export class PointtrackComponent implements OnInit {
 
 
   edit(event,data){
-    var stringForm = data.mappoint_id.toString();
+    var stringForm = data.ukey.toString();
     this.mappoint_id = stringForm;
     this.create_date = data.created_date;
-     this.http.post('https://bssservice.herokuapp.com/PointTracking/fetchpoints',{"mappoint_id":this.mappoint_id}).subscribe((data:any) => {
+     this.http.post('https://bssservice.herokuapp.com/PointTracking/fetchpoints',{"ukey":this.mappoint_id}).subscribe((data:any) => {
      this.Points = data.data[0];     
      console.log(this.Points.Employee_id);
      });
@@ -75,9 +75,9 @@ export class PointtrackComponent implements OnInit {
 
 
    delete(event,data){
-    var stringForm = data.mappoint_id.toString();
+    var stringForm = data.ukey.toString();
     this.mappoint_id = stringForm;
-    this.http.post('https://bssservice.herokuapp.com/PointTracking/deletepoints',{"mappoint_id":this.mappoint_id}).subscribe((data:any) => {
+    this.http.post('https://bssservice.herokuapp.com/PointTracking/deletepoints',{"ukey":this.mappoint_id}).subscribe((data:any) => {
     alert("Deleted Successfully");
     this.ngOnInit();
     });
@@ -92,7 +92,13 @@ export class PointtrackComponent implements OnInit {
     });
   }
 
+
+  view($event, data){
+    this.router.navigate([ "main/Pointtrackingdetails/" + data.ukey])
+  }
+
 }
+
 
 
 
