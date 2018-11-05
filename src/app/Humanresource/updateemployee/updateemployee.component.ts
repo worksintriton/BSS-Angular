@@ -14,16 +14,12 @@ export class UpdateemployeeComponent implements OnInit {
   public adduser: Adduser;
 
 
-
-
-
-
-
   constructor( private httpClient:HttpClient, private route: ActivatedRoute, private router: Router ) {
     this.adduser = new Adduser;
     this.route.params.subscribe(params => {
      this.employee_id = params['id']; // (+) converts string 'id' to a number
      console.log('this id: ' + this.employee_id);
+     this.adduser.id = +this.employee_id;
      this.httpClient.post('https://bssservice.herokuapp.com/authentication/employee_id',{employee_id:this.employee_id}).subscribe((data:any)  => {
       this.adduser = data.data;
       console.log(this.adduser);
@@ -34,17 +30,24 @@ export class UpdateemployeeComponent implements OnInit {
   ngOnInit() {
     this.syncdata();
   }
+
+  
   syncdata(){
-    console.log("data in");
-    
+    console.log("data in")
   }
 
+
+
   addapi(){
-
-
-
-    
-  
+    console.log(this.adduser);
+    console.log("in");
+    console.log(this.adduser.id);
+    this.httpClient.post('https://bssservice.herokuapp.com/authentication/updateemployee',this.adduser).subscribe((data:any) => {
+    this.datas = data.data;
+    console.log(this.datas);
+    alert("Updated Successfully")
+    console.log(data);
+    });
   }
 
   
@@ -56,6 +59,7 @@ export class UpdateemployeeComponent implements OnInit {
 class Adduser{
 
   Email_ID: string;
+  id: number;
   Password: string;
   employee_type: string;
   employee_id: string;
@@ -89,9 +93,8 @@ class Adduser{
   pf_amount: string;
   esi_elegible: string;
   esi_amount: string;
+  ESI_Elegible: string;
   professional_tax: string;
   professional_type: string;
   professional_amount: string;
-
-
 }

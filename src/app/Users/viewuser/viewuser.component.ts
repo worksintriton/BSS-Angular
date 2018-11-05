@@ -16,7 +16,7 @@ export class ViewuserComponent  {
   model: form1model;
 
   constructor(private http: HttpClient ,private route: ActivatedRoute, private router: Router) {
-    
+    this.datas=[];
   }
 
   ngOnInit() {

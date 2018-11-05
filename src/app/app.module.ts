@@ -327,7 +327,7 @@ export function createTranslateLoader(http: HttpClient) {
 
     // Insert your google maps api key, if you do not need google map in your project, you can remove this import
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCgtkx57L7YKnPJjk-lTWBWSnsfucETel0'
+      apiKey: 'AIzaSyAMEDuXnjto8fuz82XPZFLVN3sPfkMjRrg'
     }),
     HttpClientModule,
     TranslateModule.forRoot({

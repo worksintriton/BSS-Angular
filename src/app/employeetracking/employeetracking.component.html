@@ -8,12 +8,13 @@
 </div>
 <div class="card">
   <div class="card-body">
-    <agm-map [latitude]="lat" [longitude]="lng">
-       <!-- <ng-container  *ngFor="let data of maplist.data"> -->
+        <!-- <ng-container  *ngFor="let data of maplist.data"> -->
+       <agm-map [latitude]="lat" [longitude]="lng">
       <agm-marker [latitude]="lat" [longitude]="lng" [label] = "emp"></agm-marker>
        <!-- </ng-container> -->
     </agm-map>
   </div>
+  
 
   <div class="col">
   

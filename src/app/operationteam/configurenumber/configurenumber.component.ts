@@ -90,7 +90,7 @@ export class ConfigurenumberComponent implements OnInit {
     addapi(){
       console.log(this.addclient);
       this.addclient.temp = "1"
-        this.http.post('http://localhost/authentication/confignumber',this.addclient).subscribe(data => {
+        this.http.post('https://bssservice.herokuapp.com/authentication/confignumber',this.addclient).subscribe(data => {
         this.datas = data;
         console.log(this.datas);
          this.cliid = this.datas.cliid;

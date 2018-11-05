@@ -19,7 +19,7 @@ export class UserdetailsComponent implements OnInit {
      this.userid = params['id']; // (+) converts string 'id' to a number
      console.log('this id: ' + this.userid);
      this.httpClient.post('https://bssservice.herokuapp.com/authentication/userid',{userid:this.userid}).subscribe((data:any)  => {
-      this.model = data.data;
+      this.model = data.data[0];
       console.log(this.model);
       });
   });
@@ -36,7 +36,7 @@ export class UserdetailsComponent implements OnInit {
   addapi(){
     console.log(this.model);
     console.log("in");
-    this.httpClient.post('https://bssservice.herokuapp.com/authentication/updateemplo',this.model).subscribe(data => {
+    this.httpClient.post('https://bssservice.herokuapp.com/authentication/updateusers',this.model).subscribe(data => {
     this.datas = data;
     alert("Updated Successfully")
     console.log(data);

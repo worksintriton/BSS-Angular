@@ -30,8 +30,11 @@ export class ViewemployeesComponent {
       this.router.navigate(['main/updateemployee/' + item.id])
     }
     public open($event, item){
-      console.log(item.empid);
-      this.http.post('https://bssservice.herokuapp.com/authentication/deleteemployee',{empid:item.empid}).subscribe(data  => {
+      var stringForm = item.id.toString();
+      this.empid = stringForm;
+
+      console.log();
+      this.http.post('https://bssservice.herokuapp.com/authentication/deleteemployee',{empid:this.empid}).subscribe(data  => {
       console.log(data);
       alert("Employee deleted Successfully");
       this.ngOnInit();

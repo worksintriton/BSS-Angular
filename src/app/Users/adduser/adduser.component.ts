@@ -17,19 +17,13 @@ export class AdduserComponent {
   constructor(private http: HttpClient ,private route: ActivatedRoute, private router: Router)  {
  
     this.adduser = new Adduser();
-    // this.no_of_sites = '';
-    
-    this.http.get('https://api.github.com/users/vishnuvigneshwar').subscribe(data => {
-      this.datas = data;
-      console.log(data);
-      }); 
     }
 
     addapi(email_id){
       
       console.log(this.adduser);
       this.adduser.Add_by="BSS";
-      this.http.post('http://localhost/authentication/addusers', this.adduser).subscribe(data => {
+      this.http.post('https://bssservice.herokuapp.com/authentication/addusers', this.adduser).subscribe(data => {
       this.datas = data;
       console.log(this.datas);
       if(this.datas.data.message == "This Email_id already exits!"){
