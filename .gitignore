@@ -1,7 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 
-node_modules
+node_modules/
 # compiled output
 /dist
 /tmp
@@ -40,3 +40,5 @@ testem.log
 .DS_Store
 Thumbs.db
 node_modules/@agm/core/directives/map.js
+node_modules/zrender/src/zrender.js
+node_modules/zrender/src/vml/graphic.js
