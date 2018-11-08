@@ -6,8 +6,7 @@
   [longitude]="lng"
   [zoom]="zoom"
   [disableDefaultUI]="false"
-  [zoomControl]="false"
-  (mapClick)="mapClicked($event)">
+  [zoomControl]="false">
 
   <agm-marker 
       *ngFor="let m of markers; let i = index"
@@ -42,7 +41,7 @@
               <table class="table table-bordered" style="border-collapse:collapse;">
                   <thead>
                       <tr>
-                        <th></th>
+                        <th>Sl.No</th>
                           <th>Employee Id</th>
                           <th>Name</th>
                           <th>Lat</th>

@@ -67,6 +67,10 @@ export class OperationcomplaintlistComponent implements OnInit {
   }
   constructor(private http: HttpClient ,private route: ActivatedRoute, private router: Router) { 
     this.model = new form1model();
+    this.datass.issue.complaint_from = "";
+    this.datass.issue.complaint_type ="";
+    this.datass.issue.title = "";
+    this.datass.issue.description = "";
   }
 
   ngOnInit() {

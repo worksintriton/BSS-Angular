@@ -39,8 +39,7 @@
 
 
 
-    <!-- <script src=”https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY&callback=initMap"
- async defer></script> -->
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?branch=experimental' async defer></script>
 
 
 <script src='https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js'></script>
@@ -58,7 +57,18 @@
 <app-root class="loading"></app-root>
 
 
-
+<div id='app-maps' style='width: 100vw; height: 100vh;'></div>
+<script type='text/javascript'>
+    function loadMapScenario() {
+        var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+                credentials: 'My Bing Map Key - I removed here'
+        });
+        var pushpin = new Microsoft.Maps.Pushpin(map.getCenter(), null);
+        var layer = new Microsoft.Maps.Layer();
+        layer.add(pushpin);
+        map.layers.insert(layer);
+    }
+</script>
 
 
   <!--Google analytics, if you do not need analytics in your project, you can remove this script-->

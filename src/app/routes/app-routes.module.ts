@@ -135,6 +135,7 @@ import { ExamlistComponent } from 'app/operationteam/examlist/examlist.component
 import { QuestionpaperComponent } from 'app/operationteam/questionpaper/questionpaper.component';
 import { PointtrackComponent } from 'app/operationteam/pointtracking/pointtrack/pointtrack.component';
 import { PointtrackdetailsComponent  } from 'app/operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component'
+import { MapsComponent } from 'app/maps/maps.component';
 
 
 
@@ -260,6 +261,9 @@ const APP_ROUTES: Routes = [
       {path: 'FAQ', component: FAQComponent},
 
       {path: 'Examlist', component: ExamlistComponent},
+
+
+      {path: 'maps', component: MapsComponent},
 
 
       {path: 'questionpaper', component: QuestionpaperComponent},

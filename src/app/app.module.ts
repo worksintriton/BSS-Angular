@@ -1,5 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {Component, VERSION} from '@angular/core'
+import {MapModule, MapAPILoader, BingMapAPILoaderConfig, BingMapAPILoader, MarkerTypeId, IMapOptions, IBox, WindowRef, DocumentRef, MapServiceFactory, BingMapServiceFactory } from 'angular-maps';
 
 import {AppComponent} from './app.component';
 import {MultimenuComponent} from './components/multimenu/multimenu.component';
@@ -181,7 +183,8 @@ export function createTranslateLoader(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [
+  declarations: [  
+    MapsComponent,
     AppComponent,
     MultimenuComponent,
     DashboardPageComponent,
@@ -320,6 +323,7 @@ export function createTranslateLoader(http: HttpClient) {
     RouterModule,
     AppRoutesModule,
     NgbModule.forRoot(),
+    MapModule.forRoot() ,
     NgbButtonsModule,
     NgxGalleryModule,
     TextMaskModule,
@@ -344,12 +348,57 @@ export function createTranslateLoader(http: HttpClient) {
   
     ApiIntegService,
     ResizeService,
+    { 
+      provide: MapAPILoader, deps: [], useFactory: MapServiceProviderFactory
+    },
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
     }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 }
+
+export function MapServiceProviderFactory(){
+  let bc: BingMapAPILoaderConfig = new BingMapAPILoaderConfig();
+  bc.apiKey ="Ap0AObt84NcDaUThCeWOj52ZqUHv6k4TJhjLibR-DghC-semgoj-0uPbIi8r0E4j"; 
+    // replace with your bing map key
+    // the usage of this key outside this plunker is illegal. 
+  bc.branch = ""; 
+    // to use the experimental bing brach. There are some bug fixes for
+    // clustering in that branch you will need if you want to use 
+    // clustering.
+  return new BingMapAPILoader(bc, new WindowRef(), new DocumentRef());
+  
+   Microsoft.Maps.loadModule('Microsoft.Maps.AutoSuggest', {
+      callback: onLoadBingMaps,
+      //errorCallback: onErrorBingMaps,
+      credentials: 'UH5G3lgZ4NKsgJJVp2L4~u7sbfK6a7lC3m6XWJ0Kzjg~Ar0jlNrAeOmO-ORWS42YrwGatGdYNo-bS3CxoJFSaVR0it_gP8yA3P6ztlgmMj3x'
+  });
+
+  
+   function onLoadBingMaps() {  console.log("onLoadBingMaps");
+      var options = { maxResults: 5 };
+      var manager = new Microsoft.Maps.AutosuggestManager(options);
+      manager.attachAutosuggest('#searchBox', '#searchBoxContainer', selectedSuggestionBingMaps);
+  }
+  function onErrorBingMaps(message) {
+    alert(message);
+  }
+}
+   function selectedSuggestionBingMaps(suggestionResult) { 
+      // document.getElementById('addressLineTbx').value = suggestionResult.address.addressLine || '';
+      // document.getElementById('cityTbx').value = suggestionResult.address.locality || '';
+      // document.getElementById('stateTbx').value = suggestionResult.address.adminDistrict || '';
+      // document.getElementById('postalCodeTbx').value = suggestionResult.address.postalCode || '';  
+      // setTimeout(function(){
+      //   document.getElementById('searchBox').value = suggestionResult.address.addressLine || '';
+      // },1)
+    }
+
+
+
+
+
