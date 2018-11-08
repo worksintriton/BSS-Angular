@@ -2,7 +2,6 @@ import { Component, OnInit ,ViewEncapsulation} from '@angular/core';
 import { MouseEvent } from '@agm/core';
 import { HttpClientModule ,HttpClient} from '@angular/common/http';
 import { ActivatedRoute ,Router} from '@angular/router';
-import { numericIndexGetter } from '@swimlane/ngx-datatable/release/utils';
 
 @Component({
   selector: 'app-employeetracking',
@@ -12,11 +11,6 @@ import { numericIndexGetter } from '@swimlane/ngx-datatable/release/utils';
 })
 export class EmployeetrackingComponent {
     // google maps zoom level
-    zoom: number ;
-    lat: number;
-    lng: number;
-
-
     markers: marker[] = [
       // {
       //   lat: 13.067434,
@@ -57,40 +51,47 @@ export class EmployeetrackingComponent {
     ];
 datas:any;
     constructor(private http: HttpClient ,private route: ActivatedRoute, private router: Router) {
-      this.http.post('http://localhost/authentication/Trackingperson',{"Employee_id": "49"}).subscribe((data:any) => {
+      this.http.post('https://bssservice.herokuapp.com/authentication/Trackinglist',{"client_ID":"1"}).subscribe((data:any) => {
         this.datas = data.data;
+
+        data.data.forEach(element => {
+          let d = {
+          lat: +element.Lat,
+          lng: +element.Long,
+          Name: element.Name,
+          draggable: true
+
+          };
+          this.markers.push(d);
+          console.log(this.markers)  
+        });
+        
       }); 
-      this.ngOnInit();   
     }
-
-
-
-    view($event, data){
-      
-    }
-
-
-    ngOnInit() {
-     this.datas.forEach(element => {
-        this.zoom = 8 ;
-        let d = {
-        lat: +element.Lat,
-        lng: +element.Long,
-        Name: element.Name,
-        draggable: true,
-        }; 
-        this.markers.push(d);
-        console.log(this.markers)  
-      });
-      
-      }
-
-    
-  
+  zoom: number = 8;
   
 
 
   
+  // initial center position for the map
+  lat: number = 	13.1326688;
+  lng: number = 80.2520913;
+
+  // clickedMarker(label: string, index: number) {
+  //   console.log(`clicked the marker: ${label || index}`)
+  // }
+  
+  // mapClicked($event: MouseEvent) {
+  //   this.markers.push({
+  //     lat: $event.coords.lat,
+  //     lng: $event.coords.lng,
+  //     draggable: true
+  //   });
+  // }
+  
+  // markerDragEnd(m: marker, $event: MouseEvent) {
+  //   console.log('dragEnd', m, $event);
+  // }
   
   
 }
