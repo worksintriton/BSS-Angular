@@ -160,7 +160,8 @@ import{ FAQComponent } from './operationteam/faq/faq.component';
 import { ExamlistComponent } from './operationteam/examlist/examlist.component';
 import { QuestionpaperComponent } from './operationteam/questionpaper/questionpaper.component';
 import { PointtrackComponent }from './operationteam/pointtracking/pointtrack/pointtrack.component';
-import { PointtrackdetailsComponent } from './operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component'
+import { PointtrackdetailsComponent } from './operationteam/pointtracking/pointtrackdetails/pointtrackdetails.component';
+import { MapsComponent } from './maps/maps.component'
 
 
 
@@ -309,6 +310,7 @@ export function createTranslateLoader(http: HttpClient) {
     ExamlistComponent,
     QuestionpaperComponent,
     PointtrackdetailsComponent,
+    MapsComponent,
   ],
   imports: [
     BrowserModule,

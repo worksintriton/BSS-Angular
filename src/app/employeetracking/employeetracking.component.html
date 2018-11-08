@@ -1,19 +1,37 @@
-<h2 class="text-center">Google Maps</h2>
-<div class="text-center">
-  <nav class="breadcrumb mx-auto d-inline-block">
-    <a class="breadcrumb-item text-body" routerLink="/">Home</a>
-    <a class="breadcrumb-item text-body" routerLink="/">Maps</a>
-    <span class="breadcrumb-item active">Google Maps</span>
-  </nav>
-</div>
-<div class="card">
-  <div class="card-body">
-        <!-- <ng-container  *ngFor="let data of maplist.data"> -->
-       <agm-map [latitude]="lat" [longitude]="lng">
-      <agm-marker [latitude]="lat" [longitude]="lng" [label] = "emp"></agm-marker>
-       <!-- </ng-container> -->
-    </agm-map>
-  </div>
+<h1>Angular Google Maps (AGM) Demo</h1>
+<p><a href="https://angular-maps.com/" target="_blank">Official Website</a></p>
+
+<agm-map 
+  [latitude]="lat"
+  [longitude]="lng"
+  [zoom]="zoom"
+  [disableDefaultUI]="false"
+  [zoomControl]="false"
+  (mapClick)="mapClicked($event)">
+
+  <agm-marker 
+      *ngFor="let m of markers; let i = index"
+      (markerClick)="clickedMarker(m.label, i)"
+      [latitude]="m.lat"
+      [longitude]="m.lng"
+      [label]="m.label"
+      [markerDraggable]="m.draggable"
+      (dragEnd)="markerDragEnd(m, $event)">
+      
+    <agm-info-window>
+      <strong>{{m.Name}}</strong>
+    </agm-info-window>
+    
+  </agm-marker>
+  
+  <agm-circle [latitude]="lat + 0.3" [longitude]="lng" 
+      [radius]="5000"
+      [fillColor]="'red'"
+      [circleDraggable]="true"
+      [editable]="true">
+  </agm-circle>
+
+</agm-map>
   
 
   <div class="col">
@@ -24,6 +42,7 @@
               <table class="table table-bordered" style="border-collapse:collapse;">
                   <thead>
                       <tr>
+                        <th></th>
                           <th>Employee Id</th>
                           <th>Name</th>
                           <th>Lat</th>
@@ -31,16 +50,15 @@
                       </tr>
                   </thead>
                   <tbody>
-                              <ng-container  *ngFor="let data of maplist.data">
+                              <ng-container  *ngFor="let data of datas">
                                   
                               <tr colspan="6" data-toggle="collapse" [attr.data-target]="10"  class="accordion-toggle">
-                                 
                                   <td>{{data.Employee_id}}</td>
                                   <td id="l1">{{data.Name}}</td>
                                   <td id="a1">{{data.Lat}}</td>
                                   <td id="pc1">{{data.Long}}</td>
-                                  <td><button (click)= 'select(data.Lat, data.Long)' >select</button></td>
-                              </tr>
+                                  <td> <button class="accordion-toggle  btn mat-button-wrapper btn-sm" (click)="view($event, data)"><i _ngcontent-c6="" class="m-1 icon-screen-desktop"></i></button></td>
+                                </tr>
              
                               </ng-container>
 
@@ -50,4 +68,3 @@
         </div>
       </div>
       </div>
-</div>
